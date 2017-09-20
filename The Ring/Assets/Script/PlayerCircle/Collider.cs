@@ -41,8 +41,6 @@ public class Collider : MonoBehaviour {
             }
             isColliding = true;
         }
-        Debug.Log("Enter");
-
     }
 
     void OnCollisionExit2D (Collision2D col)

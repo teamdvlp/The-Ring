@@ -7,7 +7,7 @@ public class Health : MonoBehaviour {
 	public bool isDead; 
 	// Use this for initialization
 	void Start () {
-		health  = 10;
+		health  = 3;
 		isDead = false;
 	}
 	
