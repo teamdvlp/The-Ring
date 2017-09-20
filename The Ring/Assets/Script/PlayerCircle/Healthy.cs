@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Healthy : MonoBehaviour {
-	public int health {private set; get;}
-	public bool isDead; 
+	public int health;
+	public bool isDead;
+
+	public bool continueDamage;
+
 	// Use this for initialization
 	void Start () {
 		health  = 3;
 		isDead = false;
+		continueDamage = true;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +24,9 @@ public class Healthy : MonoBehaviour {
 		if (isDead) {
 			return;
 		}
+		if (continueDamage) {
 		this.health -= 1;
+		}
 	}
 
 	public void OnHealthEqual0 () {

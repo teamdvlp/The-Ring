@@ -14,5 +14,13 @@ public class Collider : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D col) {
 		this.GetComponent<Healthy>().takeDamge();
+		this.GetComponent<Healthy>().continueDamage = false;
+		Debug.Log("Enter");
 	}
+
+	void OnCollisionExit2D (Collision2D col) {
+		this.GetComponent<Healthy>().continueDamage = true;
+		Debug.Log("Exit");
+	}
+
 }

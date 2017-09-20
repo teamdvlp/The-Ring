@@ -5,15 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler {
 	public Image imgBg;
-	public Text txtPointPos;
-	public Text txtJoystickPos;
 	public Image imgJoystick;
 	public Vector3 InputDirection {get;set;}
 	private RuntimePlatform platform;
 	private PointerEventData eventPointer;
 
  void Start () {
-platform = Application.platform;
 }
 
 	public virtual void OnDrag (PointerEventData ped) {
