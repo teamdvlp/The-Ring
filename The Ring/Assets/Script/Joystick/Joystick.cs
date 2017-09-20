@@ -10,7 +10,6 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
 	public Image imgJoystick;
 	public Vector3 InputDirection {get;set;}
 	private RuntimePlatform platform;
-
 	private PointerEventData eventPointer;
 
  void Start () {
