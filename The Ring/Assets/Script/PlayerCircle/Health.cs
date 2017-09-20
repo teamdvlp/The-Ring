@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Healthy : MonoBehaviour {
-	public int health {private set; get;}
+public class Health : MonoBehaviour {
+    public int health;
 	public bool isDead; 
 	// Use this for initialization
 	void Start () {
-		health  = 3;
+		health  = 10;
 		isDead = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		OnHealthEqual0();
+		OnDead();
 	}
 
 	public void takeDamge () {
 		if (isDead) {
 			return;
 		}
-		this.health -= 1;
+		this.health -= 3;
 	}
 
-	public void OnHealthEqual0 () {
-		if (health > 0) {
+	public void OnDead () {
+		if (health >= 0) {
 			return;
 		}
 		if (isDead) {
