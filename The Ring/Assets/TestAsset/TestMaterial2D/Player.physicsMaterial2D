@@ -6,5 +6,13 @@ PhysicsMaterial2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Player
+<<<<<<< HEAD
+<<<<<<< HEAD
+  friction: 0.5
+=======
   friction: 0
+>>>>>>> d48061ba4902c99a6a661c4faba1045786b389ea
+=======
+  friction: 0
+>>>>>>> d48061ba4902c99a6a661c4faba1045786b389ea
   bounciness: 0
