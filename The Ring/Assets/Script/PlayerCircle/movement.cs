@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
-	public Joystick joystick;
-	public float speed;
-	// Use this for initialization
+	public Trackpad trackpad;
 	void Start () {
+		
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody2D>().velocity = new	Vector2 (joystick.InputDirection.x * speed, joystick.InputDirection.z * speed);	
-	}
+			this.GetComponent<Rigidbody2D>().velocity = trackpad.positionOffset * 80;
+			trackpad.positionOffset = Vector2.zero;
+}
 }

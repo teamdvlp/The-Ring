@@ -7,6 +7,7 @@ public class Collider : MonoBehaviour {
     float takeDamageTime;
     bool cantakeDamage;
     bool isColliding;
+    Health playerHealth;
     // Use this for initialization
 	void Start () {
         isColliding = false;
@@ -45,9 +46,17 @@ public class Collider : MonoBehaviour {
 
     void OnCollisionExit2D (Collision2D col)
     {
-        Debug.Log("Exit");
-        isColliding = false;
-        takeDamageTime = 0.0f;
-        cantakeDamage = false;
+        if (col.gameObject.tag == "Circle")
+        {
+            Debug.Log("Exit");
+            isColliding = false;
+            takeDamageTime = 0.0f;
+            cantakeDamage = false;
+        }
+
+        if (col.gameObject.tag == "Monster")
+        {
+            playerHealth.health = 0;
+        }
     }
 }

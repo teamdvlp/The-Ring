@@ -5,6 +5,10 @@ PhysicsMaterial2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New Physics Material 2D
+  m_Name: Player
+<<<<<<< HEAD
   friction: 0.5
+=======
+  friction: 0
+>>>>>>> d48061ba4902c99a6a661c4faba1045786b389ea
   bounciness: 0
