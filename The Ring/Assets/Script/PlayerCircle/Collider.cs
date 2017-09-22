@@ -4,59 +4,51 @@ using UnityEngine;
 
 public class Collider : MonoBehaviour {
 
-    float takeDamageTime;
-    bool cantakeDamage;
-    bool isColliding;
-    Health playerHealth;
-    // Use this for initialization
 	void Start () {
-        isColliding = false;
-        cantakeDamage = false;
-        takeDamageTime = 0.0f;
+		
     }
 	
-	// Update is called once per frame
 	void Update () {
-        if (isColliding)
-        {
-            if (!cantakeDamage)
-            {
-                takeDamageTime -= Time.deltaTime;
-                if (takeDamageTime <= 0)
-                {
-                    cantakeDamage = true;
-                }
-            }
-        }
+    
     }
 
 	void OnCollisionEnter2D (Collision2D col) {
-        isColliding = true;
-        if (col.gameObject.tag == "Circle")
-        {
-            if (cantakeDamage)
-            {
-                this.gameObject.GetComponent<Health>().takeDamge();
-                cantakeDamage = false;
-                takeDamageTime = 0.5f;
-            }
-            isColliding = true;
-        }
-    }
+		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
+		int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
+		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
+		int compareResult = compareNat.compareNature ();
+		switch (compareResult) {
+		case 0:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
+				return;
+			}
+		case 1:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		case 2:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		case 3: 
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		default:
+			return;
+		}
+	}
 
     void OnCollisionExit2D (Collision2D col)
     {
-        if (col.gameObject.tag == "Circle")
-        {
-            Debug.Log("Exit");
-            isColliding = false;
-            takeDamageTime = 0.0f;
-            cantakeDamage = false;
-        }
-
-        if (col.gameObject.tag == "Monster")
-        {
-            playerHealth.health = 0;
-        }
+       
     }
+
+	void OnTriggerExit2D (Collider2D col) {
+		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+	}
 }
