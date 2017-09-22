@@ -41,8 +41,8 @@ GameObject:
   - component: {fileID: 222509646147608794}
   - component: {fileID: 114518726638735106}
   - component: {fileID: 58958660792128488}
-  - component: {fileID: 114047972415748866}
   - component: {fileID: 114872852196766940}
+  - component: {fileID: 114919435146328032}
   m_Layer: 0
   m_Name: PlayerCircle
   m_TagString: Untagged
@@ -97,20 +97,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 42.63
---- !u!114 &114047972415748866
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1327242100850642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9fe6d26d19324bbf94603fab82edb77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  isDead: 0
+  m_Radius: 33
 --- !u!114 &114518726638735106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9705882, g: 0.049956735, b: 0.049956735, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -161,6 +148,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfc119ebf14546e88564cb4402bce3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114919435146328032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1327242100850642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nature: 1
 --- !u!198 &198932770795736850
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3497,6 +3496,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+  m_AnchoredPosition: {x: -18, y: 8}
+  m_SizeDelta: {x: 75, y: 75}
+=======
   m_AnchoredPosition: {x: -292.3882, y: -90.60568}
   m_SizeDelta: {x: 100, y: 100}
+>>>>>>> efd8f170e65cad631cea448820fd7e05d72d02a3
   m_Pivot: {x: 0.5, y: 0.5}
