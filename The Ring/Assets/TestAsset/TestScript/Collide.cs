@@ -14,8 +14,11 @@ public class Collide : MonoBehaviour {
 		
 	}
 
-    void OnCollisionEnter2D (Collision2D col)
+    void OnTriggerEnter2D (Collider2D col)
     {
-        GetComponent<GameOver>().ShowGameOverBoard();
+        if (col.gameObject.tag == "Evil" || col.gameObject.tag == "Monster")
+        {
+            GetComponent<GameOver>().ShowGameOverBoard();
+        }
     }
 }

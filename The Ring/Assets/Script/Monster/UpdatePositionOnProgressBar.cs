@@ -7,8 +7,9 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
 {
     // Cho vào một thanh Image, Sprite có Pivot nằm ở (0,0.5) để nó scale ra;
     public Image progressBar;
-    public int streetLenght;
-    public float startingPosition;
+    public GameObject destination;
+    float streetLenght;
+    public GameObject startingPosition;
     float streetHaveGone;
 
     // Use this for initialization
@@ -16,7 +17,7 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
     {
         // Do scale Canvas đi 40 lần nên vị trí của nó trên scene cũng bị scale đi 40 lần, vì vậy ta phải nhân lại 40 mới ra được vị trí đúng
         // VD: Ta thấy gameObject.x = 100 nhưng do bị scale 40 lần nên chỉ còn 2.5
-        startingPosition = this.gameObject.transform.position.x * 40;
+        streetLenght = destination.transform.position.x - startingPosition.transform.position.x;
     }
 
     // Update is called once per frame
@@ -35,9 +36,9 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
             return;
         }
 
-        // Do scale Canvas đi 40 lần nên vị trí của nó trên scene cũng bị scale đi 40 lần, vì vậy ta phải nhân lại 40 mới ra được số xác thực
         // StreetHaveGone : Đường đã đi được
-        streetHaveGone = (this.gameObject.transform.position.x * 40 - startingPosition) / streetLenght;
+        streetHaveGone = (this.gameObject.transform.position.x - startingPosition.transform.position.x) / streetLenght;
+        if (streetHaveGone < 0) return;  
         this.progressBar.transform.localScale = new Vector3(streetHaveGone, 1, 1);
     }
 
