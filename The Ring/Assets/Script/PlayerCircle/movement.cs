@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 	public Trackpad trackpad;
+
+
+    
 	void Start () {
 		
 	}
@@ -11,5 +14,5 @@ public class Movement : MonoBehaviour {
 	void Update () {
 			this.GetComponent<Rigidbody2D>().velocity = trackpad.positionOffset * 80;
 			trackpad.positionOffset = Vector2.zero;
-}
+    }
 }
