@@ -7,6 +7,7 @@ TagManager:
   - Circle
   - Score
   - Monster
+  - Core
   layers:
   - Default
   - TransparentFX
