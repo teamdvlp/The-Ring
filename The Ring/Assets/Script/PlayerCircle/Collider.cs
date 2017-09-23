@@ -13,6 +13,9 @@ public class Collider : MonoBehaviour {
     }
 
 	void OnCollisionEnter2D (Collision2D col) {
+		if (col.gameObject.GetComponent<Nature> () == null) {
+			return;
+		}
 		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
 		int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
 		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
