@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementSmallMonster : MonoBehaviour {
 	
 	private Vector2 direction;
-	public float Ymin;	private float timeDeltaChangeDirection = 4f;
+	private float timeDeltaChangeDirection = 4f;
 	public float speed = 0;
 	void Start () {
 			randomDirection();
