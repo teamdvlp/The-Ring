@@ -19,8 +19,8 @@ TagManager:
   - 
   - Ring
   - DismissRing
-  - 
-  - 
+  - Player
+  - SmallMonster
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2752611591
+    locked: 0
+  - name: UI
+    uniqueID: 2612012227
     locked: 0
