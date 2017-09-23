@@ -108,52 +108,52 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2140081717
+--- !u!1 &1499360545
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 2140081722}
-  - component: {fileID: 2140081721}
-  - component: {fileID: 2140081720}
-  - component: {fileID: 2140081719}
-  - component: {fileID: 2140081718}
+  - component: {fileID: 1499360550}
+  - component: {fileID: 1499360549}
+  - component: {fileID: 1499360548}
+  - component: {fileID: 1499360547}
+  - component: {fileID: 1499360546}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
+  m_Name: Main Camera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2140081718
+--- !u!81 &1499360546
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140081717}
+  m_GameObject: {fileID: 1499360545}
   m_Enabled: 1
---- !u!92 &2140081719
+--- !u!124 &1499360547
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140081717}
+  m_GameObject: {fileID: 1499360545}
   m_Enabled: 1
---- !u!124 &2140081720
+--- !u!92 &1499360548
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140081717}
+  m_GameObject: {fileID: 1499360545}
   m_Enabled: 1
---- !u!20 &2140081721
+--- !u!20 &1499360549
 Camera:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140081717}
+  m_GameObject: {fileID: 1499360545}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -168,8 +168,8 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.9203053
-  m_Depth: 0
+  orthographic size: 5
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -184,14 +184,14 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &2140081722
+--- !u!4 &1499360550
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140081717}
+  m_GameObject: {fileID: 1499360545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.67178285, y: 1.3840033, z: -12.25}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
