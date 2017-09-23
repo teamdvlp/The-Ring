@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,33 +14,33 @@ public class Collider : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D col) {
 		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
-		// int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
-		// CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
-		// int compareResult = compareNat.compareNature ();
-		// switch (compareResult) {
-		// case 0:
-		// 	{
-		// 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
-		// 		return;
-		// 	}
-		// case 1:
-		// 	{
-		// 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-		// 		return;
-		// 	}
-		// case 2:
-		// 	{
-		// 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-		// 		return;
-		// 	}
-		// case 3: 
-		// 	{
-		// 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-		// 		return;
-		// 	}
-		// default:
-		// 	return;
-		// }
+		int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
+		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
+		int compareResult = compareNat.compareNature ();
+		switch (compareResult) {
+		case 0:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
+				return;
+			}
+		case 1:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		case 2:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		case 3: 
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
+		default:
+			return;
+		}
 	}
 
     void OnCollisionExit2D (Collision2D col)
