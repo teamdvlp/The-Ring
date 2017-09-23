@@ -11,7 +11,6 @@ public class Movement : MonoBehaviour {
 	
 	void Update () {
 			this.GetComponent<Rigidbody2D>().velocity = trackpad.positionOffset * 10;
-			this.GetComponent<Rigidbody2D>().velocity = trackpad.positionOffset * 60;
 			trackpad.positionOffset = Vector2.zero;
 }
 }
