@@ -23,8 +23,8 @@ TagManager:
   - Player
   - SmallMonster
   - Wall
-  - 
-  - 
+  - RingProtect
+  - PlayerCircle
   - 
   - 
   - 
