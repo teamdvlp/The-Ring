@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestChangeActor : MonoBehaviour {
+public class ChangeNature : MonoBehaviour {
 
     public GameObject fire, water, grass, ground, metal;
     public GameObject playerCurrentNature;

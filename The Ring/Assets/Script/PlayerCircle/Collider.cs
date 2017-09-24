@@ -50,7 +50,7 @@ public class Collider : MonoBehaviour {
             //	}
         case 2:
             {
-                Destroy(gameObject.GetComponent<TestChangeActor>().playerCurrentNature);
+                Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
                 gameObject.GetComponent<Nature>().nature = 0;
                 return;
 			}
