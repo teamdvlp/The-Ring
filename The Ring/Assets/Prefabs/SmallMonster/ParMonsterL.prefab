@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4259762186105976}
   - component: {fileID: 198530635292827504}
   - component: {fileID: 199791400978683768}
-  m_Layer: 0
+  - component: {fileID: 114668882365089516}
+  m_Layer: 12
   m_Name: ParMonsterL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,12 +36,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670079319888546}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -253, y: 0, z: -105.00003}
+  m_LocalPosition: {x: -28.3, y: 0.5134324, z: -105.00003}
   m_LocalScale: {x: 1.0000362, y: 1.0000359, z: 1.0000362}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &114668882365089516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670079319888546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1fddc4de26641e29552661fe3af512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198530635292827504
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -100,7 +112,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1739473945
+  randomSeed: -1994531456
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2506,7 +2518,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 512
+      m_Bits: 18432
     maxCollisionShapes: 255
     quality: 0
     voxelSize: 0.5
@@ -3336,7 +3348,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

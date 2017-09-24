@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4776836464909414}
   - component: {fileID: 198087099110438020}
   - component: {fileID: 199240942751886070}
-  m_Layer: 0
+  - component: {fileID: 114336130388260612}
+  m_Layer: 12
   m_Name: ParMonsterR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &114336130388260612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304504319656934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1fddc4de26641e29552661fe3af512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198087099110438020
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -2506,7 +2518,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 512
+      m_Bits: 18432
     maxCollisionShapes: 255
     quality: 0
     voxelSize: 0.5
@@ -3336,7 +3348,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
