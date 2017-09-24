@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestChangeActor : MonoBehaviour {
 
     public GameObject fire, water, grass, ground, metal;
-    GameObject playerCurrentNature;
+    public GameObject playerCurrentNature;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +30,7 @@ public class TestChangeActor : MonoBehaviour {
         }
     }
 
-    void SetNature(int nature)
+    public void SetNature(int nature)
     {
         switch (nature)
         {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collider : MonoBehaviour {
 
+    public GameObject collideEffect;
+
 	void Start () {
 		
     }
@@ -12,8 +14,23 @@ public class Collider : MonoBehaviour {
     
     }
 
-	void OnCollisionEnter2D (Collision2D col) {
-		if (col.gameObject.GetComponent<Nature> () == null) {
+    void CollideEffect (Collision2D col)
+    {
+        ContactPoint2D point = col.contacts[0];
+        Vector2 position = point.point;
+        Instantiate(collideEffect,position,gameObject.transform.rotation);
+    }
+
+    void OnCollisionStay2D (Collision2D col)
+    {
+        CollideEffect(col);
+    }
+
+    void OnCollisionEnter2D (Collision2D col) {
+
+        CollideEffect(col);
+
+        if (col.gameObject.GetComponent<Nature> () == null) {
 			return;
 		}
 		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
@@ -26,21 +43,22 @@ public class Collider : MonoBehaviour {
 				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
 				return;
 			}
-		case 1:
-			{
-				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-				return;
+            //case 1:
+            //	{
+            //		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            //		return;
+            //	}
+        case 2:
+            {
+                Destroy(gameObject.GetComponent<TestChangeActor>().playerCurrentNature);
+                gameObject.GetComponent<Nature>().nature = 0;
+                return;
 			}
-		case 2:
-			{
-				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-				return;
-			}
-		case 3: 
-			{
-				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-				return;
-			}
+		//case 3: 
+		//	{
+		//		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+		//		return;
+		//	}
 		default:
 			return;
 		}
