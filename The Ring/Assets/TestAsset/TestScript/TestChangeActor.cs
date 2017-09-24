@@ -21,8 +21,12 @@ public class TestChangeActor : MonoBehaviour {
     {
         if (col.gameObject.tag == "Core")
         {
-            gameObject.GetComponent<Nature>().nature = col.gameObject.GetComponent<Nature>().nature;
-            SetNature(col.gameObject.GetComponent<Nature>().nature);
+            if (gameObject.GetComponent<Nature>().nature != col.gameObject.GetComponent<Nature>().nature)
+            {
+                gameObject.GetComponent<Nature>().nature = col.gameObject.GetComponent<Nature>().nature;
+                SetNature(col.gameObject.GetComponent<Nature>().nature);
+            }
+            Destroy(col.gameObject);
         }
     }
 
@@ -62,6 +66,6 @@ public class TestChangeActor : MonoBehaviour {
     {
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
-        playerCurrentNature.transform.localScale = new Vector3(0.128f, 0.128f, 0.128f);
+        playerCurrentNature.transform.localScale = new Vector3(8f, 8f, 8f);
     }
 }
