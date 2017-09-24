@@ -15,14 +15,16 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        scoreText.text = "Score: " + score;
 	}
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.tag == "Score")
+        if (col.gameObject.name.Equals("Score"))
         {
             score += 10;
-            Destroy(col.gameObject);        }
+            Destroy(col.gameObject);
+            Debug.Log("AHIHAI");
         }
+    }
 }

@@ -26,4 +26,14 @@ public class GameOver : MonoBehaviour {
     {
         GameOverBoard.SetActive(false);
     }
+
+    void OnDestroy()
+    {
+        ProceedGameOver();
+    }
+
+    void ProceedGameOver ()
+    {
+        ShowGameOverBoard();
+    }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Score
   - Monster
   - Core
+  - GetScore
   layers:
   - Default
   - TransparentFX
