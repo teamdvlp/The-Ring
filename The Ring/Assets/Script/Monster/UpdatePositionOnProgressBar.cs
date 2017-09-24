@@ -15,8 +15,6 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Do scale Canvas đi 40 lần nên vị trí của nó trên scene cũng bị scale đi 40 lần, vì vậy ta phải nhân lại 40 mới ra được vị trí đúng
-        // VD: Ta thấy gameObject.x = 100 nhưng do bị scale 40 lần nên chỉ còn 2.5
         streetLenght = destination.transform.position.x - startingPosition.transform.position.x;
     }
 
