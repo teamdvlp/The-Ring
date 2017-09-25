@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50065328438413774}
   - component: {fileID: 58519005380259896}
   - component: {fileID: 114900887798716472}
+  - component: {fileID: 114960063935060722}
   m_Layer: 11
   m_Name: PlayerCircle
   m_TagString: Untagged
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackpad: {fileID: 0}
+  speed: 0
 --- !u!114 &114705039831125190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfc119ebf14546e88564cb4402bce3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collideEffect: {fileID: 0}
 --- !u!114 &114900887798716472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +149,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nature: 0
+--- !u!114 &114960063935060722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104097678630848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326a43e61c4b57445b28bea2f921aa0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverBoard: {fileID: 0}
 --- !u!198 &198697117577337140
 ParticleSystem:
   m_ObjectHideFlags: 1
