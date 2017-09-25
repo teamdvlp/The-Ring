@@ -13,11 +13,10 @@ public class Collider_SmallMonster : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    private void OnParticleCollision(GameObject other)
+    void OnParticleCollision(GameObject other)
     {
-        if (other.layer.Equals("CirclePlayer")) {
-            Destroy(other.gameObject);
-        }
+        //if (other.layer == 15) {
+        //    Destroy(other.gameObject);
+        //}
     }
 }

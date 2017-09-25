@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 212838890635262974}
   - component: {fileID: 60074164278159962}
   - component: {fileID: 50555324330414892}
+  - component: {fileID: 95931495739397326}
   m_Layer: 9
   m_Name: GroundCircle
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 1566146665819122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4361380134757704}
   m_RootOrder: 1
@@ -84,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1500732491862966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.75, y: 0.69, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4465299065388826}
   - {fileID: 4150023076039148}
@@ -99,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1184748046201114}
   m_LocalRotation: {x: -0.4125095, y: 0.91063774, z: 0.023950547, w: 0.0011442145}
   m_LocalPosition: {x: -0, y: 0.33, z: 1.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4361380134757704}
   m_RootOrder: 0
@@ -111,7 +112,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500732491862966}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -316,6 +317,23 @@ PolygonCollider2D:
       - {x: -1.3602868, y: -1.5865561}
       - {x: -1.1802869, y: -1.3065561}
       - {x: -1.1802869, y: -1.276556}
+--- !u!95 &95931495739397326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500732491862966}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 352f38afcc6eb56429594f1fda7f3227, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!198 &198092959674834612
 ParticleSystem:
   m_ObjectHideFlags: 1
