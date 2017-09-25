@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60294116, g: 0.11083477, b: 0.11083477, a: 1}
+  m_Color: {r: 0.9632353, g: 0.0070826192, b: 0.0070826192, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -381,6 +381,11 @@ Prefab:
       propertyPath: trackpad
       value: 
       objectReference: {fileID: 1106874763}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e132b70cb2214f0b9266b7fbe3a38d9, type: 2}
   m_IsPrefabParent: 0
