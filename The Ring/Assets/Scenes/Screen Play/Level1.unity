@@ -176,6 +176,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195607097}
+<<<<<<< HEAD
+=======
 --- !u!1 &208569346
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +259,7 @@ RectTransform:
   m_AnchoredPosition: {x: -0.095001, y: 0.0018921}
   m_SizeDelta: {x: 800.19, y: 1276.7}
   m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
 --- !u!4 &366063491 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4171715331648136, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
@@ -537,7 +540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4171715331648136, guid: 9e132b70cb2214f0b9266b7fbe3a38d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.76
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 4171715331648136, guid: 9e132b70cb2214f0b9266b7fbe3a38d9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -702,8 +705,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808027679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 0.016, y: 0.044, z: -2}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+=======
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -714,12 +722,20 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808027679}
+<<<<<<< HEAD
+  m_Enabled: 0
+=======
   m_Enabled: 1
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a90ee9680a54f3e930b39facf28f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  smoothing: 5
+=======
   smoothing: 10
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
   target: {fileID: 366063491}
   YLimit: 0
   direction: 0
@@ -765,7 +781,11 @@ Prefab:
     - target: {fileID: 198530635292827504, guid: f9a09495ca9b448f585cef4f2040c95a,
         type: 2}
       propertyPath: randomSeed
+<<<<<<< HEAD
+      value: -2042763073
+=======
       value: 144952270
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
       objectReference: {fileID: 0}
     - target: {fileID: 198530635292827504, guid: f9a09495ca9b448f585cef4f2040c95a,
         type: 2}
@@ -899,7 +919,11 @@ Prefab:
     - target: {fileID: 198087099110438020, guid: 5f661b9a8f15f4937934d24aa73bb731,
         type: 2}
       propertyPath: randomSeed
+<<<<<<< HEAD
+      value: 138190137
+=======
       value: 568682552
+>>>>>>> 2677babc0a83738e0307e21580b70722a606fb91
       objectReference: {fileID: 0}
     - target: {fileID: 198087099110438020, guid: 5f661b9a8f15f4937934d24aa73bb731,
         type: 2}
