@@ -15,7 +15,7 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        streetLenght = destination.transform.position.x - startingPosition.transform.position.x;
+        streetLenght = destination.transform.position.y - startingPosition.transform.position.y;
     }
 
     // Update is called once per frame
@@ -35,9 +35,11 @@ public class UpdatePositionOnProgressBar : MonoBehaviour
         }
 
         // StreetHaveGone : Đường đã đi được
-        streetHaveGone = (this.gameObject.transform.position.x - startingPosition.transform.position.x) / streetLenght;
-        if (streetHaveGone < 0) return;  
-        this.progressBar.transform.localScale = new Vector3(streetHaveGone, 1, 1);
+        streetHaveGone = (this.gameObject.transform.position.y - startingPosition.transform.position.y) / streetLenght;
+        if (!(streetHaveGone < 0 || streetHaveGone >= 1))
+        {
+            this.progressBar.transform.localScale = new Vector3(1, streetHaveGone, 1);
+        }
     }
 
     void OnEnd ()

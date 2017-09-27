@@ -21,8 +21,8 @@ public class CameraFollow : MonoBehaviour {
 
 	private void follow () {
 		if (this.target != null) {
-                //if (Mathf.Abs(this.transform.position.x - this.target.transform.position.x) >= 6 || Mathf.Abs(this.transform.position.y - this.target.transform.position.y) >= 3.5f) 
-				this.gameObject.transform.position = Vector3.Lerp (new Vector3(this.transform.position.x, this.transform.position.y, -10f), this.target.transform.position + offset, this.smoothing * Time.deltaTime);
+				this.gameObject.transform.position = Vector3.Lerp (new Vector3(this.transform.position.x, this.transform.position.y, -15f),new Vector3(this.transform.position.x,target.transform.position.y + offset.y, -15), this.smoothing * Time.deltaTime);
 			}
 		}
+
 }

@@ -19,6 +19,6 @@ public class MonsterMovement : MonoBehaviour {
 
     void Move ()
     {
-        monsterTransform.position = new Vector3(monsterTransform.position.x + moveSpeed * Time.deltaTime, monsterTransform.position.y, 0);
+        monsterTransform.position = new Vector3(monsterTransform.position.x, monsterTransform.position.y + moveSpeed * Time.deltaTime, monsterTransform.position.z);
     }
 }
