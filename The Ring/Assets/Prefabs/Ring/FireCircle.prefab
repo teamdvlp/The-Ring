@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60948176961490594}
   - component: {fileID: 50079125403086600}
   - component: {fileID: 95780815202997094}
+  - component: {fileID: 114049662274734948}
   m_Layer: 9
   m_Name: FireCircle
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 4343343047027772}
   - component: {fileID: 50345245894666240}
   - component: {fileID: 58773611510866306}
+  - component: {fileID: 114827876949199266}
   m_Layer: 14
   m_Name: RingProtect
   m_TagString: Untagged
@@ -57,6 +59,7 @@ GameObject:
   - component: {fileID: 4952746089025828}
   - component: {fileID: 198743201523608424}
   - component: {fileID: 199925147196999842}
+  - component: {fileID: 114593519889020070}
   m_Layer: 0
   m_Name: FireParticle
   m_TagString: Untagged
@@ -334,6 +337,42 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114049662274734948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100219745127168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nature: 0
+--- !u!114 &114593519889020070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278228834243826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nature: 0
+--- !u!114 &114827876949199266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255500956895632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nature: 0
 --- !u!198 &198743201523608424
 ParticleSystem:
   m_ObjectHideFlags: 1

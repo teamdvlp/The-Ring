@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 60074164278159962}
   - component: {fileID: 50555324330414892}
   - component: {fileID: 95931495739397326}
+  - component: {fileID: 114160649788861848}
   m_Layer: 9
   m_Name: GroundCircle
   m_TagString: Untagged
@@ -334,6 +335,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114160649788861848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500732491862966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nature: 0
 --- !u!198 &198092959674834612
 ParticleSystem:
   m_ObjectHideFlags: 1

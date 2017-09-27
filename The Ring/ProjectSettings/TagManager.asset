@@ -21,7 +21,7 @@ TagManager:
   - 
   - Ring
   - DismissRing
-  - Player
+  - OverlayCanvas
   - SmallMonster
   - Wall
   - RingProtect
@@ -46,7 +46,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: OverlayCanvas
     uniqueID: 2752611591
     locked: 0
   - name: UI
