@@ -6,6 +6,7 @@ public class ChangeNature : MonoBehaviour {
 
     public GameObject fire, water, grass, ground, metal;
     public GameObject playerCurrentNature;
+    public float size;
 
 	// Use this for initialization
 	void Start () {
@@ -66,6 +67,6 @@ public class ChangeNature : MonoBehaviour {
     {
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
-        playerCurrentNature.transform.localScale = new Vector3(8f, 8f, 8f);
+        playerCurrentNature.transform.localScale = new Vector3(size,size,size);
     }
 }
