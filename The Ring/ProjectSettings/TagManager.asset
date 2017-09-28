@@ -9,6 +9,7 @@ TagManager:
   - Monster
   - Core
   - GetScore
+  - NatureEffect
   layers:
   - Default
   - TransparentFX

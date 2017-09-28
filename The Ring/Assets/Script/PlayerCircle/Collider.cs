@@ -43,22 +43,22 @@ public class Collider : MonoBehaviour {
 				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
 				return;
 			}
-            //case 1:
-            //	{
-            //		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-            //		return;
-            //	}
+            case 1:
+            	{
+            		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            		return;
+            	}
         case 2:
             {
                 Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
                 gameObject.GetComponent<Nature>().nature = 0;
                 return;
 			}
-		//case 3: 
-		//	{
-		//		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
-		//		return;
-		//	}
+		case 3: 
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+				return;
+			}
 		default:
 			return;
 		}
