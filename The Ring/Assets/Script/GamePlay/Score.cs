@@ -6,25 +6,37 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour {
 
     public Text scoreText;
-    public int score;
+    public Text currentScoreText;
+    float minute, second;
+    string score, minuteText, secondText;
 
 	// Use this for initialization
 	void Start () {
-        score = 0;
-	}
+        minute = 0;
+        second = 0;    
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        scoreText.text = "" + score;
-	}
-
-    void OnTriggerEnter2D (Collider2D col)
-    {
-        if (col.gameObject.name.Equals("Score"))
+        second += Time.deltaTime;
+        if (second >= 60)
         {
-            score += 10;
-            Destroy(col.gameObject);
-            Debug.Log("AHIHAI");
+            second = 0;
+            minute++;
         }
+
+        
+
+        secondText = second < 10 ? "0" + second.ToString("#") : second.ToString("#");
+        minuteText = minute < 10 ? "0" + minute.ToString() : minute.ToString();
+        score = minuteText + " : " + secondText;
+
+        currentScoreText.text = score;
+    }
+
+
+    void OnDestroy ()
+    {
+        scoreText.text = score;
     }
 }

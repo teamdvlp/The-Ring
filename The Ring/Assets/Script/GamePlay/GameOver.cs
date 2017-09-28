@@ -5,35 +5,35 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
 
-    public GameObject GameOverBoard;
+    public GameObject gameOverBoard;
+    public float appearTime;
+    public GameObject transparentBackground;
 
-	// Use this for initialization
-	void Start () {
-        GameOverBoard.SetActive(false);
+    // Use this for initialization
+    void Start () {
+        gameOverBoard.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
 
-    public void ShowGameOverBoard ()
+    }
+
+    public void OverGame()
     {
-        GameOverBoard.SetActive(true);
+        transparentBackground.GetComponent<TransparentBackground>().FadeIn();
+        Invoke("ActiveOverBoard", appearTime);
+    }
+
+    private void ActiveOverBoard ()
+    {
+        gameOverBoard.SetActive(true);
     }
 
     public void HideGameOverBoard ()
     {
-        GameOverBoard.SetActive(false);
+        gameOverBoard.SetActive(false);
     }
 
-    void OnDestroy()
-    {
-        ProceedGameOver();
-    }
-
-    void ProceedGameOver ()
-    {
-        ShowGameOverBoard();
-    }
+   
 }
