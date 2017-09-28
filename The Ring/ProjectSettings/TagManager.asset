@@ -10,6 +10,7 @@ TagManager:
   - Core
   - GetScore
   - NatureEffect
+  - SmallMonster
   layers:
   - Default
   - TransparentFX

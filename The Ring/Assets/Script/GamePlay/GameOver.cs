@@ -21,7 +21,11 @@ public class GameOver : MonoBehaviour {
 
     public void OverGame()
     {
-        transparentBackground.GetComponent<TransparentBackground>().FadeIn();
+        GameObject.Find("Canvas").GetComponent<Canvas>().sortingLayerName = "UI";
+        var smallMonsters = GameObject.FindGameObjectsWithTag("SmallMonster");
+        smallMonsters[0].SetActive(false);
+		smallMonsters[1].SetActive(false);
+		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
         Invoke("ActiveOverBoard", appearTime);
     }
 
