@@ -15,8 +15,17 @@ public class Collider_SmallMonster : MonoBehaviour {
 	}
     void OnParticleCollision(GameObject other)
     {
-        //if (other.layer == 15) {
-        //    Destroy(other.gameObject);
-        //}
+        if (other.layer == 15)
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D (Collider2D col)
+    {
+        if (col.gameObject.tag.Equals("Monster"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

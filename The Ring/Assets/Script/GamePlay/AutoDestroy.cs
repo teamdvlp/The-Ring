@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour {
-
+    public float destroyTime;
 	// Use this for initialization
 	void Start () {
-        Destroy(gameObject, 0.8f);
+        Destroy(gameObject, destroyTime);
 	}
 	
 	// Update is called once per frame
