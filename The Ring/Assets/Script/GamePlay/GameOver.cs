@@ -21,7 +21,6 @@ public class GameOver : MonoBehaviour {
 
     public void OverGame()
     {
-        GameObject.Find("Canvas").GetComponent<Canvas>().sortingLayerName = "UI";
         var smallMonsters = GameObject.FindGameObjectsWithTag("SmallMonster");
         smallMonsters[0].SetActive(false);
 		smallMonsters[1].SetActive(false);
