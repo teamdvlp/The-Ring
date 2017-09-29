@@ -17,7 +17,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (other.layer == 15)
         {
-            Destroy(other.gameObject);
+          //  Destroy(other.gameObject);
         }
     }
 
@@ -25,7 +25,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Monster"))
         {
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 }
