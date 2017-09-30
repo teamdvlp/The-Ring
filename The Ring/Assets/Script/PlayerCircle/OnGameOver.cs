@@ -18,10 +18,11 @@ public class OnGameOver : MonoBehaviour {
 
    public void ProcessGameOver()
     {
-        this.GetComponent<SpriteRenderer>().enabled = false;
+		//		GameObject.Find("MovingEffect").SetActive(false);
+        GetComponent<CircleCollider2D>().enabled = false;
+		this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Movement>().enabled = false;
-        GameObject.Find("MovingEffect").SetActive(false);
         Instantiate(deathEffect, transform.position, transform.rotation);
         GameManager.GetComponent<GameOver>().OverGame();
     }
