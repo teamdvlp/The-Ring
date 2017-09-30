@@ -16,13 +16,12 @@ public class OnGameOver : MonoBehaviour {
 		
 	}
 
-    void OnDestroy()
+   public void ProcessGameOver()
     {
-        ProcessGameOver();    
-    }
-
-    void ProcessGameOver()
-    {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GetComponent<Movement>().enabled = false;
+        GameObject.Find("MovingEffect").SetActive(false);
         Instantiate(deathEffect, transform.position, transform.rotation);
         GameManager.GetComponent<GameOver>().OverGame();
     }

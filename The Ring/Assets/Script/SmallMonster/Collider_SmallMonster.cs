@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Collider_SmallMonster : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+        
+    }
+    
+    // Update is called once per frame
+    void Update () {
+        
+    }
     void OnParticleCollision(GameObject other)
     {
-        if (other.layer == 15)
+        if (other.layer == 12)
         {
-          //  Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            this.GetComponent<OnGameOver>().ProcessGameOver();
         }
     }
 
@@ -25,6 +26,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Monster"))
         {
+            this.GetComponent<OnGameOver>().ProcessGameOver();
            // Destroy(gameObject);
         }
     }

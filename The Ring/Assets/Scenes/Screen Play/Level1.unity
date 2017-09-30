@@ -22943,8 +22943,19 @@ Prefab:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1487768669001762, guid: c4758b28b4ed84026a067084ea68e8fc, type: 2}
       propertyPath: m_IsActive
+=======
+    - target: {fileID: 212209034148778412, guid: c4758b28b4ed84026a067084ea68e8fc,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1542355705
+      objectReference: {fileID: 0}
+    - target: {fileID: 212209034148778412, guid: c4758b28b4ed84026a067084ea68e8fc,
+        type: 2}
+      propertyPath: m_SortingLayer
+>>>>>>> 4da369b5c11811d4a605f2f77e5dfb6f04c0c1b2
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
