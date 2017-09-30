@@ -16,13 +16,12 @@ public class CameraFollow : MonoBehaviour {
         
     }
 	void Update () {
-        follow();
+        LimitMovement();
     }
 
-	private void follow () {
-		if (this.target != null) {
-				this.gameObject.transform.position = Vector3.Lerp (new Vector3(this.transform.position.x, this.transform.position.y, -15f),new Vector3(this.transform.position.x,target.transform.position.y + offset.y, -15), this.smoothing * Time.deltaTime);
-			}
-		}
+    void LimitMovement()
+    {
+        transform.position = new Vector3(0, transform.position.y, transform.position.z);
+    }
 
 }
