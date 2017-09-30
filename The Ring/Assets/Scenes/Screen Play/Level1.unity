@@ -663,7 +663,12 @@ Prefab:
     - target: {fileID: 198224898003501386, guid: 98869c691114df647bcc07880c04823b,
         type: 2}
       propertyPath: ShapeModule.radius.value
-      value: 0.1
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 198224898003501386, guid: 98869c691114df647bcc07880c04823b,
+        type: 2}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98869c691114df647bcc07880c04823b, type: 2}
