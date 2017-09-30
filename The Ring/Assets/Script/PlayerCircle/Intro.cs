@@ -40,7 +40,7 @@ public class Intro : MonoBehaviour {
 			StartCoroutine(wakeUpMonster(10));
             Stove.GetComponent<ParticleSystem>().Play();
 			StartCoroutine(PauseParticle(4f));
-            StartCoroutine(DestroyStoveAndPutPropertiesBack(10));
+            StartCoroutine(DestroyStoveAndPutPropertiesBack(5));
         }
     }
 
