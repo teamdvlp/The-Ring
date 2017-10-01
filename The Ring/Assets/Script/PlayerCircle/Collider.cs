@@ -5,9 +5,9 @@ using UnityEngine;
 public class Collider : MonoBehaviour {
 
     public GameObject collideEffect;
-
+    private bool pornNature;
 	void Start () {
-		
+        pornNature = false;
     }
 	
 	void Update () {
@@ -41,6 +41,7 @@ public class Collider : MonoBehaviour {
 		case 0:
 			{
 				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
+                    this.pornNature = true;
 				return;
 			}
             case 1:
@@ -66,10 +67,25 @@ public class Collider : MonoBehaviour {
 
     void OnCollisionExit2D (Collision2D col)
     {
-       
     }
 
 	void OnTriggerExit2D (Collider2D col) {
+        if (col.gameObject.layer == 9)
+        {
+            Debug.Log("Exit");
+            int currentNature = col.gameObject.GetComponent<Nature>().nature;
+            if (pornNature)
+            {
+                if (currentNature >= 5)
+                    currentNature = 0;
+            }
+            else
+            {
+                ++currentNature;
+            }
+			GetComponent<ChangeNature>().SetNature(currentNature);
+		}
 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+
 	}
 }

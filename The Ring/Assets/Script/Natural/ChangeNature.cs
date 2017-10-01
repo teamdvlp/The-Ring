@@ -33,6 +33,7 @@ public class ChangeNature : MonoBehaviour {
 
     public void SetNature(int nature)
     {
+        GetComponent<Nature>().nature = nature;
         switch (nature)
         {
             case 1:

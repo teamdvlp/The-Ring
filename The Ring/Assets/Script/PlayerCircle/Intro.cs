@@ -61,7 +61,6 @@ public class Intro : MonoBehaviour {
 		this.pieceBottom.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, -200));
         this.pieceBottom.GetComponent<Rotate>().speed = 100;
 		this.SmokeBurst.GetComponent<ParticleSystem>().Play();
-
 		this.gameObject.layer = 15;
 		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 		this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
