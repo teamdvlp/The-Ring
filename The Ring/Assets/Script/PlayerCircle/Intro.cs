@@ -15,15 +15,9 @@ public class Intro : MonoBehaviour {
 
     private bool isCollided = false;
 
-    // Use this for initialization
 	void Start () {
         isCollided = false;
         PrepareFallInStove();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		 
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,12 +64,14 @@ public class Intro : MonoBehaviour {
 		this.gameObject.GetComponent<Movement>().enabled = true;
 
         Destroy(this.Stove.GetComponent<PolygonCollider2D>());
-        StartCoroutine(DestroyAfter(5));
+
+        StartCoroutine(CleanUp(5));
     } 
 
-    private IEnumerator DestroyAfter (float delay) {
+    private IEnumerator CleanUp (float delay) {
         yield return new WaitForSeconds(delay);
 		Destroy(this.Stove);
+        Destroy(this.SmokeBurst);
 	}
 
     private IEnumerator wakeUpMonster (float delay) {
