@@ -58,12 +58,15 @@ public class Intro : MonoBehaviour {
         yield return new WaitForSeconds(delay);
         Destroy(Stove.GetComponent<ParticleSystem>());
         this.Stove.GetComponent<Animator>().SetBool("Shake", false);
-		this.pieceRight.GetComponent<Animator>().SetBool("Burst", true);
-		this.pieceLeft.GetComponent<Animator>().SetBool("Burst", true);
-		this.pieceTop.GetComponent<Animator>().SetBool("Burst", true);
-		this.pieceBottom.GetComponent<Animator>().SetBool("Burst", true);
+        this.pieceRight.GetComponent<Rigidbody2D>().AddForce(new Vector2(300,200));
+        this.pieceRight.GetComponent<Rotate>().speed=-150;
+		this.pieceLeft.GetComponent<Rigidbody2D>().AddForce(new Vector2(200, -100));
+        this.pieceLeft.GetComponent<Rotate>().speed = -150;
+		this.pieceTop.GetComponent<Rigidbody2D>().AddForce(new Vector2(-200, 300));
+		this.pieceTop.GetComponent<Rotate>().speed = 100;
+		this.pieceBottom.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, -200));
+        this.pieceBottom.GetComponent<Rotate>().speed = 100;
 		this.SmokeBurst.GetComponent<ParticleSystem>().Play();
-
 		this.gameObject.layer = 15;
 		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 		this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

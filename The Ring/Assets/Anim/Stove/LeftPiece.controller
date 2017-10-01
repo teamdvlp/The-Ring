@@ -13,7 +13,11 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 0}
+=======
+    m_Controller: {fileID: 9100000}
+>>>>>>> 9e90ed04ef101891215ed3e0c378417ee4734445
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

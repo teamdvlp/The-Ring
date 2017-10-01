@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collider : MonoBehaviour {
 
     public GameObject collideEffect;
+<<<<<<< HEAD
     PassThroughEffect passThroughEffect;
     ParticleSystem circleParticle;
 
@@ -13,6 +14,11 @@ public class Collider : MonoBehaviour {
     void Start () {
         passThroughEffect = GetComponent<PassThroughEffect>();
         playerNature = gameObject.GetComponent<Nature>();
+=======
+    private bool pornNature;
+	void Start () {
+        pornNature = false;
+>>>>>>> 9e90ed04ef101891215ed3e0c378417ee4734445
     }
 	
 	void Update () {
@@ -37,7 +43,30 @@ public class Collider : MonoBehaviour {
         {
             CollideEffect(col);
 
+<<<<<<< HEAD
             if (col.gameObject.GetComponent<Nature>() == null)
+=======
+        if (col.gameObject.GetComponent<Nature> () == null) {
+			return;
+		}
+		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
+		int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
+		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
+		int compareResult = compareNat.compareNature ();
+		switch (compareResult) {
+		case 0:
+			{
+				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
+                    this.pornNature = true;
+				return;
+			}
+            case 1:
+            	{
+            		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            		return;
+            	}
+        case 2:
+>>>>>>> 9e90ed04ef101891215ed3e0c378417ee4734445
             {
                 return;
             }
@@ -80,15 +109,34 @@ public class Collider : MonoBehaviour {
 
     void OnCollisionExit2D (Collision2D col)
     {
+<<<<<<< HEAD
         if (col.gameObject.layer == 9)
         {
             circleParticle = col.gameObject.GetComponentInChildren<ParticleSystem>();
             passThroughEffect.DisableTrigger(circleParticle);
             Debug.Log("Exit : Disable");
         }
+=======
+>>>>>>> 9e90ed04ef101891215ed3e0c378417ee4734445
     }
 
 	void OnTriggerExit2D (Collider2D col) {
+        if (col.gameObject.layer == 9)
+        {
+            Debug.Log("Exit");
+            int currentNature = col.gameObject.GetComponent<Nature>().nature;
+            if (pornNature)
+            {
+                if (currentNature >= 5)
+                    currentNature = 0;
+            }
+            else
+            {
+                ++currentNature;
+            }
+			GetComponent<ChangeNature>().SetNature(currentNature);
+		}
 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+
 	}
 }
