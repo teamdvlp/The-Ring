@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/TestAsset/TestScene/DEMO.unity
+    path: 
     guid: 51fde16b7aab8e74faa35412b9096d76
   - enabled: 0
     path: 
