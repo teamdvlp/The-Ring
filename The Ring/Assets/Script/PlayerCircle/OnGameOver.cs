@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnGameOver : MonoBehaviour {
     public GameObject deathEffect;
     public GameObject GameManager;
-
+    public GameObject Cam;
     // Use this for initialization
     void Start () {
 		
@@ -23,6 +23,7 @@ public class OnGameOver : MonoBehaviour {
 		this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Movement>().enabled = false;
+
         Instantiate(deathEffect, transform.position, transform.rotation);
         GameManager.GetComponent<GameOver>().OverGame();
     }
