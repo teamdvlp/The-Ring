@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 50601313642540924}
   - component: {fileID: 58544713030785510}
   - component: {fileID: 114934097450083800}
+  - component: {fileID: 114911601933553054}
   m_Layer: 14
   m_Name: RingProtect
   m_TagString: Untagged
@@ -73,15 +74,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1880765725268010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.91, y: -4.08, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -0, y: 4.32, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4444809968199944}
   - {fileID: 4575307356541968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4444809968199944
 Transform:
   m_ObjectHideFlags: 1
@@ -157,12 +158,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2.6
 --- !u!60 &60655086407311518
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -473,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nature: 0
+  nature: 1
 --- !u!114 &114629673972436974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,6 +487,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nature: 0
+--- !u!114 &114911601933553054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885098046522552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8409b6b86006d49dbaf56867f2e8cbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderPlayer: {fileID: 0}
 --- !u!114 &114934097450083800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32704e70edac442429c6b9723bad45e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 30
 --- !u!198 &198281435313520252
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -569,7 +582,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1912397747
+  randomSeed: 1508411008
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3013,7 +3026,7 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 0}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
@@ -3022,7 +3035,7 @@ ParticleSystem:
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
-    enter: 0
+    enter: 1
     exit: 0
     radiusScale: 1
   SubModule:

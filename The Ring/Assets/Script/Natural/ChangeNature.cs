@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeNature : MonoBehaviour {
 
     public GameObject fire, water, grass, ground, metal;
-    public GameObject playerCurrentNature;
+    public GameObject playerCurrentNature, SmokeTransform;
     public float size;
 
 	// Use this for initialization
@@ -25,6 +25,7 @@ public class ChangeNature : MonoBehaviour {
             if (gameObject.GetComponent<Nature>().nature != col.gameObject.GetComponent<Nature>().nature)
             {
                 gameObject.GetComponent<Nature>().nature = col.gameObject.GetComponent<Nature>().nature;
+                Instantiate(SmokeTransform, transform.position, transform.rotation);
                 SetNature(col.gameObject.GetComponent<Nature>().nature);
             }
             Destroy(col.gameObject);
@@ -66,10 +67,7 @@ public class ChangeNature : MonoBehaviour {
 
     void Change(GameObject nature)
     {
-        GameObject oldEffect = GameObject.FindGameObjectWithTag("NatureEffect");
-        if (oldEffect != null) {
-            Destroy(oldEffect);
-		}
+        Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);
     }

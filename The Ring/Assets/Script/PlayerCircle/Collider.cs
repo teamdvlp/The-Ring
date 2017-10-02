@@ -113,11 +113,9 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
         if (Math.Abs(distance) < Math.Abs(col.gameObject.GetComponent<CircleCollider2D>().radius) - Math.Abs(this.GetComponent<CircleCollider2D>().radius)) {
             processBornNature(col.transform.parent.gameObject);
         }
-            
-        }
+ }
 
-	// Override
-	public void OnTriggeredEnter(GameObject col)
+    public void OnTriggeredEnter(GameObject col)
     {
     }
 }

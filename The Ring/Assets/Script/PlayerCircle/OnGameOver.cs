@@ -5,7 +5,6 @@ using UnityEngine;
 public class OnGameOver : MonoBehaviour {
     public GameObject deathEffect;
     public GameObject GameManager;
-    public GameObject Cam;
     // Use this for initialization
     void Start () {
 		

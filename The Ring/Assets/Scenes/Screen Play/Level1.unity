@@ -6563,6 +6563,7 @@ MonoBehaviour:
   ground: {fileID: 1299815677178400, guid: a10c20aa3e24b9e4f84f912d7517c9a1, type: 2}
   metal: {fileID: 1876552543866436, guid: 00c856146e051394e9c43d5e719c6930, type: 2}
   playerCurrentNature: {fileID: 1956274992}
+  SmokeTransform: {fileID: 241699228}
   size: 0.075
 --- !u!114 &2141814777
 MonoBehaviour:

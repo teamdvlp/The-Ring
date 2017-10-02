@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 50345245894666240}
   - component: {fileID: 58773611510866306}
   - component: {fileID: 114827876949199266}
+  - component: {fileID: 114637090021011968}
   m_Layer: 14
   m_Name: RingProtect
   m_TagString: Untagged
@@ -157,12 +158,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2.6
 --- !u!60 &60737435529849008
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -485,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nature: 0
+  nature: 4
 --- !u!114 &114593519889020070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,6 +499,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nature: 0
+--- !u!114 &114637090021011968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255500956895632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8409b6b86006d49dbaf56867f2e8cbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderPlayer: {fileID: 0}
 --- !u!114 &114827876949199266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,14 +582,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1184769361
+  randomSeed: -1192223774
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -965,7 +978,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 300
+    maxNumParticles: 1000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2992,9 +3005,9 @@ ParticleSystem:
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
-    enter: 0
+    enter: 1
     exit: 0
-    radiusScale: 1
+    radiusScale: 2
   SubModule:
     serializedVersion: 2
     enabled: 0
