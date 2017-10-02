@@ -110,7 +110,8 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
                                     +
                                    (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y)
                                    );
-        if (Math.Abs(distance) < Math.Abs(col.gameObject.GetComponent<CircleCollider2D>().radius) - Math.Abs(this.GetComponent<CircleCollider2D>().radius)) {
+        Debug.Log("Stay: " + distance + "radius: " + col.gameObject.GetComponent<CircleCollider2D>().radius);
+		if (Math.Abs(distance) < Math.Abs(col.gameObject.GetComponent<CircleCollider2D>().radius) - Math.Abs(this.GetComponent<CircleCollider2D>().radius)*2) {
             processBornNature(col.transform.parent.gameObject);
         }
  }
