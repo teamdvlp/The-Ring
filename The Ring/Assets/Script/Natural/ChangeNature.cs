@@ -8,14 +8,12 @@ public class ChangeNature : MonoBehaviour {
     public GameObject playerCurrentNature, SmokeTransformFire,SmokeTransformGrass, SmokeTransformWater, SmokeTransformGround, SmokeTransformMetal;
     public Sprite firePlayer, waterPlayer, grassLayer, groundLayer, metalPlayer;
     public float size;
-    public GameObject transformLight;
     Animator animTransformLight;
     SpriteRenderer playerRenderer;
 
 	// Use this for initialization
 	void Start () {
-        playerRenderer = gameObject.GetComponent<SpriteRenderer>();
-        animTransformLight = transformLight.GetComponent<Animator>();
+        playerRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -85,6 +83,5 @@ public class ChangeNature : MonoBehaviour {
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);
-        animTransformLight.Play("LightUp");
     }
 }
