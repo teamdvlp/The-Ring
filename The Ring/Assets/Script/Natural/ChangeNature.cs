@@ -5,12 +5,17 @@ using UnityEngine;
 public class ChangeNature : MonoBehaviour {
 
     public GameObject fire, water, grass, ground, metal;
-    public GameObject playerCurrentNature, SmokeTransform;
+    public GameObject playerCurrentNature, SmokeTransformFire,SmokeTransformGrass, SmokeTransformWater, SmokeTransformGround, SmokeTransformMetal;
+    public Sprite firePlayer, waterPlayer, grassLayer, groundLayer, metalPlayer;
     public float size;
+    public GameObject transformLight;
+    Animator animTransformLight;
+    SpriteRenderer playerRenderer;
 
 	// Use this for initialization
 	void Start () {
-         
+        playerRenderer = gameObject.GetComponent<SpriteRenderer>();
+        animTransformLight = transformLight.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,7 +30,7 @@ public class ChangeNature : MonoBehaviour {
             if (gameObject.GetComponent<Nature>().nature != col.gameObject.GetComponent<Nature>().nature)
             {
                 gameObject.GetComponent<Nature>().nature = col.gameObject.GetComponent<Nature>().nature;
-                Instantiate(SmokeTransform, transform.position, transform.rotation);
+                
                 SetNature(col.gameObject.GetComponent<Nature>().nature);
             }
             Destroy(col.gameObject);
@@ -40,26 +45,36 @@ public class ChangeNature : MonoBehaviour {
             case 1:
                 {
                     Change(metal);
-                    break;
+                    Instantiate(SmokeTransformMetal, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
+                    playerRenderer.sprite = metalPlayer;
+                        break;
                 }
             case 2:
                 {
+                    Instantiate(SmokeTransformGrass, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(grass);
+                    playerRenderer.sprite = grassLayer;
                     break;
                 }
             case 3:
                 {
+                    Instantiate(SmokeTransformWater, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(water);
+                    playerRenderer.sprite = waterPlayer;
                     break;
                 }
             case 4:
                 {
+                    Instantiate(SmokeTransformFire, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(fire);
+                    playerRenderer.sprite = firePlayer;
                     break;
                 }
             case 5:
                 {
+                    Instantiate(SmokeTransformGround, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(ground);
+                    playerRenderer.sprite = groundLayer;
                     break;
                 }
         }
@@ -70,5 +85,6 @@ public class ChangeNature : MonoBehaviour {
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);
+        animTransformLight.Play("LightUp");
     }
 }

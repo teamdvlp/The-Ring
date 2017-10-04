@@ -1814,6 +1814,36 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114705039831125190, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: ringProtect
+      value: 
+      objectReference: {fileID: 1689171103}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: playerLimits.MaximumX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: playerLimits.MinimumX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: playerLimits.MaximumY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: playerLimits.MinimumY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114059774685102844, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+        type: 2}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e132b70cb2214f0b9266b7fbe3a38d9, type: 2}
   m_IsPrefabParent: 0
@@ -2332,6 +2362,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1689171103 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1432826976364280, guid: 9e132b70cb2214f0b9266b7fbe3a38d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 953679638}
 --- !u!1 &1845660571
 GameObject:
   m_ObjectHideFlags: 0
