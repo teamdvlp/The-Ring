@@ -6,7 +6,9 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 	public GameObject collideEffect;
 	public GameObject ringProtect;
     private bool isBornNature;
+    private bool isStayIn;
 	void Start () {
+        isStayIn = false;
         isBornNature = false;
     }
 	
@@ -70,7 +72,7 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 	}
 
 	void OnTriggerExit2D (Collider2D col) {
-		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+			this.gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
 	}
 
     private void processBornNature(GameObject col)
@@ -101,7 +103,10 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
     // Override
     public void OnTriggeredExit(GameObject col)
     {
+        if (isStayIn) {
 			processBornNature(col.transform.parent.gameObject);
+            isStayIn = false;
+        }
     }
 	// Override
 	public void OnTriggeredStay(GameObject col)
@@ -113,6 +118,7 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
         Debug.Log("Stay: " + distance + "radius: " + col.gameObject.GetComponent<CircleCollider2D>().radius);
 		if (Math.Abs(distance) < Math.Abs(col.gameObject.GetComponent<CircleCollider2D>().radius) - Math.Abs(this.GetComponent<CircleCollider2D>().radius)*2) {
             processBornNature(col.transform.parent.gameObject);
+            isStayIn = true;
         }
  }
 
