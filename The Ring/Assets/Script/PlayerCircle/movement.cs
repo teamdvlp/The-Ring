@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 	public Trackpad trackpad;
-    public int speed;
+    public float speed;
     public Limit playerLimits;
 
     void Start () {
