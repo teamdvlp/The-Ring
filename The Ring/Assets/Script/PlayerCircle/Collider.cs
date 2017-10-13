@@ -69,6 +69,45 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 		}
 	}
 
+	void OnTriggerEnter2D (Collider2D col) {
+		if (col.gameObject.layer == 14) {
+			Debug.Log ("FUCK");
+			if (col.gameObject.GetComponent<Nature> () == null) {
+				return;
+			}
+			int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
+			int natureIndex2 = col.gameObject.GetComponent<Nature> ().nature;
+			CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
+			int compareResult = compareNat.compareNature ();
+			switch (compareResult) {
+			case 0:
+				{
+					this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
+					return;
+				}
+			case 1:
+				{
+					this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+					return;
+				}
+			case 2:
+				{
+					Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
+					gameObject.GetComponent<Nature>().nature = 0;
+					return;
+				}
+			case 3: 
+				{
+					this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+					return;
+				}
+			default:
+				return;
+			}
+		}
+
+	}
+
 	void OnTriggerExit2D (Collider2D col) {
 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
 	}
