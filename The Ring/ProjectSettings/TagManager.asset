@@ -12,6 +12,7 @@ TagManager:
   - NatureEffect
   - SmallMonster
   - EffectNature
+  - Ring
   layers:
   - Default
   - TransparentFX
