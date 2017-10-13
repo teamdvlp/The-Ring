@@ -8,13 +8,15 @@ public class ChangeNature : MonoBehaviour {
     public GameObject playerCurrentNature, SmokeTransformFire,SmokeTransformGrass, SmokeTransformWater, SmokeTransformGround, SmokeTransformMetal;
     public Sprite firePlayer, waterPlayer, grassLayer, groundLayer, metalPlayer;
     public float size;
+	Nature playerNature, coreNature;
     Animator animTransformLight;
     SpriteRenderer playerRenderer;
 
 	// Use this for initialization
 	void Start () {
         playerRenderer = GetComponent<SpriteRenderer>();
-    }
+		playerNature = GetComponent<Nature> ();	
+	}
 
     // Update is called once per frame
     void Update () {
@@ -25,11 +27,11 @@ public class ChangeNature : MonoBehaviour {
     {
         if (col.gameObject.tag == "Core")
         {
-            if (gameObject.GetComponent<Nature>().nature != col.gameObject.GetComponent<Nature>().nature)
+			coreNature = col.GetComponent<Nature> ();
+			if (playerNature.nature != coreNature.nature)
             {
-                gameObject.GetComponent<Nature>().nature = col.gameObject.GetComponent<Nature>().nature;
-                
-                SetNature(col.gameObject.GetComponent<Nature>().nature);
+				playerNature.nature = coreNature.nature;
+				SetNature(coreNature.nature);
             }
             Destroy(col.gameObject);
         }
@@ -81,6 +83,7 @@ public class ChangeNature : MonoBehaviour {
     void Change(GameObject nature)
     {
         Destroy(playerCurrentNature);
+		Debug.Log ("Core : " + coreNature.nature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);
     }
