@@ -934,7 +934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4934327889056146, guid: 98869c691114df647bcc07880c04823b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.28
+      value: 32.2
       objectReference: {fileID: 0}
     - target: {fileID: 4934327889056146, guid: 98869c691114df647bcc07880c04823b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2418,7 +2418,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1170687558
+  randomSeed: 91272332
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6745,23 +6745,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86507238c37675b43bb1a29055adf906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 1575852710466420, guid: 3970217068139284ba160e440b62d059, type: 2}
-  water: {fileID: 1427101683265026, guid: 9a2045916efae2a449e4c57408a58bb2, type: 2}
-  grass: {fileID: 1481878202762370, guid: 2650218f2e1c4b84fb4cac837b1bb808, type: 2}
-  ground: {fileID: 1299815677178400, guid: a10c20aa3e24b9e4f84f912d7517c9a1, type: 2}
-  metal: {fileID: 1876552543866436, guid: 00c856146e051394e9c43d5e719c6930, type: 2}
+  fire: {fileID: 1070868501533450, guid: b85a165151ac90e4ba4f86c0f74da49b, type: 2}
+  water: {fileID: 1745796615465252, guid: a76d36ec1f8b90045ba3bcf1a0f4af9b, type: 2}
+  grass: {fileID: 1217773454774368, guid: dc07eee00054e9e4e8375b00fc105f1a, type: 2}
+  ground: {fileID: 1170988087702458, guid: 0ce01aa6f3aa4114ca36fb9ce516ac5b, type: 2}
+  metal: {fileID: 1025105167030484, guid: 5a76a91687abc7942813d80459401160, type: 2}
   playerCurrentNature: {fileID: 1689171103}
-  SmokeTransformFire: {fileID: 0}
-  SmokeTransformGrass: {fileID: 0}
-  SmokeTransformWater: {fileID: 0}
-  SmokeTransformGround: {fileID: 0}
-  SmokeTransformMetal: {fileID: 0}
-  firePlayer: {fileID: 0}
-  waterPlayer: {fileID: 0}
-  grassLayer: {fileID: 0}
-  groundLayer: {fileID: 0}
-  metalPlayer: {fileID: 0}
-  size: 0.075
+  SmokeTransformFire: {fileID: 1099993623772848, guid: c34970478e3d2bb41b5862606af17f7f,
+    type: 2}
+  SmokeTransformGrass: {fileID: 1202411408832822, guid: b0ddbf552b11158499e1e00471b4e4a7,
+    type: 2}
+  SmokeTransformWater: {fileID: 1915057418881676, guid: 6160be74254b0ac4f92e5539f3daa535,
+    type: 2}
+  SmokeTransformGround: {fileID: 1792190606263184, guid: 41d04af02ab47ac4dbdb6a13d5088f9b,
+    type: 2}
+  SmokeTransformMetal: {fileID: 1756586489338020, guid: 59c34af3c29facc4090f3d1a632233fb,
+    type: 2}
+  firePlayer: {fileID: 21300000, guid: 669186fbd48b66f48979708ae9629169, type: 3}
+  waterPlayer: {fileID: 21300000, guid: dca3c9e1c735807448c9ab84eae9f9c7, type: 3}
+  grassLayer: {fileID: 21300000, guid: b91b74f7b2529a044b9f39746096a0c0, type: 3}
+  groundLayer: {fileID: 21300000, guid: 57758eb15eddf8d4d98997492a5065a7, type: 3}
+  metalPlayer: {fileID: 21300000, guid: c9c379c416c16654a90aa977d76d839d, type: 3}
+  size: 1.452253
 --- !u!114 &2141814777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6846,7 +6851,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.52
 --- !u!50 &2141814783
 Rigidbody2D:
   serializedVersion: 4
@@ -6916,7 +6921,7 @@ SpriteRenderer:
   m_SortingLayerID: -1542355705
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 669186fbd48b66f48979708ae9629169, type: 3}
   m_Color: {r: 0.40933174, g: 0.8308824, b: 0.7959954, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6934,8 +6939,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141814774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 33.9, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0.59, y: 36.35, z: 0}
+  m_LocalScale: {x: 0.8275747, y: 0.8275747, z: 0.8275747}
   m_Children:
   - {fileID: 1486573229}
   - {fileID: 1689171104}
