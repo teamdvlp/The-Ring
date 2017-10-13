@@ -88,16 +88,13 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 		}
         GameObject ring = col.gameObject.transform.parent.gameObject;
 		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
-        Debug.Log("1: " +  natureIndex1);
 		int natureIndex2 = ring.GetComponent<Nature> ().nature;
-        Debug.Log("2: " +  natureIndex2);
 		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
 		int compareResult = compareNat.compareNature ();
         Debug.Log(compareResult);
 		switch (compareResult) {
 		case 0:
 			{
-                Debug.Log("truecc");
 				    this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
                     this.isBornNature = true;
                     this.processCollideWithAgainstRing(ring);
@@ -113,7 +110,6 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
         case 2:
             {
                     Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
-                    gameObject.GetComponent<Nature>().nature = 0;
 					this.processCollideWithNormalRing(ring);
 					isBornNature = false;
 					return;
