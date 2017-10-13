@@ -20,14 +20,16 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 
 	public void OnDrag (PointerEventData evenData) 
 	{
-			endPoint = evenData.position;
-			direction = (endPoint - startPoint) / 100f;
-			point1.transform.position = player.transform.position + direction *  0.2f;
-			point2.transform.position = player.transform.position + direction * 0.4f;
-			point3.transform.position = player.transform.position + direction * 0.6f;
-			point4.transform.position = player.transform.position + direction * 0.8f;
-			point5.transform.position = player.transform.position + direction * 1f;
-			setActivePoint (true);
+		endPoint = evenData.position;
+		direction = (endPoint - startPoint) / 100f;
+		Debug.Log (direction.magnitude);
+		direction = direction.magnitude > 4 ? direction.normalized * 4 : direction;
+		point1.transform.position = player.transform.position + direction *  0.2f;
+		point2.transform.position = player.transform.position + direction * 0.4f;
+		point3.transform.position = player.transform.position + direction * 0.6f;
+		point4.transform.position = player.transform.position + direction * 0.8f;
+		point5.transform.position = player.transform.position + direction * 1f;
+		setActivePoint (true);
 	}
 
 	public void OnPointerUp (PointerEventData eventData) 
@@ -54,5 +56,6 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 
 	
 	void Update () {
+		
 	}
 }
