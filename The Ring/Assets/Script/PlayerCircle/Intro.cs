@@ -28,7 +28,7 @@ public class Intro : MonoBehaviour {
     private void PrepareFallInStove () {
         this.gameObject.layer = 16;
 		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-        this.gameObject.GetComponent<Movement>().enabled = false;
+            this.gameObject.GetComponent<Movement>().enabled = false;
 		}
 
     private void PrepareAfterCollide () {
