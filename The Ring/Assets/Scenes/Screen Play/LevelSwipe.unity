@@ -6697,7 +6697,7 @@ MonoBehaviour:
   grassLayer: {fileID: 21300000, guid: b91b74f7b2529a044b9f39746096a0c0, type: 3}
   groundLayer: {fileID: 21300000, guid: 57758eb15eddf8d4d98997492a5065a7, type: 3}
   metalPlayer: {fileID: 21300000, guid: c9c379c416c16654a90aa977d76d839d, type: 3}
-  size: 1.452253
+  size: 12.4038
 --- !u!114 &2141814777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6887,7 +6887,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141814774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 37.76, z: 0}
+  m_LocalPosition: {x: 0.25, y: 34.94, z: 0}
   m_LocalScale: {x: 0.20447119, y: 0.24055433, z: 0.24055433}
   m_Children:
   - {fileID: 1486573229}
