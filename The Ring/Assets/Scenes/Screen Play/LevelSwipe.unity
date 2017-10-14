@@ -1439,7 +1439,18 @@ Prefab:
       propertyPath: m_Name
       value: GrassCircle (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114516481989616592, guid: 80d828044c36c4856a57efae0144dbd8,
+        type: 2}
+      propertyPath: nature
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 60655086407311518, guid: 80d828044c36c4856a57efae0144dbd8,
+        type: 2}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114934097450083800, guid: 80d828044c36c4856a57efae0144dbd8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 80d828044c36c4856a57efae0144dbd8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &499947230
