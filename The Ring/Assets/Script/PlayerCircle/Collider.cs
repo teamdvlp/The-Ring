@@ -5,10 +5,10 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 	public GameObject collideEffect;
 	public GameObject ringProtect;
     private bool isBornNature;
-    private bool stopBorn;
+    private bool isPlayerInCircle;
 	void Start () {
         isBornNature = false;
-        stopBorn = false;
+        isPlayerInCircle = false;
     }
 	
     void CollideEffect (Collision2D col)
@@ -27,12 +27,27 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 
 	}
 
+	void OnCollisionExit2D(Collision2D other)
+	{
+		isBornNature = false;	
+	}
+
 	void OnTriggerExit2D (Collider2D col) {
+		if (isPlayerInCircle) {
+                isPlayerInCircle = false;
+				isBornNature = true;
+                processBornNature(col.gameObject);
+            }
 		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
 	}
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+    }
+
     private void processBornNature(GameObject col)
     {
+		
         if (isBornNature) {
         isBornNature = false;
         int currentNature = col.GetComponent<Nature>().nature;
@@ -59,8 +74,8 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
     // Override
     public void OnTriggeredExit(GameObject col)
     {
-            isBornNature = true;
-			processBornNature(col.transform.parent.gameObject);
+			isBornNature = false;
+			
     }
 	// Override
 	public void OnTriggeredStay(GameObject col)
@@ -69,6 +84,7 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
                                     +
                                    (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
         if (Math.Abs(distance) < Math.Abs(2.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+            isPlayerInCircle = true;
             processBornNature(col.transform.parent.gameObject);
         GameObject ring = col.gameObject.transform.parent.gameObject;
 		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
@@ -78,8 +94,9 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
             if (compareResult == 0) {
         this.GetComponent<CircleCollider2D>().isTrigger = true;            
             }
-        } 
- }
+		}
+            
+        }
 
     public void OnTriggeredEnter(GameObject col)
     {
@@ -109,7 +126,8 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
             	}
         case 2:
             {
-                    Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
+                    // Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
+            		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
 					this.processCollideWithNormalRing(ring);
 					isBornNature = false;
 					return;
