@@ -67,6 +67,7 @@ public class ChangeNature : MonoBehaviour {
                 {
                     Instantiate(SmokeTransformFire, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(fire);
+				Debug.Log ("BUG SẤP MẶT");
                     playerRenderer.sprite = firePlayer;
                     break;
                 }
