@@ -59,7 +59,6 @@ GameObject:
   - component: {fileID: 4575307356541968}
   - component: {fileID: 50601313642540924}
   - component: {fileID: 58544713030785510}
-  - component: {fileID: 114934097450083800}
   - component: {fileID: 114911601933553054}
   m_Layer: 14
   m_Name: RingProtect
@@ -175,7 +174,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nature: 1
+  nature: 2
 --- !u!114 &114629673972436974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,18 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColliderPlayer: {fileID: 0}
---- !u!114 &114934097450083800
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885098046522552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nature: 0
 --- !u!114 &114989754402305550
 MonoBehaviour:
   m_ObjectHideFlags: 1
