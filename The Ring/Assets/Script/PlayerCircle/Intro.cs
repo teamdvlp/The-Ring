@@ -31,9 +31,6 @@ public class Intro : MonoBehaviour {
 		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
 		swipe.enabled = false;	
 	}
-
-    
-
 	private void PrepareAfterCollide () {
 		
         if (!isCollided) {
@@ -53,15 +50,12 @@ public class Intro : MonoBehaviour {
         Stove.GetComponent<ParticleSystem>().Pause();
 	}
 
-
-    
 	private IEnumerator DestroyStoveAndPutPropertiesBack(float delay) {
         yield return new WaitForSeconds(delay);
+	    this.Stove.GetComponent<PolygonCollider2D>().enabled = false;
         Destroy(Stove.GetComponent<ParticleSystem>());
         this.Stove.GetComponent<Animator>().SetBool("Shake", false);
-
 		this.ProcessFlyingPiece ();
-
 		this.SmokeBurst.GetComponent<ParticleSystem>().Play();
 		this.gameObject.layer = 15;
 		this.gameObject.GetComponent<CircleCollider2D> ().sharedMaterial = bounceMaterial;
@@ -70,11 +64,8 @@ public class Intro : MonoBehaviour {
 		player.velocity = Vector2.zero;
 		player.drag = 5;
 		swipe.enabled = true;
-		Destroy(this.Stove.GetComponent<PolygonCollider2D>());
 		StartCoroutine(CleanUp(5));
     }
-
-
 
 	private void ProcessFlyingPiece() {
 		Rigidbody2D right = this.pieceRight.GetComponent<Rigidbody2D>();
@@ -91,17 +82,11 @@ public class Intro : MonoBehaviour {
 		bottom.AddTorque(100);
 	}
 
-
-
-
     private IEnumerator CleanUp (float delay) {
         yield return new WaitForSeconds(delay);
 		Destroy(this.Stove);
         Destroy(this.SmokeBurst);
 	}
-
-
-
 
     private IEnumerator wakeUpMonster (float delay) {
         yield return new WaitForSeconds(delay);
