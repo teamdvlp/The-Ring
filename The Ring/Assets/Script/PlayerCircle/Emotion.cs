@@ -5,30 +5,55 @@ using UnityEngine;
 public class Emotion : MonoBehaviour {
 	public GameObject monster;
 	Animator anim;
+	public float DurationCryAnim, DurationScreamAnim;
 	float timePlaySmileAnim;
+	float timePlayCryAnim;
 	public float distance;
-
+	bool isSafe;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		timePlaySmileAnim = 2f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameObject.transform.position.y - monster.transform.position.y < distance) {
-			anim.Play ("cry");
+		/* Is not safe */
+		if (gameObject.transform.position.y - monster.transform.position.y <= distance) {
+			ProcessPlayCryAnim ();
+		/* Is safe */
 		} else {
-			timePlaySmileAnim -= Time.deltaTime;
-			if (timePlaySmileAnim <= 0) {
-				anim.Play ("smile");
-				timePlaySmileAnim = 2f;
-			}
+			ProcessPlaySmileAnim ();
 		}
 	}
 
 	void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.layer == 9) {
-			anim.Play ("scream");
+			ProcessPlayScreamAnim ();			
 		}
 	}
+
+	#region ProcessAnim
+	//Smile
+	private void ProcessPlaySmileAnim () {
+		anim.SetBool ("isSafe", true);
+	}
+
+	//Cry
+	private void ProcessPlayCryAnim () {
+		anim.SetBool ("isSafe", false);
+	}
+
+	//Scream
+	private void ProcessPlayScreamAnim () {
+		anim.Play ("scream");
+		anim.SetBool ("isHurt",true);
+	}
+	#endregion
+
+	public void setIsNotHurt () {
+		anim.SetBool ("isHurt", false);
+	}
+
+
 }
