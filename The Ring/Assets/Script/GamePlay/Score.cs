@@ -35,7 +35,7 @@ public class Score : MonoBehaviour {
     }
 
 
-    void OnDestroy ()
+    void OnDisable()
     {
         scoreText.text = score;
     }
