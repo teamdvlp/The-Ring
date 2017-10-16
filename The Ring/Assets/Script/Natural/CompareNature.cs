@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 public class CompareNature  {
     // nature1 sẽ được đem so sánh với nature2   
-	private int natureIndex1;
-	private int natureIndex2;
-
 	private string nature1;
 	private string nature2;
 
-	public CompareNature(int natureIndex1, int natureIndex2) {
-		this.natureIndex1 = natureIndex1;
-		this.natureIndex2 = natureIndex2;
+	public CompareNature() {
 	}
 
 	// 0: nature1 khắc nature2;
 	// 1: nature1 bằng nature2;
 	// 2: nature2 khắc nature1
 	// 3: nature1 không khắc nature2 và ngược lại
-    public int compareNature() {
+    public int compareNature(int natureIndex1, int natureIndex2) {
 		ListNature lsNature = new ListNature ();
 		nature1 = lsNature.getListNature () [natureIndex1];
 		nature2 = lsNature.getListNature () [natureIndex2];

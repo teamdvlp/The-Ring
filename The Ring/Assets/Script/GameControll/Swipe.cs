@@ -36,7 +36,7 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 			setActivePoint (false);
 			direction = (Vector3) eventData.position - startPoint;
 			direction /= 3f;
-			rigidBody.AddForce (-direction * force);
+			rigidBody.velocity = (-direction);
 	}
 
 	void setActivePoint(bool isActive) {

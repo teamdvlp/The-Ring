@@ -1,16 +1,17 @@
 using System;
 using UnityEngine;
-public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
+public class Collider : MonoBehaviour {
 
 	public GameObject collideEffect;
 	public GameObject ringProtect;
-    private bool isBornNature;
-    private bool isPlayerInCircle;
+	private CircleCollider2D mCircleCollider;
+	private Nature mNature;
+
 	void Start () {
-        isBornNature = false;
-        isPlayerInCircle = false;
+		mCircleCollider = GetComponent<CircleCollider2D>();
+		mNature = this.GetComponent<Nature>();
     }
-	
+
     void CollideEffect (Collision2D col)
     {
         ContactPoint2D point = col.contacts[0];
@@ -23,43 +24,21 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
         CollideEffect(col);
     }
 
-    void OnCollisionEnter2D (Collision2D col) {
-
-	}
-
-	void OnCollisionExit2D(Collision2D other)
-	{
-		isBornNature = false;	
-	}
-
 	void OnTriggerExit2D (Collider2D col) {
-		if (isPlayerInCircle) {
-                isPlayerInCircle = false;
-				isBornNature = true;
-                processBornNature(col.gameObject);
-            }
-		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+			if (col.gameObject.layer == 9) {
+			col.GetComponent<PolygonCollider2D>().isTrigger = false;
+			}
 	}
 
     void OnTriggerEnter2D(Collider2D col)
     {
+		if (col.gameObject.name == "RingProtect") {
+			processCollider(col.gameObject);
+		}
     }
-
-    private void processBornNature(GameObject col)
-    {
-		
-        if (isBornNature) {
-        isBornNature = false;
-        int currentNature = col.GetComponent<Nature>().nature;
-        currentNature = currentNature + 1;
-        if (currentNature > 5)
-        {
-            currentNature = 1;
-        }
-        GetComponent<ChangeNature>().SetNature(currentNature);
-    }
-    }
-
+	void OnCollisionEnter2D(Collision2D other)
+	{
+	}
 	private void processCollideWithAgainstRing(GameObject Ring)
 	{
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
@@ -71,77 +50,49 @@ public class Collider : MonoBehaviour, ColliderRingProtect.OnTriggerd {
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
 		collision.enabled = false;
 	}
-    // Override
-    public void OnTriggeredExit(GameObject col)
-    {
-			isBornNature = false;
-			
-    }
-	// Override
-	public void OnTriggeredStay(GameObject col)
-    {
-        double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
-                                    +
-                                   (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
-        if (Math.Abs(distance) < Math.Abs(2.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-            isPlayerInCircle = true;
-            processBornNature(col.transform.parent.gameObject);
-        GameObject ring = col.gameObject.transform.parent.gameObject;
-		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
-		int natureIndex2 = ring.GetComponent<Nature> ().nature;
-		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
-		int compareResult = compareNat.compareNature ();
-            if (compareResult == 0) {
-        this.GetComponent<CircleCollider2D>().isTrigger = true;            
-            }
+	
+	void OnTriggerStay2D(Collider2D other)
+		{
+			if (other.gameObject.layer == 14) {
+			processCollider(other.gameObject);
 		}
-            
-        }
-
-    public void OnTriggeredEnter(GameObject col)
-    {
-        if (col.gameObject.GetComponentInParent<Nature> () == null) {
-			return;
 		}
-        GameObject ring = col.gameObject.transform.parent.gameObject;
-		int natureIndex1 = this.gameObject.GetComponent<Nature> ().nature;
-		int natureIndex2 = ring.GetComponent<Nature> ().nature;
-		CompareNature compareNat = new CompareNature (natureIndex1,natureIndex2);
-		int compareResult = compareNat.compareNature ();
-        Debug.Log(compareResult);
+	private int natureIndex1,natureIndex2, compareResult;
+	private GameObject ring;
+	CompareNature compareNat = new CompareNature();
+	private void processCollider (GameObject col) {
+        ring = col.gameObject.transform.parent.gameObject;
+		natureIndex1 = mNature.nature;
+		natureIndex2 = ring.GetComponent<Nature> ().nature;
+		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
 		switch (compareResult) {
 		case 0:
 			{
-				    this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = true;
-                    this.isBornNature = true;
+            		ring.GetComponent<PolygonCollider2D>().isTrigger = false;
                     this.processCollideWithAgainstRing(ring);
 					return;
 			}
-            case 1:
+    	case 1:
             	{
-            		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            		ring.GetComponent<PolygonCollider2D>().isTrigger = true;
                     this.processCollideWithNormalRing(ring);
-                    isBornNature = false;
 					return;
             	}
         case 2:
             {
-                    // Destroy(gameObject.GetComponent<ChangeNature>().playerCurrentNature);
-            		this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            		ring.GetComponent<PolygonCollider2D>().isTrigger = false;
 					this.processCollideWithNormalRing(ring);
-					isBornNature = false;
 					return;
 			}
 		case 3: 
 			{
-				this.gameObject.GetComponent<CircleCollider2D> ().isTrigger = false;
+            		ring.GetComponent<PolygonCollider2D>().isTrigger = false;
 					this.processCollideWithNormalRing(ring);
-					isBornNature = false;
 					return;
 			}
 		default:
-				isBornNature = false;
 				return;
 		}
-    }
+		
+	}
 }
