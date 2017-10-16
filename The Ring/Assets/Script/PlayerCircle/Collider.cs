@@ -5,9 +5,16 @@ public class Collider : MonoBehaviour {
 	public GameObject collideEffect;
 	public GameObject ringProtect;
 	private CircleCollider2D mCircleCollider;
+
+	private bool isCollideCircle;
+	private bool isCollideCircleInside;
 	private Nature mNature;
 
+	private 
+
 	void Start () {
+		isCollideCircleInside = false;
+		isCollideCircle = false;
 		mCircleCollider = GetComponent<CircleCollider2D>();
 		mNature = this.GetComponent<Nature>();
     }
@@ -27,14 +34,35 @@ public class Collider : MonoBehaviour {
 	void OnTriggerExit2D (Collider2D col) {
 			if (col.gameObject.layer == 9) {
 			col.GetComponent<PolygonCollider2D>().isTrigger = false;
+			isCollideCircle = false;
+			}
+			else if (col.gameObject.layer == 18) {
+				isCollideCircleInside = false;
+			}
+			if (col.gameObject.layer == 9) {
+				if (!isCollideCircle && !isCollideCircleInside) {
+				Debug.Log("Đổi hệ ngoài");
+			}
 			}
 	}
 
     void OnTriggerEnter2D(Collider2D col)
     {
-		if (col.gameObject.name == "RingProtect") {
+		if (col.gameObject.layer == 14) {
 			processCollider(col.gameObject);
+		} 
+		else if (col.gameObject.layer == 9) {
+			isCollideCircle = true;
 		}
+		else if (col.gameObject.layer == 18) {
+			isCollideCircleInside = true;	
+		}
+		if (col.gameObject.layer == 18) {
+			if (isCollideCircle && isCollideCircleInside) {
+			Debug.Log("Đổi hệ trong");
+		}
+		}
+
     }
 	void OnCollisionEnter2D(Collision2D other)
 	{
