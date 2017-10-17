@@ -5677,6 +5677,11 @@ Prefab:
       propertyPath: m_Layer
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 58390539126708072, guid: 04d4278ccc32b425fa08f35f673a5b7a,
+        type: 2}
+      propertyPath: m_Radius
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04d4278ccc32b425fa08f35f673a5b7a, type: 2}
   m_IsPrefabParent: 0
@@ -6830,6 +6835,7 @@ MonoBehaviour:
   collideEffect: {fileID: 1170039246907364, guid: f2cb3ae491df29c4aa1b9ee7417218f4,
     type: 2}
   ringProtect: {fileID: 1689171103}
+  checkNature: 0
 --- !u!95 &2141814785
 Animator:
   serializedVersion: 3

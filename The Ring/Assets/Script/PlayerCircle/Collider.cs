@@ -1,20 +1,16 @@
 using System;
 using UnityEngine;
 public class Collider : MonoBehaviour {
-
 	public GameObject collideEffect;
 	public GameObject ringProtect;
 	private CircleCollider2D mCircleCollider;
-
-	private bool isCollideCircle;
-	private bool isCollideCircleInside;
 	private Nature mNature;
-
-	private 
+	public bool checkNature;
+	private bool isBornNature;
 
 	void Start () {
-		isCollideCircleInside = false;
-		isCollideCircle = false;
+		checkNature = false;
+		isBornNature = false;
 		mCircleCollider = GetComponent<CircleCollider2D>();
 		mNature = this.GetComponent<Nature>();
     }
@@ -30,43 +26,6 @@ public class Collider : MonoBehaviour {
     {
         CollideEffect(col);
     }
-
-	void OnTriggerExit2D (Collider2D col) {
-			if (col.gameObject.layer == 9) {
-			col.GetComponent<PolygonCollider2D>().isTrigger = false;
-			isCollideCircle = false;
-			}
-			else if (col.gameObject.layer == 18) {
-				isCollideCircleInside = false;
-			}
-			if (col.gameObject.layer == 9) {
-				if (!isCollideCircle && !isCollideCircleInside) {
-				Debug.Log("Đổi hệ ngoài");
-			}
-			}
-	}
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-		if (col.gameObject.layer == 14) {
-			processCollider(col.gameObject);
-		} 
-		else if (col.gameObject.layer == 9) {
-			isCollideCircle = true;
-		}
-		else if (col.gameObject.layer == 18) {
-			isCollideCircleInside = true;	
-		}
-		if (col.gameObject.layer == 18) {
-			if (isCollideCircle && isCollideCircleInside) {
-			Debug.Log("Đổi hệ trong");
-		}
-		}
-
-    }
-	void OnCollisionEnter2D(Collision2D other)
-	{
-	}
 	private void processCollideWithAgainstRing(GameObject Ring)
 	{
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
@@ -78,11 +37,33 @@ public class Collider : MonoBehaviour {
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
 		collision.enabled = false;
 	}
-	
-	void OnTriggerStay2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.layer == 14) {
+			checkNature = true;
+		}
+	}
+	void OnTriggerStay2D(Collider2D col)
 		{
-			if (other.gameObject.layer == 14) {
-			processCollider(other.gameObject);
+			if (col.gameObject.layer == 14) {
+			if (checkNature) {
+			processCollider(col.gameObject);
+			checkNature = false;
+				}
+		double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
+                                    +
+                                   (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
+        if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+			if (isBornNature) {
+			Debug.Log("Đổi hệ trong");
+			isBornNature = false;
+			}
+		} else {
+			if (isBornNature) {
+			Debug.Log("Đổi hệ ngoài");
+			isBornNature = false;
+			}
+		}
 		}
 		}
 	private int natureIndex1,natureIndex2, compareResult;
@@ -93,6 +74,7 @@ public class Collider : MonoBehaviour {
 		natureIndex1 = mNature.nature;
 		natureIndex2 = ring.GetComponent<Nature> ().nature;
 		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
+					isBornNature = true;
 		switch (compareResult) {
 		case 0:
 			{
@@ -121,6 +103,5 @@ public class Collider : MonoBehaviour {
 		default:
 				return;
 		}
-		
 	}
 }
