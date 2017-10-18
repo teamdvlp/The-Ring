@@ -1378,6 +1378,7 @@ MonoBehaviour:
   point3: {fileID: 169832872}
   point4: {fileID: 1844222237}
   point5: {fileID: 152710614}
+  moveEffect: {fileID: 1486573228}
   force: 25
   canSwipe: 0
 --- !u!1001 &445927989
@@ -5671,7 +5672,7 @@ Prefab:
     - target: {fileID: 58850276524312852, guid: 04d4278ccc32b425fa08f35f673a5b7a,
         type: 2}
       propertyPath: m_Radius
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1411056519888240, guid: 04d4278ccc32b425fa08f35f673a5b7a, type: 2}
       propertyPath: m_Layer
@@ -5685,7 +5686,7 @@ Prefab:
     - target: {fileID: 114018163929349034, guid: 04d4278ccc32b425fa08f35f673a5b7a,
         type: 2}
       propertyPath: speed
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04d4278ccc32b425fa08f35f673a5b7a, type: 2}

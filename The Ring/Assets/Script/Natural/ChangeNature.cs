@@ -8,6 +8,7 @@ public class ChangeNature : MonoBehaviour {
     public GameObject playerCurrentNature, SmokeTransformFire,SmokeTransformGrass, SmokeTransformWater, SmokeTransformGround, SmokeTransformMetal;
     public Sprite firePlayer, waterPlayer, grassLayer, groundLayer, metalPlayer;
     public float size;
+	Collider playerCollider;
 	Nature playerNature, coreNature;
     SpriteRenderer playerRenderer;
 
@@ -15,7 +16,9 @@ public class ChangeNature : MonoBehaviour {
 	void Start () {
         playerRenderer = GetComponent<SpriteRenderer>();
 		playerNature = GetComponent<Nature> ();	
+		playerCollider = GetComponent<Collider> ();
 	}
+		
 
     // Update is called once per frame
     void Update () {
@@ -81,6 +84,7 @@ public class ChangeNature : MonoBehaviour {
 
     void Change(GameObject nature)
     {
+		playerCollider.checkNature = true;
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);

@@ -72,7 +72,8 @@ public class Collider : MonoBehaviour {
 			if (checkNature) {
 			processCollider(col.gameObject);
 			checkNature = false;
-				}
+			
+			}
 		double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
                                     +
                                    (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
