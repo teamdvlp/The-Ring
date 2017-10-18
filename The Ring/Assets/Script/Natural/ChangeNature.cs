@@ -9,7 +9,6 @@ public class ChangeNature : MonoBehaviour {
     public Sprite firePlayer, waterPlayer, grassLayer, groundLayer, metalPlayer;
     public float size;
 	Nature playerNature, coreNature;
-    Animator animTransformLight;
     SpriteRenderer playerRenderer;
 
 	// Use this for initialization
@@ -67,7 +66,6 @@ public class ChangeNature : MonoBehaviour {
                 {
                     Instantiate(SmokeTransformFire, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10f), transform.rotation);
                     Change(fire);
-				Debug.Log ("BUG SẤP MẶT");
                     playerRenderer.sprite = firePlayer;
                     break;
                 }
@@ -84,7 +82,6 @@ public class ChangeNature : MonoBehaviour {
     void Change(GameObject nature)
     {
         Destroy(playerCurrentNature);
-		Debug.Log ("Core : " + coreNature.nature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);
     }

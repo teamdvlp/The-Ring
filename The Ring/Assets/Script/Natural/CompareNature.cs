@@ -12,7 +12,8 @@ public class CompareNature  {
 	// 0: nature1 khắc nature2;
 	// 1: nature1 bằng nature2;
 	// 2: nature2 khắc nature1
-	// 3: nature1 không khắc nature2 và ngược lại
+	// 3: nature1 sinh nature2 và ngược lại
+	// 4: nature1 không khắc nature2 và ngược lại
     public int compareNature(int natureIndex1, int natureIndex2) {
 		ListNature lsNature = new ListNature ();
 		nature1 = lsNature.getListNature () [natureIndex1];
@@ -32,8 +33,10 @@ public class CompareNature  {
 					return 1;
 				} else if (nature2.Equals ("Hỏa")) {
 					return 2;
-				} else {
+				} else if (nature2.Equals("Thủy")) {
 					return 3;
+				} else {
+					return 4;
 				}
 
                 }
@@ -46,6 +49,8 @@ public class CompareNature  {
 					return 1;
 				} else if (nature2.Equals ("Kim")) {
 					return 2;
+				} else if (nature2.Equals("Hỏa")) {
+					return 3;
 				} else {
 					return 3;
 				}
@@ -59,8 +64,10 @@ public class CompareNature  {
 					return 1;
 				} else if (nature2.Equals ("Thổ")) {
 					return 2;
-				} else {
+				} else if (nature2.Equals("Mộc")) {
 					return 3;
+				} else {
+					return 4;
 				}
 			}
 
@@ -72,8 +79,10 @@ public class CompareNature  {
 					return 1;
 				} else if (nature2.Equals ("Thủy")) {
 					return 2;
-				} else {
+				} else if (nature2.Equals("Thổ")) {
 					return 3;
+				} else {
+					return 4;
 				}
 			}
 
@@ -85,8 +94,10 @@ public class CompareNature  {
 					return 1;
 				} else if (nature2.Equals ("Mộc")) {
 					return 2;
-				} else {
+				} else if (nature2.Equals("Kim")) {
 					return 3;
+				} else {
+					return 4;
 				}
 			}
 		default:
