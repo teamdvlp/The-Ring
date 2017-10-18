@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 0fe239d025f49644cbdd4989dd7c7ece
+  - enabled: 1
+    path: Assets/Scenes/Screen Play/LevelSwipes.unity
+    guid: 9f08a055e69268044bf3c928a075114f

@@ -9,6 +9,7 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 	public Vector3 startPoint, endPoint, direction;
 	public GameObject player;
 	public GameObject point1, point2, point3, point4, point5;
+	public GameObject moveEffect;
 	Rigidbody2D rigidBody;
 	public float force;
 	public bool canSwipe;
@@ -28,6 +29,7 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 		point3.transform.position = player.transform.position + direction * 0.6f;
 		point4.transform.position = player.transform.position + direction * 0.8f;
 		point5.transform.position = player.transform.position + direction * 1f;
+		moveEffect.transform.LookAt (point5.transform);
 		setActivePoint (true);
 	}
 
