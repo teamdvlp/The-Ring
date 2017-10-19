@@ -49,13 +49,13 @@ public class Collider : MonoBehaviour {
 		natureIndex2 = ring.GetComponent<Nature> ().nature;
 		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
 		switch (compareResult) {
-    	case 1:
-            	{
+		case 0:
+				{
 					isBornNature = true;
-					return;
-            	}
+					return;		
+				}
 		default: {
-				isBornNature = true;
+				isBornNature = false;
 				return;
 		}
 		}	
@@ -98,6 +98,11 @@ public class Collider : MonoBehaviour {
 		natureIndex2 = ring.GetComponent<Nature> ().nature;
 		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
 		switch (compareResult) {
+		case 0:
+			{
+            	ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+				return;
+			}
     	case 1:
             	{
             		ring.GetComponent<PolygonCollider2D>().isTrigger = true;
