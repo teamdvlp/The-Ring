@@ -57,13 +57,15 @@ public class Collider : MonoBehaviour {
 		default: {
 				isBornNature = false;
 				return;
-		}
+			}
 		}	
 		}
 	}
 
 	private void changeNatureWhenGoThroughTheCircle (GameObject Circle) {
 		int nature = Circle.GetComponent<Nature>().nature;
+		Debug.Log("Circle Nature: " + nature);
+		Debug.Log("mNature" + mNature.nature);
 		changeNature.SetNature(compareNat.getNatureBorn(nature));
 	}
 
@@ -101,6 +103,7 @@ public class Collider : MonoBehaviour {
 		case 0:
 			{
             	ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+                this.processCollideWithNormalRing(ring);
 				return;
 			}
     	case 1:

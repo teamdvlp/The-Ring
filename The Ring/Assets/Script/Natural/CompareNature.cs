@@ -110,9 +110,9 @@ public class CompareNature  {
         switch (natureResult)
         {
             case "Kim":
-                {
+            {
 					return 3;
-                }
+            }
 
 			case "Mộc":
 			{
@@ -129,7 +129,8 @@ public class CompareNature  {
 					return 5;
 			}
 
-		case "Thổ": 
+			case "Thổ": 
+			
 			{
 					return 1;
 			}
