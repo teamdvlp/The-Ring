@@ -1328,7 +1328,7 @@ MonoBehaviour:
   point4: {fileID: 1844222237}
   point5: {fileID: 152710614}
   moveEffect: {fileID: 1486573228}
-  force: 25
+  force: 0.5
   canSwipe: 0
 --- !u!1 &499947230
 GameObject:
@@ -6793,7 +6793,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 10
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
