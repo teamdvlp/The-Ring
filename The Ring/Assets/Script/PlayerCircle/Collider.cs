@@ -43,50 +43,49 @@ public class Collider : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.layer == 14) {
-			checkNature = true;
-		} else if (col.gameObject.layer == 9) {
-		ring = col.gameObject	;
+		if (col.gameObject.layer == 9) {
+		ring = col.gameObject;
 		natureIndex1 = mNature.nature;
 		natureIndex2 = ring.GetComponent<Nature> ().nature;
 		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
 		switch (compareResult) {
     	case 1:
             	{
-            		ring.GetComponent<PolygonCollider2D>().isTrigger = true;
 					isBornNature = true;
-                    this.processCollideWithNormalRing(ring);
 					return;
             	}
 		default: {
 				isBornNature = true;
-				this.processCollideWithNormalRing(ring);
 				return;
 		}
 		}	
 		}
 	}
+
+	private void changeNatureWhenGoThroughTheCircle (GameObject Circle) {
+		int nature = Circle.GetComponent<Nature>().nature;
+		changeNature.SetNature(compareNat.getNatureBorn(nature));
+	}
+
 	void OnTriggerStay2D(Collider2D col)
 		{
 			if (col.gameObject.layer == 14) {
-			if (checkNature) {
 			processCollider(col.gameObject);
-			checkNature = false;
-			
-			}
 		double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
                                     +
                                    (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
         if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
 			if (isBornNature && !isPlayerInside) {
-			Debug.Log("Đổi hệ trong");
 			isBornNature = false;
+			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
 			}
 			isPlayerInside = true;
-		} else if (Math.Abs(distance) > Math.Abs(6.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+		} else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
 			if (isBornNature && isPlayerInside) {
-			Debug.Log("Đổi hệ ngoài");
 			isBornNature = false;
+			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
 			}
 			isPlayerInside = false;
 		}
@@ -106,9 +105,9 @@ public class Collider : MonoBehaviour {
 					return;
             	}
 		default:
-				ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-				this.processCollideWithNormalRing(ring);
-				return;
+					ring.GetComponent<PolygonCollider2D>().isTrigger = false;
+					this.processCollideWithNormalRing(ring);
+					return;
 		}
 	}
 }

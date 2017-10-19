@@ -103,4 +103,38 @@ public class CompareNature  {
 		default:
 			return -1; 
 		}
-	}}
+	}
+		public int getNatureBorn (int nature) {
+		ListNature lsNature = new ListNature ();
+		string natureResult = lsNature.getListNature () [nature];
+        switch (natureResult)
+        {
+            case "Kim":
+                {
+					return 3;
+                }
+
+			case "Mộc":
+			{
+					return 4;
+			}
+
+			case "Thủy": 
+			{
+					return 2;
+			}
+
+			case "Hỏa": 
+			{
+					return 5;
+			}
+
+		case "Thổ": 
+			{
+					return 1;
+			}
+		default:
+			return -1; 
+		}
+		}
+	}
