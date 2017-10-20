@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour {
     public float speed;
+	Rigidbody2D rigid;
 
 	void Start () {
-		
+		rigid = GetComponent<Rigidbody2D> ();
 	}
 	
 	void Update () {
-        float dt = Time.deltaTime;
-        rotate(dt);
+        rotate();
 	}
 
-    private void rotate(float dt)
+    private void rotate()
     {
-            this.gameObject.transform.Rotate(new Vector3(0, 0, speed * dt));
-    }
-}
+		rigid.angularVelocity = speed;
+	}
+}	

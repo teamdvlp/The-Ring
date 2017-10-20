@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 78700a3fabb735f43a18cc8c538f7e5a
+timeCreated: 1508475508
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DifferenceRing_0
+    21300002: DifferenceRing_1
+    21300004: DifferenceRing_2
+    21300006: DifferenceRing_3
+    21300008: DifferenceRing_4
+    21300010: DifferenceRing_5
+    21300012: DifferenceRing_6
+    21300014: DifferenceRing_7
+    21300016: DifferenceRing_8
+    21300018: DifferenceRing_9
+    21300020: DifferenceRing_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DifferenceRing_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 512
+        width: 257
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -128.5, y: 238.5}
+        - {x: -128.5, y: -187.5}
+        - {x: -64.5, y: -238.5}
+        - {x: 128.5, y: -238.5}
+        - {x: 128.5, y: 238.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_1
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 432
+        width: 242
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 81, y: -55}
+        - {x: 34, y: -69}
+        - {x: 34, y: -270}
+        - {x: 61, y: -270}
+        - {x: 83, y: -246}
+        - {x: 121, y: -121}
+        - {x: 121, y: -55}
+      - - {x: -119, y: -55}
+        - {x: -119, y: -131}
+        - {x: -88, y: -260}
+        - {x: -65, y: -263}
+        - {x: -41, y: -263}
+        - {x: -39, y: -262}
+        - {x: -39, y: -181}
+        - {x: -77, y: -55}
+      - - {x: -52, y: 270}
+        - {x: -91, y: 213}
+        - {x: -109, y: 158}
+        - {x: -120, y: 81}
+        - {x: -120, y: 54}
+        - {x: -117, y: 53}
+        - {x: -76, y: 53}
+        - {x: -39, y: 204}
+        - {x: -38, y: 216}
+        - {x: -38, y: 270}
+      - - {x: 46, y: 270}
+        - {x: 34, y: 270}
+        - {x: 34, y: 212}
+        - {x: 72, y: 53}
+        - {x: 121, y: 53}
+        - {x: 121, y: 129}
+        - {x: 73, y: 252}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 756
+        width: 85
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -28.5, y: 109.5}
+        - {x: -41.5, y: 109.5}
+        - {x: -42.5, y: 108.5}
+        - {x: -42.5, y: 44.5}
+        - {x: -5.5, y: -109.5}
+        - {x: 42.5, y: -109.5}
+        - {x: 42.5, y: -32.5}
+        - {x: 5.5, y: 95.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 439
+        width: 79
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -36.5, y: 103.5}
+        - {x: -39.5, y: 102.5}
+        - {x: -39.5, y: 70.5}
+        - {x: -34.5, y: 45.5}
+        - {x: -19.5, y: -14.5}
+        - {x: -5.5, y: -47.5}
+        - {x: 4.5, y: -68.5}
+        - {x: 13.5, y: -84.5}
+        - {x: 29.5, y: -104.5}
+        - {x: 39.5, y: -104.5}
+        - {x: 39.5, y: -21.5}
+        - {x: 2.5, y: 103.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 433
+        width: 85
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3.5, y: 106.5}
+        - {x: -1.5, y: 103.5}
+        - {x: -42.5, y: -45.5}
+        - {x: -42.5, y: -107.5}
+        - {x: -31.5, y: -107.5}
+        - {x: 1.5, y: -73.5}
+        - {x: 42.5, y: 42.5}
+        - {x: 42.5, y: 106.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_5
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 5
+        width: 515
+        height: 532
+      alignment: 9
+      pivot: {x: 0.5742979, y: 0.4446739}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 243.5, y: -261}
+        - {x: 250.5, y: -261}
+        - {x: 250.5, y: -255}
+        - {x: 180.5, y: -35}
+        - {x: 115.5, y: -35}
+        - {x: 43.5, y: -77}
+        - {x: 43.5, y: -132}
+      - - {x: -63.5, y: 44}
+        - {x: -242.5, y: -58}
+        - {x: -252.5, y: -65}
+        - {x: -252.5, y: -68}
+        - {x: -251.5, y: -69}
+        - {x: -43.5, y: -102}
+        - {x: -29.5, y: -102}
+        - {x: -21.5, y: -97}
+        - {x: -21.5, y: 26}
+        - {x: -46.5, y: 44}
+      - - {x: 153.5, y: 261}
+        - {x: 0.5, y: 88}
+        - {x: 0.5, y: 77}
+        - {x: 13.5, y: 42}
+        - {x: 53.5, y: 26}
+        - {x: 131.5, y: 26}
+        - {x: 146.5, y: 37}
+        - {x: 159.5, y: 235}
+        - {x: 159.5, y: 261}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 54
+        width: 374
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20, y: 117}
+        - {x: -64, y: 42}
+        - {x: -64, y: -100}
+        - {x: -61, y: -113}
+        - {x: -54, y: -116}
+        - {x: -48, y: -116}
+        - {x: -9, y: -90}
+        - {x: 66, y: 46}
+        - {x: 66, y: 117}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 207
+        width: 144
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -38, y: 108}
+        - {x: -72, y: 108}
+        - {x: -72, y: 17}
+        - {x: -16, y: -108}
+        - {x: 72, y: -108}
+        - {x: 72, y: 9}
+        - {x: 56, y: 50}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_8
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 167
+        width: 237
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 91.5, y: 59}
+        - {x: 80.5, y: 59}
+        - {x: -112.5, y: -36}
+        - {x: -112.5, y: -54}
+        - {x: 19.5, y: -87}
+        - {x: 118.5, y: -87}
+        - {x: 118.5, y: 36}
+        - {x: 97.5, y: 56}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_9
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1
+        width: 215
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -106.5, y: -4.5}
+        - {x: 94.5, y: -108.5}
+        - {x: 100.5, y: -108.5}
+        - {x: 100.5, y: -97.5}
+        - {x: 4.5, y: 117.5}
+        - {x: -54.5, y: 117.5}
+        - {x: -106.5, y: 47.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DifferenceRing_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 56
+        width: 264
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -67, y: 43}
+        - {x: -132, y: 31}
+        - {x: -132, y: -9}
+        - {x: -67, y: -43}
+        - {x: 47, y: -43}
+        - {x: 100, y: -29}
+        - {x: 132, y: 14}
+        - {x: 132, y: 25}
+        - {x: 112, y: 43}
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
