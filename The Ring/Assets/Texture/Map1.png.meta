@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8881dc988995047f68117c5fb1da6055
-timeCreated: 1508560799
+guid: 5673e44068c7705448666b6fb7be5288
+timeCreated: 1508572574
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: images_0
+    21300000: Map1_0
+    21300002: Map1_1
+    21300004: Map1_2
+    21300006: Map1_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,21 +87,59 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: images_0
+      name: Map1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 307
-        height: 164
+        x: 44
+        y: 176
+        width: 169
+        height: 722
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5.793579, y: 11.283295}
-        - {x: -153.5, y: -82}
-        - {x: 153.5, y: -82}
-        - {x: 153.5, y: 82}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Map1_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 672
+        width: 230
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Map1_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 205
+        width: 176
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Map1_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 168
+        width: 261
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []

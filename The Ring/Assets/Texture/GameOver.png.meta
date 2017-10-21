@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8881dc988995047f68117c5fb1da6055
-timeCreated: 1508560799
+guid: 23066d92498836140b40cef33393b209
+timeCreated: 1508559827
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: images_0
+    21300000: GameOver_0
+    21300002: GameOver_1
+    21300004: GameOver_2
+    21300006: GameOver_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,21 +87,59 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: images_0
+      name: GameOver_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 307
-        height: 164
+        x: 568
+        y: 28
+        width: 879
+        height: 1444
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5.793579, y: 11.283295}
-        - {x: -153.5, y: -82}
-        - {x: 153.5, y: -82}
-        - {x: 153.5, y: 82}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GameOver_1
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 1299
+        width: 172
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GameOver_2
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 664
+        width: 171
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GameOver_3
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 28
+        width: 171
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
