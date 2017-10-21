@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TransparentBackground : MonoBehaviour {
 
-    public float appearTime;
+    public float timeDelayAppearTransparentBackground;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,7 @@ public class TransparentBackground : MonoBehaviour {
 
     public void FadeIn ()
     {
-        Invoke("Fade", appearTime);
+		Invoke("Fade", timeDelayAppearTransparentBackground);
     }
 
     void Fade ()

@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameOver : MonoBehaviour {
 
     public GameObject gameOverBoard;
-    public float appearTime;
+	public GameObject ContinueBoard;
+    public float delayTimeAppearOverBoard;
     public GameObject transparentBackground;
 
     // Use this for initialization
@@ -23,9 +24,12 @@ public class GameOver : MonoBehaviour {
         var smallMonsters = GameObject.FindGameObjectsWithTag("SmallMonster");
         smallMonsters[0].SetActive(false);
 		smallMonsters[1].SetActive(false);
+		transparentBackground.SetActive (true);
 		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
-        Invoke("ActiveOverBoard", appearTime);
+		Invoke("ActiveOverBoard", delayTimeAppearOverBoard);
+		ContinueBoard.SetActive (false);
     }
+
 
     private void ActiveOverBoard ()
     {
