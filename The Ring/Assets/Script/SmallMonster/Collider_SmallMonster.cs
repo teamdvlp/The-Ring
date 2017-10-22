@@ -19,7 +19,8 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (other.layer == 12)
         {
-			// onGameOver.ProcessPlayerDie();
+            onGameOver.ProcessGameOver();
+            // onGameOver.ProcessPlayerDie();
         }
     }
 
@@ -27,6 +28,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Monster"))
         {
+            onGameOver.ProcessGameOver();
 			// onGameOver.ProcessPlayerDie();
         }
     }
