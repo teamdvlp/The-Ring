@@ -263,6 +263,11 @@ Prefab:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 893008432}
+    - target: {fileID: 114269596169521698, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+        type: 2}
+      propertyPath: Monster
+      value: 
+      objectReference: {fileID: 943222314}
     m_RemovedComponents:
     - {fileID: 114941254801227292, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
@@ -1790,7 +1795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverBoard: {fileID: 385149061}
-  appearTime: 5
+  ContinueBoard: {fileID: 0}
+  delayTimeAppearOverBoard: 0
   transparentBackground: {fileID: 934076375}
 --- !u!1001 &903412674
 Prefab:
@@ -1932,7 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694098b28e084a34aa82fd65e9dcadcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appearTime: 3
+  timeDelayAppearTransparentBackground: 0
 --- !u!114 &934076378
 MonoBehaviour:
   m_ObjectHideFlags: 0

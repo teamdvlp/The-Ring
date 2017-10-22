@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
 	void Start () {
-		SqliteUserManager.ClearAllCharacter();
-		Debug.Log(SqliteUserManager.getCharacter()[0] + "");
+		GetComponent<OnGameOver>().OnOverGame+=OverGame;
 	}
 	
 	void Update () {
 		
+	}
+
+	public void OverGame () {
 	}
 }
