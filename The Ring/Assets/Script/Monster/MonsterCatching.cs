@@ -10,13 +10,12 @@ public class TestMonsterFollow : MonoBehaviour {
     float startingPoint;
     public GameObject player;
     public GameObject monster;
-    Transform monsterTransform, playerTransform;
+    Transform monsterTransform;
     public float monsterSpeed;
 
 	// Use this for initialization
 	void Start () {
         monsterTransform = monster.transform;
-        playerTransform = player.transform;
         startingPoint = monsterTransform.position.x;
         destination = startingPoint + streetLenght;
     }

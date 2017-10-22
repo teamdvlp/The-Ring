@@ -10327,6 +10327,7 @@ GameObject:
   - component: {fileID: 2141814788}
   - component: {fileID: 2141814785}
   - component: {fileID: 2141814789}
+  - component: {fileID: 2141814790}
   m_Layer: 16
   m_Name: PlayerCircle
   m_TagString: Untagged
@@ -10632,3 +10633,14 @@ MonoBehaviour:
   grassLight: {fileID: 0}
   groundLight: {fileID: 0}
   metalLight: {fileID: 0}
+--- !u!114 &2141814790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141814774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81374251c9f204d80960261b470537a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

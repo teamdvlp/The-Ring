@@ -29,7 +29,7 @@ public class Intro : MonoBehaviour {
     private void PrepareFallInStove () {
         this.gameObject.layer = 16;
 		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-		swipe.enabled = false;	
+		// swipe.enabled = false;	
 	}
 	private void PrepareAfterCollide () {
 		
@@ -63,7 +63,7 @@ public class Intro : MonoBehaviour {
 		player.gravityScale = 0;
 		player.velocity = Vector2.zero;
 		player.drag = 5;
-		swipe.enabled = true;
+		// swipe.enabled = true;
 		StartCoroutine(CleanUp(5));
     }
 

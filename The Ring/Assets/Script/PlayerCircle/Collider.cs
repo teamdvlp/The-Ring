@@ -10,10 +10,11 @@ public class Collider : MonoBehaviour {
 	CompareNature compareNat = new CompareNature();
 	private int natureIndex1,natureIndex2, compareResult;
 	private GameObject ring;
-
+	private NatureSkill mNatureSkill;
 	void Start () {
 		isPlayerInside = false;
 		checkNature = false;
+		mNatureSkill = this.GetComponent<NatureSkill>();
 		changeNature = this.GetComponent<ChangeNature>();
 		isBornNature = false;
 		mNature = this.GetComponent<Nature>();
@@ -62,10 +63,13 @@ public class Collider : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D col)
+	{
+		isBornNature = false;
+	}
+
 	private void changeNatureWhenGoThroughTheCircle (GameObject Circle) {
 		int nature = Circle.GetComponent<Nature>().nature;
-		Debug.Log("Circle Nature: " + nature);
-		Debug.Log("mNature" + mNature.nature);
 		changeNature.SetNature(compareNat.getNatureBorn(nature));
 	}
 
@@ -81,6 +85,9 @@ public class Collider : MonoBehaviour {
 			isBornNature = false;
 			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
 			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+			} 
+			else if (!isBornNature && !isPlayerInside) {
+			// mNatureSkill.BuffSkill(mNature.nature);
 			}
 			isPlayerInside = true;
 		} else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
@@ -88,6 +95,8 @@ public class Collider : MonoBehaviour {
 			isBornNature = false;
 			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
 			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+			}
+			else if (!isBornNature && !isPlayerInside) {
 			}
 			isPlayerInside = false;
 		}
@@ -103,18 +112,18 @@ public class Collider : MonoBehaviour {
 		case 0:
 			{
             	ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-                this.processCollideWithNormalRing(ring);
+                // this.processCollideWithNormalRing(ring);
 				return;
 			}
     	case 1:
             	{
             		ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-                    this.processCollideWithNormalRing(ring);
+                    // this.processCollideWithNormalRing(ring);
 					return;
             	}
 		default:
 					ring.GetComponent<PolygonCollider2D>().isTrigger = false;
-					this.processCollideWithNormalRing(ring);
+					// this.processCollideWithNormalRing(ring);
 					return;
 		}
 	}
