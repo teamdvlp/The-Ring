@@ -10,6 +10,7 @@ public class Score : MonoBehaviour {
     float minute, second;
     string score, minuteText, secondText;
 
+
 	// Use this for initialization
 	void Start () {
         minute = 0;
@@ -24,8 +25,6 @@ public class Score : MonoBehaviour {
             second = 0;
             minute++;
         }
-
-        
 
         secondText = second < 10 ? "0" + second.ToString("#") : second.ToString("#");
         minuteText = minute < 10 ? "0" + minute.ToString() : minute.ToString();
