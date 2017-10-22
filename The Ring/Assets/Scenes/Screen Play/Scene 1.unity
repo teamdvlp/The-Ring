@@ -1250,7 +1250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9adb25f41ec88648a9142be9c09c3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  coinText: {fileID: 1515841648}
+  onGameOver: {fileID: 703511365}
 --- !u!114 &703511365 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114269596169521698, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
