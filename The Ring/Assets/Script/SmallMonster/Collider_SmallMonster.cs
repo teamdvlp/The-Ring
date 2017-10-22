@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Collider_SmallMonster : MonoBehaviour {
+	OnGameOver onGameOver;
+
 
     // Use this for initialization
     void Start () {
-        
+		onGameOver = this.GetComponent<OnGameOver> ();
     }
     
     // Update is called once per frame
@@ -17,8 +19,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (other.layer == 12)
         {
-            //Destroy(other.gameObject);
-            this.GetComponent<OnGameOver>().ProcessGameOver();
+			onGameOver.ProcessPlayerDie();
         }
     }
 
@@ -26,8 +27,7 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Monster"))
         {
-            this.GetComponent<OnGameOver>().ProcessGameOver();
-           // Destroy(gameObject);
+			onGameOver.ProcessPlayerDie();
         }
     }
 }
