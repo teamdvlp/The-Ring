@@ -6,14 +6,12 @@ public class Emotion : MonoBehaviour {
 	public GameObject monster;
 	Animator anim;
 	public float DurationCryAnim, DurationScreamAnim;
-	float timePlaySmileAnim;
 	float timePlayCryAnim;
 	public float distance;
 	bool isSafe;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-		timePlaySmileAnim = 2f;
 	}
 	
 	// Update is called once per frame

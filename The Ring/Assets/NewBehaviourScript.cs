@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
-	// Use this for initialization
 	void Start () {
+		SqliteUserManager.ClearAllCharacter();
+		Debug.Log(SqliteUserManager.getCharacter()[0] + "");
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		// Debug.Log("Force: " + GetComponent<Rigidbody2D>().velocity);
+		
 	}
 }
