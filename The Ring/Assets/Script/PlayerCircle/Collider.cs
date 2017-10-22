@@ -80,25 +80,23 @@ public class Collider : MonoBehaviour {
 		double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
                                     +
                                    (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
-        if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+        
+			if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
 			if (isBornNature && !isPlayerInside) {
-			isBornNature = false;
-			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+				isBornNature = false;
+				changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+				col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
 			} 
-			else if (!isBornNature && !isPlayerInside) {
-			// mNatureSkill.BuffSkill(mNature.nature);
-			}
 			isPlayerInside = true;
 		} else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-			if (isBornNature && isPlayerInside) {
-			isBornNature = false;
-			changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-			col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+				if (isBornNature && isPlayerInside) {
+				isBornNature = false;
+				changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+				col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
 			}
 			else if (!isBornNature && !isPlayerInside) {
 			}
-			isPlayerInside = false;
+				isPlayerInside = false;
 		}
 		}
 		}

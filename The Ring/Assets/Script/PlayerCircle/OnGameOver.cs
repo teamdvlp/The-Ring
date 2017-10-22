@@ -25,7 +25,7 @@ public class OnGameOver : MonoBehaviour {
         //      this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         //      swipe.enabled = false;
         if (OnOverGame != null) {
-        OnOverGame();
+        	OnOverGame();
         }
         this.gameObject.SetActive(false);    
         Instantiate(deathEffect, transform.position, transform.rotation);
