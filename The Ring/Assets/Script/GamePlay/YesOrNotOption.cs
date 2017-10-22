@@ -14,7 +14,7 @@ public class YesOrNotOption : MonoBehaviour, IPointerDownHandler {
 	{
 		if (canRespawn) {
 			Debug.Log ("YES");
-			onGameOver.ProcessPlayerRespawn();
+			// onGameOver.ProcessPlayerRespawn();
 		} else {
 			Debug.Log ("NO");
 			gameOver.OverGame ();

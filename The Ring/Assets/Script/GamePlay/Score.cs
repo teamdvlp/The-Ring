@@ -18,18 +18,16 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        second += Time.deltaTime;
-        if (second >= 60)
-        {
-            second = 0;
-            minute++;
-        }
+        second += 1;
+        // if (second >= 60)
+        // {
+        //     second = 0;
+        //     minute++;
+        // }
 
-        
-
-        secondText = second < 10 ? "0" + second.ToString("#") : second.ToString("#");
-        minuteText = minute < 10 ? "0" + minute.ToString() : minute.ToString();
-        score = minuteText + " : " + secondText;
+        // secondText = second < 10 ? "0" + second.ToString("#") : second.ToString("#");
+        // minuteText = minute < 10 ? "0" + minute.ToString() : minute.ToString();
+        score = second + "";
 
         currentScoreText.text = score;
     }
