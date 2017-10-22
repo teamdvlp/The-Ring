@@ -8,33 +8,32 @@ public class Score : MonoBehaviour {
     public Text scoreText;
     public Text currentScoreText;
     float minute, second;
-    string score, minuteText, secondText;
-
+    int score;
+    private bool isGameStarted;
 	// Use this for initialization
+    
 	void Start () {
+        isGameStarted = false;
         minute = 0;
         second = 0;    
+        GetComponent<Intro>().onGameStarted += OnGameStarted;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        second += 1;
-        // if (second >= 60)
-        // {
-        //     second = 0;
-        //     minute++;
-        // }
-
-        // secondText = second < 10 ? "0" + second.ToString("#") : second.ToString("#");
-        // minuteText = minute < 10 ? "0" + minute.ToString() : minute.ToString();
-        score = second + "";
-
-        currentScoreText.text = score;
+        if (isGameStarted) {
+            score = (int) (this.transform.position.y + 2.65);
+        }
+        currentScoreText.text = score + "" ;
     }
 
 
     void OnDisable()
     {
-        scoreText.text = score;
+        scoreText.text = score + "";
+    }
+
+    private void OnGameStarted () {
+        isGameStarted = true;
     }
 }

@@ -16,6 +16,9 @@ public class Intro : MonoBehaviour {
     private bool isCollided = false;
 	public Swipe swipe;
 
+	public delegate void GameStarted ();
+
+	public event GameStarted onGameStarted; 
 	void Start () {
         isCollided = false;
         PrepareFallInStove();
@@ -63,6 +66,9 @@ public class Intro : MonoBehaviour {
 		player.gravityScale = 0;
 		player.velocity = Vector2.zero;
 		player.drag = 5;
+		if (onGameStarted != null) {
+			onGameStarted();
+		}
 		// swipe.enabled = true;
 		StartCoroutine(CleanUp(5));
     }
