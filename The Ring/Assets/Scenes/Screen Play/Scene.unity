@@ -1054,11 +1054,30 @@ GameObject:
   m_PrefabParentObject: {fileID: 1037768122486432, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
     type: 2}
   m_PrefabInternal: {fileID: 61096524}
+--- !u!114 &703511365 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114269596169521698, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 61096524}
+  m_Script: {fileID: 11500000, guid: 2dfd6a046d31d5040940a216b1cc69aa, type: 3}
 --- !u!4 &703511372 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
     type: 2}
   m_PrefabInternal: {fileID: 61096524}
+--- !u!114 &703511373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703511359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9adb25f41ec88648a9142be9c09c3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 0}
+  onGameOver: {fileID: 703511365}
 --- !u!1 &705888448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32704e70edac442429c6b9723bad45e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
   speed: 100
 --- !u!1001 &719399159
 Prefab:

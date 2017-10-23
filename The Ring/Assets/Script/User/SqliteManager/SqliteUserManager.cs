@@ -134,11 +134,7 @@ public class SqliteUserManager {
 	}
 
 	public static void AddCoin (Double Coin) {
-<<<<<<< HEAD
 		string query = "update UserInfo set Coin = Coin + " + Coin + " where STT = 0";
-=======
-		string query = "update UserInfo set Coin = Coin +" + Coin + " where STT = 0";
->>>>>>> bc8daadad1140894b9b89d2bd69c829021019ff4
 		connect();
 		try {
 			using(conn) {

@@ -27,7 +27,7 @@ public class GameOver : MonoBehaviour {
 		transparentBackground.SetActive (true);
 		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
 		Invoke("ActiveOverBoard", delayTimeAppearOverBoard);
-		ContinueBoard.SetActive (false);
+		// ContinueBoard.SetActive (false);
     }
 
 

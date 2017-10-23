@@ -24,9 +24,8 @@ public class OnGameOver : MonoBehaviour {
         //this.GetComponent<SpriteRenderer>().enabled = false;
         //      this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         //      swipe.enabled = false;
-        if (OnOverGame != null) {
+            Debug.Log("Over");
         	OnOverGame();
-        }
         this.gameObject.SetActive(false);    
         Instantiate(deathEffect, transform.position, transform.rotation);
         GameManager.GetComponent<GameOver>().OverGame();
