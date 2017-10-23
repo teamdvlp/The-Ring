@@ -102,27 +102,27 @@ public class Collider : MonoBehaviour {
 		}
 
 		private void processCollider (GameObject col) {
-        ring = col.gameObject.transform.parent.gameObject;
-		natureIndex1 = mNature.nature;
-		natureIndex2 = ring.GetComponent<Nature> ().nature;
-		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
-		switch (compareResult) {
-		case 0:
-			{
-            	ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-                // this.processCollideWithNormalRing(ring);
-				return;
-			}
-    	case 1:
-            	{
-            		ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+            ring = col.gameObject.transform.parent.gameObject;
+		    natureIndex1 = mNature.nature;
+		    natureIndex2 = ring.GetComponent<Nature> ().nature;
+		    compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
+		    switch (compareResult) {
+		    case 0:
+			    {
+            	    ring.GetComponent<PolygonCollider2D>().isTrigger = true;
                     // this.processCollideWithNormalRing(ring);
-					return;
-            	}
-		default:
-					ring.GetComponent<PolygonCollider2D>().isTrigger = false;
-					// this.processCollideWithNormalRing(ring);
-					return;
+				    return;
+			    }
+    	    case 1:
+            	    {
+            		    ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+                        // this.processCollideWithNormalRing(ring);
+					    return;
+            	    }
+		    default:
+					    ring.GetComponent<PolygonCollider2D>().isTrigger = false;
+					    // this.processCollideWithNormalRing(ring);
+					    return;
 		}
 	}
 }

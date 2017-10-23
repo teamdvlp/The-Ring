@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,25 +9,31 @@ public class GameOver : MonoBehaviour {
     public float delayTimeAppearOverBoard;
     public GameObject transparentBackground;
 
-    // Use this for initialization
+    // Đem từ Delegate và Event OnGameOver qua GameOver vì hàm OverGame nằm bên file GameOver.cs
+    public delegate void OverGame();
+    public event OverGame OnOverGame;
+
+
+
+
     void Start () {
         gameOverBoard.SetActive(false);
 	}
 	
-	// Update is called once per frame
-	void Update () {
 
-    }
-
-    public void OverGame()
+    public void OverGames()
     {
+        if (OnOverGame != null)
+        {
+            OnOverGame();
+        }
         var smallMonsters = GameObject.FindGameObjectsWithTag("SmallMonster");
         smallMonsters[0].SetActive(false);
 		smallMonsters[1].SetActive(false);
 		transparentBackground.SetActive (true);
 		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
 		Invoke("ActiveOverBoard", delayTimeAppearOverBoard);
-		// ContinueBoard.SetActive (false);
+		ContinueBoard.SetActive (false);
     }
 
 

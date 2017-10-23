@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class YesOrNotOption : MonoBehaviour, IPointerDownHandler {
+public class YesOrNoOption : MonoBehaviour, IPointerDownHandler {
 	public bool canRespawn;
 	public GameOver gameOver;
 	public OnGameOver onGameOver;
@@ -14,21 +14,13 @@ public class YesOrNotOption : MonoBehaviour, IPointerDownHandler {
 	{
 		if (canRespawn) {
 			Debug.Log ("YES");
-			// onGameOver.ProcessPlayerRespawn();
-		} else {
+            onGameOver.Respawn();
+        } else {
 			Debug.Log ("NO");
-			gameOver.OverGame ();
+			gameOver.OverGames();
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 }

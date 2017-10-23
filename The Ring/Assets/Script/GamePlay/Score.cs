@@ -7,17 +7,20 @@ public class Score : MonoBehaviour {
 
     public Text scoreText;
     public Text currentScoreText;
-    float minute, second;
+    public Text coinToRespawnText;
     private bool isGameStarted;
     int score;
 	public OnGameOver OnGameOver;
+    public GameOver gameOver;
+    private static int coinToRespawn;
+    
     
 	void Start () {
+        coinToRespawn = 10;
         isGameStarted = false;
-        minute = 0;
-        second = 0;    
         GetComponent<Intro>().onGameStarted += OnGameStarted;
-        GetComponent<OnGameOver>().OnOverGame += OnOverGame;    
+        gameOver.OnOverGame += OnOverGame;
+        OnGameOver.OnPlayerRespawn += OnRespawn;
     }
 	
 	void Update () {
@@ -37,11 +40,30 @@ public class Score : MonoBehaviour {
         isGameStarted = true;
     }
 
+
+
     private void OnOverGame () {
         isGameStarted = false;
+        coinToRespawn = 10;
         int currentBestScore = SqliteUserManager.getBestScore();
         if (currentBestScore <= score) {
             SqliteUserManager.setBestScore(score);
+        }
+        SqliteUserManager.AddCoin(score);
+    }
+
+
+
+    private bool OnRespawn ()
+    {
+        if (SqliteUserManager.getCoin() > coinToRespawn)
+        {
+            SqliteUserManager.AddCoin(-coinToRespawn);
+            coinToRespawn += 10;
+            return true;
+        } else
+        {
+            return false;
         }
     }
 }
