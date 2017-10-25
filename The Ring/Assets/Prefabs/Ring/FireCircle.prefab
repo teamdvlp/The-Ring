@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1100219745127168}
   m_IsPrefabParent: 1
+--- !u!1 &1053608412795778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4224386896167604}
+  - component: {fileID: 58843391323517392}
+  m_Layer: 19
+  m_Name: RingProtect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1100219745127168
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +59,7 @@ GameObject:
   - component: {fileID: 58773611510866306}
   - component: {fileID: 114637090021011968}
   m_Layer: 14
-  m_Name: RingProtect
+  m_Name: CheckedRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,12 +90,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100219745127168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -11.71, z: 0}
-  m_LocalScale: {x: 0.16666667, y: 0.16666667, z: 0.16666667}
+  m_LocalPosition: {x: 0, y: 2.628376, z: 0}
+  m_LocalScale: {x: 0.3884553, y: 0.38845527, z: 0.38845527}
   m_Children:
-  - {fileID: 4952746089025828}
+  - {fileID: 4224386896167604}
   - {fileID: 4343343047027772}
+  - {fileID: 4952746089025828}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4224386896167604
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053608412795778}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1092396, y: 1.1092397, z: 1.1092397}
+  m_Children: []
+  m_Father: {fileID: 4158663137630066}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4343343047027772
@@ -101,13 +131,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278228834243826}
-  m_LocalRotation: {x: -0, y: -0, z: -0.45363703, w: 0.89118654}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0.42917532, w: 0.9032213}
+  m_LocalPosition: {x: 0.25, y: -0.05, z: -0.43}
+  m_LocalScale: {x: 0.34250113, y: 0.34250116, z: 0.34250116}
   m_Children: []
   m_Father: {fileID: 4158663137630066}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -53.955}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50.83}
 --- !u!50 &50079125403086600
 Rigidbody2D:
   serializedVersion: 4
@@ -115,19 +145,19 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100219745127168}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 3
 --- !u!50 &50345245894666240
 Rigidbody2D:
   serializedVersion: 4
@@ -163,6 +193,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 7
+--- !u!58 &58843391323517392
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053608412795778}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!60 &60737435529849008
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -473,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32704e70edac442429c6b9723bad45e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -150
+  speed: 100
 --- !u!114 &114049662274734948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,10 +610,10 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1192223774
+  randomSeed: 866859596
   InitialModule:
     serializedVersion: 3
     enabled: 1
