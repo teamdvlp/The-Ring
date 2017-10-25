@@ -30,12 +30,12 @@ TagManager:
   - OverlayCanvas
   - SmallMonster
   - Wall
-  - RingProtect
+  - CheckedRing
   - PlayerCircle
   - CollideStove
   - Stove
   - CircleInside
-  - 
+  - RingProtected
   - 
   - 
   - 

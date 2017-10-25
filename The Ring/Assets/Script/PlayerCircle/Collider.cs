@@ -16,7 +16,7 @@ public class Collider : MonoBehaviour {
 		checkNature = false;
 		mNatureSkill = this.GetComponent<NatureSkill>();
 		changeNature = this.GetComponent<ChangeNature>();
-		isBornNature = false;
+		// isBornNature = false;
 		mNature = this.GetComponent<Nature>();
     }
 
@@ -44,28 +44,28 @@ public class Collider : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.layer == 9) {
-		ring = col.gameObject;
-		natureIndex1 = mNature.nature;
-		natureIndex2 = ring.GetComponent<Nature> ().nature;
-		compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
-		switch (compareResult) {
-		case 0:
-				{
-					isBornNature = true;
-					return;		
-				}
-		default: {
-				isBornNature = false;
-				return;
-			}
-		}	
-		}
+		// if (col.gameObject.layer == 9) {
+		// ring = col.gameObject;
+		// natureIndex1 = mNature.nature;
+		// natureIndex2 = ring.GetComponent<Nature> ().nature;
+		// compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
+		// switch (compareResult) {
+		// case 0:
+		// 		{
+		// 			isBornNature = true;
+		// 			return;		
+		// 		}
+		// default: {
+		// 		isBornNature = false;
+		// 		return;
+		// 	}
+		// }	
+		// }
 	}
 
 	void OnTriggerExit2D(Collider2D col)
 	{
-		isBornNature = false;
+		// isBornNature = false;
 	}
 
 	private void changeNatureWhenGoThroughTheCircle (GameObject Circle) {
@@ -77,41 +77,44 @@ public class Collider : MonoBehaviour {
 		{
 			if (col.gameObject.layer == 14) {
 			processCollider(col.gameObject);
-		double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
-                                    +
-                                   (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
+		// double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
+        //                             +
+        //                            (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
         
-			if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-			if (isBornNature && !isPlayerInside) {
-				isBornNature = false;
-				changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-				col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
-			} 
-			isPlayerInside = true;
-		} else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-				if (isBornNature && isPlayerInside) {
-				isBornNature = false;
-				changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-				col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
-			}
-			else if (!isBornNature && !isPlayerInside) {
-			}
-				isPlayerInside = false;
-		}
+		// 	if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+		// 	if (isBornNature && !isPlayerInside) {
+		// 		isBornNature = false;
+		// 		changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+		// 		col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+		// 	} 
+		// 	isPlayerInside = true;
+		// } else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
+		// 		if (isBornNature && isPlayerInside) {
+		// 		isBornNature = false;
+		// 		changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
+		// 		col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+		// 	}
+		// 	else if (!isBornNature && !isPlayerInside) {
+		// 	}
+		// 		isPlayerInside = false;
+		// }
 		}
 		}
 
 		private void processCollider (GameObject col) {
             ring = col.gameObject.transform.parent.gameObject;
-		    natureIndex1 = mNature.nature;
+		    if (ring.GetComponent<Nature> () == null) {
+				return;
+			}
+			natureIndex1 = mNature.nature;
 		    natureIndex2 = ring.GetComponent<Nature> ().nature;
-		    compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
+		    compareResult = compareNat.compareNature (natureIndex1, natureIndex2);	
 		    switch (compareResult) {
 		    case 0:
 			    {
-            	    ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-                    // this.processCollideWithNormalRing(ring);
-				    return;
+						ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+						// this.processCollideWithNormalRing(ring);
+						return;
 			    }
     	    case 1:
             	    {
