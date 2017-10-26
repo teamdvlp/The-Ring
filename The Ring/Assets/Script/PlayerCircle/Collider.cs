@@ -118,7 +118,7 @@ public class Collider : MonoBehaviour {
 			    }
     	    case 1:
             	    {
-            		    ring.GetComponent<PolygonCollider2D>().isTrigger = true;
+            		    ring.GetComponent<PolygonCollider2D>().isTrigger = true;	
                         // this.processCollideWithNormalRing(ring);
 					    return;
             	    }

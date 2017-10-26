@@ -26,17 +26,17 @@ TagManager:
   - 
   - 
   - Ring
-  - DismissRing
+  - 
   - OverlayCanvas
   - SmallMonster
-  - Wall
+  - 
   - CheckedRing
   - PlayerCircle
   - CollideStove
   - Stove
-  - CircleInside
-  - RingProtected
   - 
+  - RingProtected
+  - Coin
   - 
   - 
   - 
