@@ -14,33 +14,10 @@ public class Shopping : MonoBehaviour {
 	public double total_coins;
 
 
-<<<<<<< HEAD
 	void Start () { 
 		total_coins = SqliteUserManager.getCoin();
-		Debug.Log ("ABC");
-		CreateShopping ();
-	
 	}
 
-	void CreateShopping () {
-		list_Character = new List<Character> ();
-
-		Character character1 = new Character (list_CharacterSprite[0],100,1);
-		Character character2 = new Character (list_CharacterSprite[1],800,2);
-		Character character3 = new Character (list_CharacterSprite[2],3000,3);
-		Character character4 = new Character (list_CharacterSprite[3],7000,4);
-		Character character5 = new Character (list_CharacterSprite[4],15000,5);
-
-		list_Character.Add (character1);
-		list_Character.Add (character2);
-		list_Character.Add (character3);
-		list_Character.Add (character4);
-		list_Character.Add (character5);
-		Debug.Log (list_Character.Count);
-
-	}
-=======
->>>>>>> ca1e2f1ca5dfbd6c28dc075b13556da2b92ec34c
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {
