@@ -5,7 +5,7 @@ using UnityEngine;
 public class ListNature {
 
 	public List<string> getListNature () {
-		List<string> list = new List<string> () { "Null", "Kim", "Mộc", "Thủy", "Hỏa", "Thổ" };
+		List<string> list = new List<string> () { "Null", "Hỏa", "Mộc", "Băng", "Phong"};
 		return list;
 	}
 

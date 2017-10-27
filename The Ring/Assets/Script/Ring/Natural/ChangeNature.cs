@@ -84,7 +84,6 @@ public class ChangeNature : MonoBehaviour {
 
     void Change(GameObject nature)
     {
-		playerCollider.checkNature = true;
         Destroy(playerCurrentNature);
         playerCurrentNature = Instantiate(nature, gameObject.transform.position, gameObject.transform.rotation,gameObject.transform);
         playerCurrentNature.transform.localScale = new Vector3(size,size,size);

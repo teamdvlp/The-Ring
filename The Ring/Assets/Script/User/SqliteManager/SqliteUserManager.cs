@@ -63,7 +63,6 @@ public class SqliteUserManager {
 					idb.CommandText = query;
 					idb.ExecuteNonQuery();
 					IDataReader idata = idb.ExecuteReader();
-					int i = 0;
 					while (idata.Read()) {
 					Character.Add(Convert.ToInt32(idata[0]));
 					}

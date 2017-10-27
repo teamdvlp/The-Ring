@@ -6,22 +6,6 @@ public class CameraFollow : MonoBehaviour
 {
         public float smoothing;
         public Transform target;
-        public float YLimit;
-        // true: trái, false: phải
-        public bool direction;
-
-        private Vector3 offsetRight;
-        private Vector3 offsetLeft;
-
-        void Start()
-        {
-            this.offsetRight = new Vector3(this.transform.position.x - this.target.transform.position.x, this.transform.position.y - this.target.transform.position.y, -10);
-        }
-        void Update()
-
-        {
-
-	}
 
     	void FixedUpdate () {
 			follow();
