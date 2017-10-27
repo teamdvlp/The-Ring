@@ -13,10 +13,11 @@ public class Shopping : MonoBehaviour {
 	public List<Character> list_Character;
 	List <int> list_Cost;
 	int choosenPosition = 0;
-	public int total_coins;
+	public double total_coins;
 
 
 	void Start () { 
+		total_coins = SqliteUserManager.getCoin();
 		Debug.Log ("ABC");
 		CreateShopping ();
 	
