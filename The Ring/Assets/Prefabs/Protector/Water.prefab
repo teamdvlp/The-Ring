@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4394725947944028}
   - component: {fileID: 212049183933573772}
   - component: {fileID: 114758919700835274}
-  - component: {fileID: 114625859928996146}
   - component: {fileID: 50377601046043446}
   - component: {fileID: 58696202012952974}
   - component: {fileID: 114415983389527210}
@@ -290,6 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 326a43e61c4b57445b28bea2f921aa0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverBoard: {fileID: 0}
+  ContinueBoard: {fileID: 0}
+  delayTimeAppearOverBoard: 0
+  transparentBackground: {fileID: 0}
 --- !u!114 &114187944252823812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,6 +315,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfd6a046d31d5040940a216b1cc69aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ContinueBoard: {fileID: 0}
+  deathEffect: {fileID: 0}
+  respawnEffect: {fileID: 0}
+  swipe: {fileID: 0}
+  MovingEffect: {fileID: 0}
 --- !u!114 &114415983389527210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1dde8089a1b5945bf51abe38ee4e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nature: 0
 --- !u!114 &114471487434870572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,6 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a90ee9680a54f3e930b39facf28f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothing: 0
+  target: {fileID: 0}
 --- !u!114 &114551684494237630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,17 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986725952f7938f4eb3d26d6131e35f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114625859928996146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157956976578418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebfc119ebf14546e88564cb4402bce3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  progressBar: {fileID: 0}
+  destination: {fileID: 0}
+  startingPosition: {fileID: 0}
 --- !u!114 &114758919700835274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,6 +381,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6659d6aa80a3a43588d822627b13398f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trackpad: {fileID: 0}
+  speed: 0
+  playerLimits:
+    MaximumX: 0
+    MinimumX: 0
+    MaximumY: 0
+    MinimumY: 0
 --- !u!114 &114822586805109274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,6 +399,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50542cdd29c824429cf24f08f85a0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  currentScoreText: {fileID: 0}
+  coinToRespawnText: {fileID: 0}
+  OnGameOver: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!114 &114876245051983486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,6 +415,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86507238c37675b43bb1a29055adf906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: {fileID: 0}
+  water: {fileID: 0}
+  grass: {fileID: 0}
+  ground: {fileID: 0}
+  metal: {fileID: 0}
+  playerCurrentNature: {fileID: 0}
+  SmokeTransformFire: {fileID: 0}
+  SmokeTransformGrass: {fileID: 0}
+  SmokeTransformWater: {fileID: 0}
+  SmokeTransformGround: {fileID: 0}
+  SmokeTransformMetal: {fileID: 0}
+  firePlayer: {fileID: 0}
+  waterPlayer: {fileID: 0}
+  grassLayer: {fileID: 0}
+  groundLayer: {fileID: 0}
+  metalPlayer: {fileID: 0}
+  size: 0
 --- !u!124 &124960598589412162
 Behaviour:
   m_ObjectHideFlags: 1

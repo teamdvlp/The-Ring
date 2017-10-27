@@ -1,24 +1,55 @@
-using System;
+using System.Collections;
 using UnityEngine;
 public class Collider : MonoBehaviour {
 	public GameObject collideEffect;
 	private Nature mNature;
-	public bool checkNature;
-	private bool isBornNature;
-	private bool isPlayerInside;
 	private ChangeNature changeNature;
 	CompareNature compareNat = new CompareNature();
 	private int natureIndex1,natureIndex2, compareResult;
 	private GameObject ring;
-	private NatureSkill mNatureSkill;
+	public Swipe swipe;
+	public Rigidbody2D mRigidBody;
+	private bool stunned;
+	private bool isStopRotate;
+	private bool isStartGame; 
 	void Start () {
-		isPlayerInside = false;
-		checkNature = false;
-		mNatureSkill = this.GetComponent<NatureSkill>();
+		isStartGame = false;
+		stunned = false;
+		isStopRotate = false;
+		mRigidBody = this.GetComponent<Rigidbody2D>();
 		changeNature = this.GetComponent<ChangeNature>();
-		// isBornNature = false;
+		this.GetComponent<Intro>().onGameStarted += OnStartGame;
 		mNature = this.GetComponent<Nature>();
     }
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.layer == 9) {
+			if (compareResult == 2) {
+				if (!stunned) {
+					stunned = true;
+					Stun();
+				}
+			}
+			
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.layer == 9) {
+			if (isStopRotate) {
+				isStopRotate = false;
+				col.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+				col.gameObject.transform.localEulerAngles = new Vector3(0,0,180);
+			}
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D col)
+	{
+		stunned = false;
+	}
 
     void CollideEffect (Collision2D col)
     {
@@ -42,66 +73,29 @@ public class Collider : MonoBehaviour {
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
 		collision.enabled = false;
 	}
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		// if (col.gameObject.layer == 9) {
-		// ring = col.gameObject;
-		// natureIndex1 = mNature.nature;
-		// natureIndex2 = ring.GetComponent<Nature> ().nature;
-		// compareResult = compareNat.compareNature (natureIndex1, natureIndex2);
-		// switch (compareResult) {
-		// case 0:
-		// 		{
-		// 			isBornNature = true;
-		// 			return;		
-		// 		}
-		// default: {
-		// 		isBornNature = false;
-		// 		return;
-		// 	}
-		// }	
-		// }
+
+	private void Stun () {
+		swipe.enabled = false;
+		mRigidBody.velocity = Vector2.zero;
+		StartCoroutine(CancelStun(1.0f));
 	}
 
-	void OnTriggerExit2D(Collider2D col)
-	{
-		// isBornNature = false;
-	}
-
-	private void changeNatureWhenGoThroughTheCircle (GameObject Circle) {
-		int nature = Circle.GetComponent<Nature>().nature;
-		changeNature.SetNature(compareNat.getNatureBorn(nature));
+	private IEnumerator CancelStun (float second) {
+		yield return new WaitForSeconds(second);
+		swipe.enabled = true;
 	}
 
 	void OnTriggerStay2D(Collider2D col)
 		{
 			if (col.gameObject.layer == 14) {
 			processCollider(col.gameObject);
-		// double distance = Math.Sqrt((this.transform.position.x - col.transform.position.x) * (this.transform.position.x - col.transform.position.x)
-        //                             +
-        //                            (this.transform.position.y - col.transform.position.y) * (this.transform.position.y - col.transform.position.y));
-        
-		// 	if (Math.Abs(distance) < Math.Abs(4.5 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-		// 	if (isBornNature && !isPlayerInside) {
-		// 		isBornNature = false;
-		// 		changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-		// 		col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
-		// 	} 
-		// 	isPlayerInside = true;
-		// } else if (Math.Abs(distance) > Math.Abs(6 - Math.Abs(this.GetComponent<CircleCollider2D>().radius))) {
-		// 		if (isBornNature && isPlayerInside) {
-		// 		isBornNature = false;
-		// 		changeNatureWhenGoThroughTheCircle(col.transform.parent.gameObject);
-		// 		col.transform.parent.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
-		// 	}
-		// 	else if (!isBornNature && !isPlayerInside) {
-		// 	}
-		// 		isPlayerInside = false;
-		// }
 		}
 		}
 
 		private void processCollider (GameObject col) {
+			if (!isStartGame) {
+				return;
+			}
             ring = col.gameObject.transform.parent.gameObject;
 		    if (ring.GetComponent<Nature> () == null) {
 				return;
@@ -113,19 +107,22 @@ public class Collider : MonoBehaviour {
 		    case 0:
 			    {
 						ring.GetComponent<PolygonCollider2D>().isTrigger = true;
-						// this.processCollideWithNormalRing(ring);
+						isStopRotate = true;
 						return;
 			    }
     	    case 1:
             	    {
             		    ring.GetComponent<PolygonCollider2D>().isTrigger = true;	
-                        // this.processCollideWithNormalRing(ring);
+						isStopRotate = true;
 					    return;
             	    }
 		    default:
 					    ring.GetComponent<PolygonCollider2D>().isTrigger = false;
-					    // this.processCollideWithNormalRing(ring);
 					    return;
 		}
+	}
+
+	private void OnStartGame () {
+		isStartGame = true;
 	}
 }

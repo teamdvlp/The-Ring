@@ -13,11 +13,7 @@ public class EatCoin : MonoBehaviour {
 	void Start () {
         coin = 0;
 		onGameOver.OnOverGame += OnGameOver;
-        Debug.Log(SqliteUserManager.getCoin().ToString());
-        Debug.Log(SqliteUserManager.getBestScore().ToString());
     }
-
-
     public void OnGameOver () { 
 		SqliteUserManager.AddCoin (coin);
     }

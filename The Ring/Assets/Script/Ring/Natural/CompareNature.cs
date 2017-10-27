@@ -12,8 +12,7 @@ public class CompareNature  {
 	// 0: nature1 khắc nature2;
 	// 1: nature1 bằng nature2;
 	// 2: nature2 khắc nature1
-	// 3: nature1 sinh nature2 và ngược lại
-	// 4: nature1 không khắc nature2 và ngược lại
+	// 3: nature1 không khắc nature2 và ngược lại
     public int compareNature(int natureIndex1, int natureIndex2) {
 		ListNature lsNature = new ListNature ();
 		nature1 = lsNature.getListNature () [natureIndex1];
@@ -25,117 +24,60 @@ public class CompareNature  {
                 {
                     return 3;
                 }
-            case "Kim":
+            case "Băng":
                 {
 				if (nature2.Equals ("Mộc")) {
 					return 0;
-				} else if (nature2.Equals ("Kim")) {
+				} else if (nature2.Equals ("Băng")) {
 					return 1;
 				} else if (nature2.Equals ("Hỏa")) {
 					return 2;
-				} else if (nature2.Equals("Thủy")) {
-					return 3;
 				} else {
-					return 4;
+					return 3;
 				}
-
                 }
 
 			case "Mộc":
 			{
-				if (nature2.Equals ("Thổ")) {
+				if (nature2.Equals ("Phong")) {
 					return 0;
 				} else if (nature2.Equals ("Mộc")) {
 					return 1;
-				} else if (nature2.Equals ("Kim")) {
+				} else if (nature2.Equals ("Hỏa")) {
 					return 2;
-				} else if (nature2.Equals("Hỏa")) {
-					return 3;
 				} else {
 					return 3;
 				}
 			}
 
-			case "Thủy": 
+			case "Phong": 
 			{
 				if (nature2.Equals ("Hỏa")) {
 					return 0;
-				} else if (nature2.Equals ("Thủy")) {
+				} else if (nature2.Equals ("Phong")) {
 					return 1;
-				} else if (nature2.Equals ("Thổ")) {
+				} else if (nature2.Equals ("Mộc")) {
 					return 2;
-				} else if (nature2.Equals("Mộc")) {
-					return 3;
 				} else {
-					return 4;
+					return 3;
 				}
 			}
 
 			case "Hỏa": 
 			{
-				if (nature2.Equals ("Kim")) {
+				if (nature2.Equals ("Băng")) {
 					return 0;
 				} else if (nature2.Equals ("Hỏa")) {
 					return 1;
-				} else if (nature2.Equals ("Thủy")) {
+				} else if (nature2.Equals ("Phong")) {
 					return 2;
-				} else if (nature2.Equals("Thổ")) {
-					return 3;
 				} else {
-					return 4;
+					return 3;
 				}
 			}
 
-		case "Thổ": 
-			{
-				if (nature2.Equals ("Thủy")) {
-					return 0;
-				} else if (nature2.Equals ("Thổ")) {
-					return 1;
-				} else if (nature2.Equals ("Mộc")) {
-					return 2;
-				} else if (nature2.Equals("Kim")) {
-					return 3;
-				} else {
-					return 4;
-				}
-			}
 		default:
 			return -1; 
 		}
 	}
-		public int getNatureBorn (int nature) {
-		ListNature lsNature = new ListNature ();
-		string natureResult = lsNature.getListNature () [nature];
-        switch (natureResult)
-        {
-            case "Kim":
-            {
-					return 3;
-            }
-
-			case "Mộc":
-			{
-					return 4;
-			}
-
-			case "Thủy": 
-			{
-					return 2;
-			}
-
-			case "Hỏa": 
-			{
-					return 5;
-			}
-
-			case "Thổ": 
-			
-			{
-					return 1;
-			}
-		default:
-			return -1; 
-		}
-		}
 	}

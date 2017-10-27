@@ -8,32 +8,22 @@ public class OnGameOver : MonoBehaviour {
     public Swipe swipe;
     public delegate bool RespawnEvent();
     public event RespawnEvent OnPlayerRespawn;
-    
-
     // Properties Of Player
     public GameObject MovingEffect;
     SpriteRenderer spriteRenderer;
-    CircleCollider2D circleCollider2D;
-    Rigidbody2D rigidbody2D;
-
-
+    private Rigidbody2D rigidbody2D;
 
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        circleCollider2D = GetComponent<CircleCollider2D>();
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 	
-
-
     public void Die()
     {
         ContinueBoard.SetActive(true);
         SetState(false);    
         Instantiate(deathEffect, transform.position, transform.rotation);
     }
-
-
 
     public void Respawn ()
     {
@@ -57,15 +47,11 @@ public class OnGameOver : MonoBehaviour {
         
     }
 
-
-
     private IEnumerator CreateRespawnEffect()
     {
         yield return new WaitForSeconds(.05f);
         Instantiate(respawnEffect, transform.position, transform.rotation);
     }
-
-
 
     public void SetState (bool state) 
     {
