@@ -15,6 +15,7 @@ public class Shopping : MonoBehaviour {
 	int choosenPosition = 0;
 
 	void Start () { 
+<<<<<<< HEAD
 		CreateShopping ();
 	}
 
@@ -35,6 +36,11 @@ public class Shopping : MonoBehaviour {
 		Debug.Log (list_Character.Count);
 
 	}
+=======
+		total_coins = SqliteUserManager.getCoin();
+	}
+
+>>>>>>> bcf15d8f557060cdd445fd00f13f3d6f1c3c077d
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {

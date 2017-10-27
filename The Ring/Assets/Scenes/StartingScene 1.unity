@@ -119,7 +119,6 @@ GameObject:
   - component: {fileID: 73658523}
   - component: {fileID: 73658522}
   - component: {fileID: 73658521}
-  - component: {fileID: 73658520}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -146,18 +145,6 @@ RectTransform:
   m_AnchoredPosition: {x: 365, y: 220}
   m_SizeDelta: {x: 45.7, y: 55.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &73658520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73658518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16bac6e691292c4e8f5d6d486a014ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: ShoppingScene
 --- !u!114 &73658521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +183,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 73658522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1187811528}
+        m_MethodName: NextCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &73658522
@@ -867,7 +865,6 @@ GameObject:
   - component: {fileID: 615034988}
   - component: {fileID: 615034987}
   - component: {fileID: 615034986}
-  - component: {fileID: 615034985}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -894,18 +891,6 @@ RectTransform:
   m_AnchoredPosition: {x: -440, y: 212}
   m_SizeDelta: {x: 45.7, y: 55.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &615034985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 615034983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16bac6e691292c4e8f5d6d486a014ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: ShoppingScene
 --- !u!114 &615034986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +929,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615034987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1187811528}
+        m_MethodName: PreviousCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &615034987
@@ -1589,7 +1585,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b91b74f7b2529a044b9f39746096a0c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f75a3cc31beafaf4491423c770878ad4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1614,8 +1610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e59a12f8eb783e409da808ca8d24bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 1187811526}
-  startingSprite: {fileID: 21300000, guid: 669186fbd48b66f48979708ae9629169, type: 3}
+  imageChoosenCharacter: {fileID: 1187811526}
+  startingSprite: {fileID: 21300000, guid: f75a3cc31beafaf4491423c770878ad4, type: 3}
+  list_CharacterSprite:
+  - {fileID: 21300000, guid: 669186fbd48b66f48979708ae9629169, type: 3}
+  - {fileID: 21300000, guid: b91b74f7b2529a044b9f39746096a0c0, type: 3}
+  - {fileID: 21300000, guid: f75a3cc31beafaf4491423c770878ad4, type: 3}
+  - {fileID: 21300000, guid: c9c379c416c16654a90aa977d76d839d, type: 3}
+  - {fileID: 21300000, guid: dca3c9e1c735807448c9ab84eae9f9c7, type: 3}
 --- !u!1 &1303758428
 GameObject:
   m_ObjectHideFlags: 0
