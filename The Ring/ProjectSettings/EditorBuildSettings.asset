@@ -18,17 +18,26 @@ EditorBuildSettings:
     path: Assets/Scenes/ChooseMapScene.unity
     guid: a8eb7fb382c4d9848b9f1e6f3ecd3e5f
   - enabled: 0
-    path: Assets/Scenes/StartingScene.unity
+    path: 
     guid: 0282502d6cc3af049bec81e41f0faa73
+  - enabled: 1
+    path: Assets/Scenes/SettingScene.unity
+    guid: 3ed71f52777b24149abff945a2ee3ef3
   - enabled: 0
     path: 
     guid: 0fe239d025f49644cbdd4989dd7c7ece
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Screen Play/LevelSwipes.unity
     guid: 9f08a055e69268044bf3c928a075114f
   - enabled: 1
     path: Assets/Scenes/Screen Play/Scene 1.unity
     guid: 9628e5385c46bac4b93d0a593ec66839
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartingScene 1.unity
     guid: 3a0cad35c3048544f9c5c77de45063ab
+  - enabled: 1
+    path: Assets/Scenes/Screen Play/Scene.unity
+    guid: 1d01d8009f3cbb3479b04071dfa0f268
+  - enabled: 1
+    path: Assets/Scenes/ShoppingScene.unity
+    guid: 0663c46b9a4e5be458998e691d659c13

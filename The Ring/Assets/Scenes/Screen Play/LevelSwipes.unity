@@ -1685,7 +1685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d3692ae15334c32a53282173c33987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DIDI: 2
 --- !u!212 &723779761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1839,7 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694098b28e084a34aa82fd65e9dcadcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appearTime: 1.3
+  timeDelayAppearTransparentBackground: 0
 --- !u!1 &752908120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,7 +5636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverBoard: {fileID: 1845660571}
-  appearTime: 4
+  ContinueBoard: {fileID: 0}
+  delayTimeAppearOverBoard: 0
   transparentBackground: {fileID: 742601987}
 --- !u!114 &1096486611
 MonoBehaviour:
@@ -10403,6 +10403,7 @@ GameObject:
   - component: {fileID: 2141814785}
   - component: {fileID: 2141814789}
   - component: {fileID: 2141814790}
+  - component: {fileID: 2141814791}
   m_Layer: 16
   m_Name: PlayerCircle
   m_TagString: Untagged
@@ -10481,6 +10482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 499947232}
   currentScoreText: {fileID: 1976506651}
+  coinToRespawnText: {fileID: 0}
+  OnGameOver: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!114 &2141814778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10493,10 +10497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfd6a046d31d5040940a216b1cc69aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ContinueBoard: {fileID: 0}
   deathEffect: {fileID: 1444735654080226, guid: fbab311c05414c34582995d8ee1ee752,
     type: 2}
-  GameManager: {fileID: 1096486609}
+  respawnEffect: {fileID: 0}
   swipe: {fileID: 0}
+  MovingEffect: {fileID: 0}
 --- !u!114 &2141814779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10596,7 +10602,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141814774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d41554b79d10f6c40ac261d8631d1b6a, type: 2}
   m_CullingMode: 0
@@ -10672,7 +10678,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141814774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27fcf609009fc2949a0fe98b3873f69a, type: 3}
   m_Name: 
@@ -10719,3 +10725,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81374251c9f204d80960261b470537a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2141814791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141814774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396da348c4f31a4eb86e0b96488b0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2141814786}

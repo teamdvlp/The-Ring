@@ -9,7 +9,11 @@ public class TransparentBackground : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+	}
+
+	void Awake () {
+		Application.targetFrameRate = 85;
 	}
 	
 	// Update is called once per frame
