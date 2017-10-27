@@ -117,11 +117,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.843
       objectReference: {fileID: 0}
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 71.43726
+      value: 70.849
       objectReference: {fileID: 0}
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -149,15 +149,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.13104314
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.1695852
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.17619245
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114354978503100278, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
         type: 2}
@@ -268,6 +268,27 @@ Prefab:
       propertyPath: Monster
       value: 
       objectReference: {fileID: 943222314}
+    - target: {fileID: 114983517121859816, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95491828223969054, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212486972286569252, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 669186fbd48b66f48979708ae9629169,
+        type: 3}
+    - target: {fileID: 58693645058422448, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.49
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114941254801227292, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ae6c788862228ad4fbfd440ad5fa4b9a, type: 2}
@@ -1054,18 +1075,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1037768122486432, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
     type: 2}
   m_PrefabInternal: {fileID: 61096524}
---- !u!114 &703511365 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114269596169521698, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
-    type: 2}
-  m_PrefabInternal: {fileID: 61096524}
-  m_Script: {fileID: 11500000, guid: 2dfd6a046d31d5040940a216b1cc69aa, type: 3}
---- !u!4 &703511372 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
-    type: 2}
-  m_PrefabInternal: {fileID: 61096524}
---- !u!114 &703511373
+--- !u!114 &703511360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1073,11 +1083,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 703511359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9adb25f41ec88648a9142be9c09c3af, type: 3}
+  m_Script: {fileID: 11500000, guid: b396da348c4f31a4eb86e0b96488b0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 0}
-  onGameOver: {fileID: 703511365}
+  spriteRenderer: {fileID: 703511373}
+--- !u!4 &703511372 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4501680175995612, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 61096524}
+--- !u!212 &703511373 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212486972286569252, guid: ae6c788862228ad4fbfd440ad5fa4b9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 61096524}
 --- !u!1 &705888448
 GameObject:
   m_ObjectHideFlags: 0
