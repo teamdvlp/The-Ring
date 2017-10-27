@@ -9,41 +9,16 @@ public class Shopping : MonoBehaviour {
 	public Image choosenCharacterImage;
 	public Character choosenCharacter;
 	public Text costText;
-	public List<Sprite> list_CharacterSprite;
-	public List<Character> list_Character;
 	List <int> list_Cost;
 	int choosenPosition = 0;
 	public int total_coins;
 
 
-	void Start () { 
-		Debug.Log ("ABC");
-		CreateShopping ();
-	
-	}
-
-	void CreateShopping () {
-		list_Character = new List<Character> ();
-
-		Character character1 = new Character (list_CharacterSprite[0],100,1);
-		Character character2 = new Character (list_CharacterSprite[1],800,2);
-		Character character3 = new Character (list_CharacterSprite[2],3000,3);
-		Character character4 = new Character (list_CharacterSprite[3],7000,4);
-		Character character5 = new Character (list_CharacterSprite[4],15000,5);
-
-		list_Character.Add (character1);
-		list_Character.Add (character2);
-		list_Character.Add (character3);
-		list_Character.Add (character4);
-		list_Character.Add (character5);
-		Debug.Log (list_Character.Count);
-
-	}
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {
 
-		if (choosenPosition < list_Character.Count - 1) {
+		if (choosenPosition < Starting.ListAllCharacter.Count - 1) {
 			choosenPosition++;
 			ShowInfo (this.choosenPosition);
 
@@ -61,7 +36,7 @@ public class Shopping : MonoBehaviour {
 			ShowInfo (this.choosenPosition);
 
 		} else if (choosenPosition <= 0) {
-			choosenPosition = list_Character.Count - 1;
+			choosenPosition = Starting.ListAllCharacter.Count - 1;
 			ShowInfo (this.choosenPosition);
 		}
 	}
@@ -69,7 +44,7 @@ public class Shopping : MonoBehaviour {
 
 	// Thể hiện thông tin lên màn hình
 	private void ShowInfo (int choosenPosition) {
-		Character character = list_Character [choosenPosition];
+		Character character = Starting.ListAllCharacter [choosenPosition];
 
 		if (character.isBought) {
 			Debug.Log ("ĐÃ MUA");
@@ -87,7 +62,7 @@ public class Shopping : MonoBehaviour {
 
 	// Xử lý nhân vật thể hiện trong shop sau khi được mua
 	private void Process_Bought_Character_InShop_AfterBuy (int choosenPosition) {
-		list_Character [choosenPosition].SetIsBought (true);
+		Starting.ListAllCharacter [choosenPosition].SetIsBought (true);
 	}
 
 
@@ -100,9 +75,12 @@ public class Shopping : MonoBehaviour {
 
 
 	public void Buy () {
-		if (total_coins > list_Character[choosenPosition].GetCost()) {
-			User.SetUserSprite(list_Character[choosenPosition].GetSprite());
-			total_coins -= list_Character [choosenPosition].GetCost();
+		if (total_coins > Starting.ListAllCharacter[choosenPosition].GetCost()) {
+			
+			User.SetUserSprite(Starting.ListAllCharacter[choosenPosition].GetSprite());
+			total_coins -= Starting.ListAllCharacter [choosenPosition].GetCost();
+			Starting.list_OwnedCharacter.Add(Starting.ListAllCharacter[choosenPosition]);
+			Starting.choosenPosition = Starting.list_OwnedCharacter.Count - 1;
 			Process_Bought_Character_InShop_AfterBuy (choosenPosition);
 			ShowInfo (choosenPosition);
 		} else { 
