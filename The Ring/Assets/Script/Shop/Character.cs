@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character {
-
 	public Sprite sprite;
 	public int cost;
 	public int speed;
-	public bool isBought;
+	public int id;
 
-	public Character (Sprite sprite, int cost, int speed) {
+	public Character (Sprite sprite, int cost, int speed, int id) {
 		this.sprite = sprite;
 		this.cost = cost;
 		this.speed = speed;
-		this.isBought = false;
+		this.id = id;
 	}
 
 	public Sprite GetSprite () {
@@ -28,10 +27,9 @@ public class Character {
 		return this.speed;
 	}
 
-	public void SetIsBought (bool isBought) { 
-		this.isBought = isBought;
+	public int getId () {
+		return this.id;
 	}
-
 
 }
 

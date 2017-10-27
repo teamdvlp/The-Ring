@@ -2,34 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Linq;
 public class Shopping : MonoBehaviour {
 	public Image OwnedImage;
 	public Button btn_Buy;
 	public Image choosenCharacterImage;
 	public Character choosenCharacter;
 	public Text costText;
+	public List<Sprite> list_CharacterSprite;
+	public List<Character> list_Character;
 	List <int> list_Cost;
 	int choosenPosition = 0;
-	public double total_coins;
 
-
-<<<<<<< HEAD
 	void Start () { 
-		total_coins = SqliteUserManager.getCoin();
-		Debug.Log ("ABC");
 		CreateShopping ();
-	
 	}
 
 	void CreateShopping () {
 		list_Character = new List<Character> ();
 
-		Character character1 = new Character (list_CharacterSprite[0],100,1);
-		Character character2 = new Character (list_CharacterSprite[1],800,2);
-		Character character3 = new Character (list_CharacterSprite[2],3000,3);
-		Character character4 = new Character (list_CharacterSprite[3],7000,4);
-		Character character5 = new Character (list_CharacterSprite[4],15000,5);
+		Character character1 = new Character (list_CharacterSprite[0],100,1,2314);
+		Character character2 = new Character (list_CharacterSprite[1],800,2,3214);
+		Character character3 = new Character (list_CharacterSprite[2],3000,3,5234);
+		Character character4 = new Character (list_CharacterSprite[3],7000,4,5524);
+		Character character5 = new Character (list_CharacterSprite[4],15000,5,9182);
 
 		list_Character.Add (character1);
 		list_Character.Add (character2);
@@ -39,13 +35,11 @@ public class Shopping : MonoBehaviour {
 		Debug.Log (list_Character.Count);
 
 	}
-=======
->>>>>>> ca1e2f1ca5dfbd6c28dc075b13556da2b92ec34c
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {
 
-		if (choosenPosition < Starting.ListAllCharacter.Count - 1) {
+		if (choosenPosition < list_Character.Count - 1) {
 			choosenPosition++;
 			ShowInfo (this.choosenPosition);
 
@@ -63,17 +57,19 @@ public class Shopping : MonoBehaviour {
 			ShowInfo (this.choosenPosition);
 
 		} else if (choosenPosition <= 0) {
-			choosenPosition = Starting.ListAllCharacter.Count - 1;
+			choosenPosition = list_Character.Count - 1;
 			ShowInfo (this.choosenPosition);
 		}
 	}
 
+	private bool checkIsBought (int id) {
+		return SqliteUserManager.getCharacter().Exists(x => x == id);
+	}
 
 	// Thể hiện thông tin lên màn hình
 	private void ShowInfo (int choosenPosition) {
-		Character character = Starting.ListAllCharacter [choosenPosition];
-
-		if (character.isBought) {
+		Character character = list_Character [choosenPosition];
+		if (checkIsBought(character.getId())) {
 			Debug.Log ("ĐÃ MUA");
 			choosenCharacterImage.sprite = character.GetSprite ();
 			ProcessControllerState (false, 100);
@@ -86,12 +82,10 @@ public class Shopping : MonoBehaviour {
 		}
 	}
 
-
 	// Xử lý nhân vật thể hiện trong shop sau khi được mua
 	private void Process_Bought_Character_InShop_AfterBuy (int choosenPosition) {
-		Starting.ListAllCharacter [choosenPosition].SetIsBought (true);
+		SqliteUserManager.addCharacter(list_Character[choosenPosition].getId());
 	}
-
 
 	private void ProcessControllerState (bool state, float alpha) {
 		OwnedImage.enabled = !state;
@@ -100,19 +94,16 @@ public class Shopping : MonoBehaviour {
 		choosenCharacterImage.color = new Color(225f,225f,225f,alpha);
 	}
 
-
 	public void Buy () {
-		if (total_coins > Starting.ListAllCharacter[choosenPosition].GetCost()) {
-			
-			User.SetUserSprite(Starting.ListAllCharacter[choosenPosition].GetSprite());
-			total_coins -= Starting.ListAllCharacter [choosenPosition].GetCost();
-			Starting.list_OwnedCharacter.Add(Starting.ListAllCharacter[choosenPosition]);
-			Starting.choosenPosition = Starting.list_OwnedCharacter.Count - 1;
+		if (SqliteUserManager.getCoin() > list_Character[choosenPosition].GetCost()) {
+			User.SetUserSprite(list_Character[choosenPosition].GetSprite());
+			SqliteUserManager.AddCoin (-list_Character [choosenPosition].GetCost());
 			Process_Bought_Character_InShop_AfterBuy (choosenPosition);
 			ShowInfo (choosenPosition);
 		} else { 
 			Debug.Log ("You have not enough money");
-			Debug.Log (total_coins + " And " + list_Cost[choosenPosition]  );
+			// Debug.Log (SqliteUserManager.getCoin() + " And " + list_Cost[choosenPosition]  );
 		}
 	}
+
 }

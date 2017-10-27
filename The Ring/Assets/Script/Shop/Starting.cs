@@ -27,24 +27,21 @@ public class Starting : MonoBehaviour {
 
 
 	void CreateListOfAllCharacter () {
-		ListOfCharacterKey = new List<int> ();
-		ListOfCharacterKey.Add (2);
-		ListOfCharacterKey.Add (4);
-		ListOfCharacterKey.Add (0);
-		ListAllCharacter = new List<Character> ();
+		// ListOfCharacterKey = new List<int> ();
+		// ListOfCharacterKey.Add (2);
+		// ListOfCharacterKey.Add (4);
+		// ListOfCharacterKey.Add (0);
+		// ListAllCharacter = new List<Character> ();
 
-		Character character1 = new Character (list_CharacterSprite[0],100,1);
-		Character character2 = new Character (list_CharacterSprite[1],800,2);
-		Character character3 = new Character (list_CharacterSprite[2],3000,3);
-		Character character4 = new Character (list_CharacterSprite[3],7000,4);
-		Character character5 = new Character (list_CharacterSprite[4],15000,5);
+		// Character character1 = new Character (list_CharacterSprite[0],100,1,2314);
+		// Character character2 = new Character (list_CharacterSprite[1],800,2,3214);
+		// Character character3 = new Character (list_CharacterSprite[2],3000,3,5234);
+		// Character character4 = new Character (list_CharacterSprite[3],7000,4,5524);
 
-		ListAllCharacter.Add (character1);
-		ListAllCharacter.Add (character2);
-		ListAllCharacter.Add (character3);
-		ListAllCharacter.Add (character4);
-		ListAllCharacter.Add (character5);
-
+		// ListAllCharacter.Add (character1);
+		// ListAllCharacter.Add (character2);
+		// ListAllCharacter.Add (character3);
+		// ListAllCharacter.Add (character4);
 	}
 
 
