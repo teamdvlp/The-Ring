@@ -2374,7 +2374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdde6e244a7ea346b356d1b188d3b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Scene 1
+  SceneName: Scene
   background: {fileID: 1594540686}
   progress: {fileID: 715937195}
 --- !u!114 &1970035798
