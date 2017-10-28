@@ -10,4 +10,6 @@ public class Rotate : MonoBehaviour {
 		rigid = GetComponent<Rigidbody2D> ();
 		rigid.angularVelocity = speed;
 	}
+
+
 }	
