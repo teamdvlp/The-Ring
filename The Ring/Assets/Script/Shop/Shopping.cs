@@ -19,6 +19,7 @@ public class Shopping : MonoBehaviour {
 	}
 
 	void CreateShopping () {
+<<<<<<< HEAD
 		list_Character = new List<Character> ();
 
 		Character character1 = new Character (list_CharacterSprite[0],100,1,2314);
@@ -35,6 +36,10 @@ public class Shopping : MonoBehaviour {
 		Debug.Log (list_Character.Count);
 	}
 
+=======
+		list_Character = Warehouse.getInstance().getAllCharacter();
+	}
+>>>>>>> 0fd42d8263b1b9a54edd55fff41d5e69ec89484e
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {
@@ -48,7 +53,6 @@ public class Shopping : MonoBehaviour {
 			ShowInfo (this.choosenPosition);
 		}
 	}
-
 
 	// Nhân vật phía trước
 	public void PreviousCharacter () { 
@@ -82,7 +86,6 @@ public class Shopping : MonoBehaviour {
 		}
 	}
 
-	// Xử lý nhân vật thể hiện trong shop sau khi được mua
 	private void Process_Bought_Character_InShop_AfterBuy (int choosenPosition) {
 		SqliteUserManager.addCharacter(list_Character[choosenPosition].getId());
 	}
@@ -105,5 +108,4 @@ public class Shopping : MonoBehaviour {
 			// Debug.Log (SqliteUserManager.getCoin() + " And " + list_Cost[choosenPosition]  );
 		}
 	}
-
 }
