@@ -19,27 +19,9 @@ public class Shopping : MonoBehaviour {
 	}
 
 	void CreateShopping () {
-<<<<<<< HEAD
 		list_Character = new List<Character> ();
-
-		Character character1 = new Character (list_CharacterSprite[0],100,1,2314);
-		Character character2 = new Character (list_CharacterSprite[1],800,2,3214);
-		Character character3 = new Character (list_CharacterSprite[2],3000,3,5234);
-		Character character4 = new Character (list_CharacterSprite[3],7000,4,5524);
-		Character character5 = new Character (list_CharacterSprite[4],15000,5,9182);
-
-		list_Character.Add (character1);
-		list_Character.Add (character2);
-		list_Character.Add (character3);
-		list_Character.Add (character4);
-		list_Character.Add (character5);
-		Debug.Log (list_Character.Count);
-	}
-
-=======
 		list_Character = Warehouse.getInstance().getAllCharacter();
 	}
->>>>>>> 0fd42d8263b1b9a54edd55fff41d5e69ec89484e
 	
 	// Nhân vật phía sau
 	public void NextCharacter () {
