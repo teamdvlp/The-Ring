@@ -19,6 +19,7 @@ public class Shopping : MonoBehaviour {
 	}
 
 	void CreateShopping () {
+		list_Character = new List<Character> ();
 		list_Character = Warehouse.getInstance().getAllCharacter();
 	}
 	
