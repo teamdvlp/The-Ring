@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Warehouse {
-	public List<Sprite> CharacterSprites;
 	public static Warehouse mInstance;
 	private List<Character> characters = new List<Character>();
 	private Warehouse (List<Sprite> CharacterSprites) {
-		this.CharacterSprites = CharacterSprites;
-		AddCharacter();
+		AddCharacter(CharacterSprites);
 	}
-	void AddCharacter ()
+	void AddCharacter (List<Sprite> CharacterSprites)
 	{
 		Character character1 = new Character (CharacterSprites[0],100,1,2314);
 		Character character2 = new Character (CharacterSprites[1],800,2,3214);
@@ -30,11 +28,7 @@ public class Warehouse {
 	}
 
 	public static Warehouse getInstance () {
-		if (Warehouse.mInstance != null) {
 			return Warehouse.mInstance;
-		} else {
-			return null;
-		}
 	}
 
 	public List<Character> getAllCharacter () {

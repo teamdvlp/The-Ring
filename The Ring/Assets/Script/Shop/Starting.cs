@@ -9,13 +9,17 @@ public class Starting : MonoBehaviour {
 	public static bool hadSetSpriteDefault = false;
 	public static List<Character> list_OwnedCharacter;
 	public static int choosenPosition;
-
+	public List<Sprite> CharacterSprites;
 	void Start () {
+		choosenPosition = 0;
+		Warehouse.newInstance(CharacterSprites);
 		CreateListOfAllCharacter ();
 		SetStartingState ();
+		ShowInfoOfChoosenCharacter(choosenPosition);
 	}
 
 	void CreateListOfAllCharacter () {
+		SqliteUserManager.ClearAllCharacter();
 		list_OwnedCharacter = Warehouse.getInstance().getAllCharacter()
 		.FindAll(x => SqliteUserManager.getCharacter()
 		.Exists(id => id == x.getId()));
@@ -35,8 +39,10 @@ public class Starting : MonoBehaviour {
 	}
 
 	private void ShowInfoOfChoosenCharacter (int position) {
+		if (list_OwnedCharacter.Count >= 1) {
 		imageChoosenCharacter.sprite = list_OwnedCharacter [position].GetSprite ();
 		User.sprite = list_OwnedCharacter [position].GetSprite ();
+		}
 	}
 
 	public void PreviousCharacter () { 
