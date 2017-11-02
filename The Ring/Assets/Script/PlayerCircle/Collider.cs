@@ -31,7 +31,6 @@ public class Collider : MonoBehaviour {
 					Stun();
 				}
 			}
-			
 		}
 	}
 
@@ -64,6 +63,7 @@ public class Collider : MonoBehaviour {
     }
 	private void processCollideWithAgainstRing(GameObject Ring)
 	{
+
 		var collision = Ring.GetComponentInChildren<ParticleSystem>().collision;
 		collision.enabled = true;
 	}
