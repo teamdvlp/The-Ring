@@ -6,7 +6,7 @@ public class EndlessManager : MonoBehaviour {
 	public List<GameObject> map;
 	private static int order;
 	private static Vector2 position;
-	private const int MapLength = 80;
+	public int distance = 80;
 	private int NumberOfMapHasBeenBorn;
 	private float timer = 3;
 	private float timerCache = 0;
@@ -47,6 +47,6 @@ public class EndlessManager : MonoBehaviour {
 	}
 
 	private void updateMapLocation () {
-		position = new Vector2(0,MapLength * NumberOfMapHasBeenBorn ) ;
+		position = new Vector2(0,distance * NumberOfMapHasBeenBorn ) ;
 	}
 }
