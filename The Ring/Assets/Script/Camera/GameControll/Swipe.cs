@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler {
+public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler {
 
 	public Vector3 startPoint, endPoint, direction;
 	public GameObject player;
@@ -12,7 +12,7 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 	public GameObject moveEffect;
 	Rigidbody2D rigidBody;
 	public float force;
-	public bool canSwipe;
+	private bool isDragging;
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
@@ -20,17 +20,25 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 	}
 
 	public void OnDrag (PointerEventData evenData) 
-	{//
+	{
+		isDragging = true;
 		endPoint = evenData.position;
 		direction = (endPoint - startPoint) / 100f;
 		direction = direction.magnitude > 4 ? direction.normalized * 4 : direction;
+		moveEffect.transform.LookAt (point5.transform);
+		setActivePoint (true);
+	}
+
+	public void OnEndDrag(PointerEventData eventData) {
+		isDragging = false;
+	}
+
+	public void SetPointPosition () { 
 		point1.transform.position = player.transform.position + direction *  0.2f;
 		point2.transform.position = player.transform.position + direction * 0.4f;
 		point3.transform.position = player.transform.position + direction * 0.6f;
 		point4.transform.position = player.transform.position + direction * 0.8f;
 		point5.transform.position = player.transform.position + direction * 1f;
-		moveEffect.transform.LookAt (point5.transform);
-		setActivePoint (true);
 	}
 
 	public void OnPointerUp (PointerEventData eventData) 
@@ -57,6 +65,8 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 
 	
 	void Update () {
-		
+		if (isDragging) {
+			SetPointPosition ();
+		}
 	}
 }
