@@ -14,51 +14,67 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 	public float force;
 	private bool isDragging;
 
-	public void OnPointerDown(PointerEventData eventData)
-	{
-		startPoint = eventData.position;
-	}
 
-	public void OnDrag (PointerEventData evenData) 
+
+    public void OnPointerDown(PointerEventData eventData)
 	{
-		isDragging = true;
-		endPoint = evenData.position;
-		direction = (endPoint - startPoint) / 100f;
-		direction = direction.magnitude > 4 ? direction.normalized * 4 : direction;
+		startPoint = Camera.main.ScreenToWorldPoint(eventData.position);
+        point1.transform.position = new Vector3(startPoint.x,startPoint.y, -10);
+        Debug.Log(eventData.position);
+        Debug.Log(startPoint);
+    }
+
+
+
+    public void OnDrag (PointerEventData eventData) 
+	{
+        Vector3 vec = Camera.main.ScreenToWorldPoint(eventData.position);
+        point2.transform.position = new Vector3(vec.x, vec.y, -10);
+        isDragging = true;
+		endPoint = Camera.main.ScreenToWorldPoint(eventData.position);
+        direction = (endPoint - startPoint);
+		direction = direction.magnitude > 3? direction.normalized * 3f: direction;
+        Debug.Log(direction.magnitude);
 		moveEffect.transform.LookAt (point5.transform);
 		setActivePoint (true);
 	}
 
-	public void OnEndDrag(PointerEventData eventData) {
+
+
+    public void OnEndDrag(PointerEventData eventData) {
 		isDragging = false;
 	}
+    
 
-	public void SetPointPosition () { 
-		point1.transform.position = player.transform.position + direction *  0.2f;
-		point2.transform.position = player.transform.position + direction * 0.4f;
-		point3.transform.position = player.transform.position + direction * 0.6f;
-		point4.transform.position = player.transform.position + direction * 0.8f;
-		point5.transform.position = player.transform.position + direction * 1f;
-	}
 
 	public void OnPointerUp (PointerEventData eventData) 
 	{
 			setActivePoint (false);
-			direction = (Vector3) eventData.position - startPoint;
+			direction = (Vector3) endPoint - startPoint;
 			direction /= 3f;
 			rigidBody.velocity = (-direction) * force;
 	}
 
+
+
 	void setActivePoint(bool isActive) {
-		point1.SetActive(isActive);
-		point2.SetActive(isActive) ;
-		point3.SetActive(isActive);
-		point4.SetActive(isActive);
-		point5.SetActive(isActive);
-	}
+        point1.SetActive(isActive);
+        point2.SetActive(isActive);
+        point3.SetActive(isActive);
+        point4.SetActive(isActive);
+        point5.SetActive(isActive);
+    }
 
+    public void SetPointPosition()
+    {
+        point1.transform.position = player.transform.position + direction * 0.2f;
+        point2.transform.position = player.transform.position + direction * 0.4f;
+        point3.transform.position = player.transform.position + direction * 0.6f;
+        point4.transform.position = player.transform.position + direction * 0.8f;
+        point5.transform.position = player.transform.position + direction * 1f;
+    }
 
-	void Start () {
+    void Start () {
 		rigidBody = player.GetComponent<Rigidbody2D> ();
 	}
 
