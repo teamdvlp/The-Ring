@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Collider_SmallMonster : MonoBehaviour {
 	OnGameOver onGameOver;
-
+    public FuckingLimit limit;
+    public AudioSource audio;
 
     // Use this for initialization
     void Start () {
@@ -15,6 +16,12 @@ public class Collider_SmallMonster : MonoBehaviour {
     void Update () {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audio.Play();
+    }
+
     void OnParticleCollision(GameObject other)
     {
         if (other.layer == 12)
@@ -27,7 +34,9 @@ public class Collider_SmallMonster : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Monster"))
         {
-            onGameOver.Die();
+            limit.End();
+            Destroy(gameObject);
+            //onGameOver.Die();
         }
     }
 }

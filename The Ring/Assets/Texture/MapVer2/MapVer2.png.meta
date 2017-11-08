@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: b98cd2f92fb53cf4b84f40ec5f37b77c
+timeCreated: 1509867233
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MapVer2_0
+    21300002: MapVer2_1
+    21300004: MapVer2_2
+    21300006: MapVer2_3
+    21300008: MapVer2_4
+    21300010: MapVer2_5
+    21300012: MapVer2_6
+    21300014: MapVer2_7
+    21300016: MapVer2_8
+    21300018: MapVer2_9
+    21300020: MapVer2_10
+    21300022: MapVer2_11
+    21300024: MapVer2_12
+    21300026: MapVer2_13
+    21300028: MapVer2_14
+    21300030: MapVer2_15
+    21300032: MapVer2_16
+    21300034: MapVer2_17
+    21300036: MapVer2_18
+    21300038: MapVer2_19
+    21300040: MapVer2_20
+    21300042: MapVer2_21
+    21300044: MapVer2_22
+    21300046: MapVer2_23
+    21300048: MapVer2_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MapVer2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4830
+        width: 797
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_1
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 4830
+        width: 95
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_2
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 3088
+        width: 1074
+        height: 1911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_3
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 3085
+        width: 130
+        height: 1915
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_4
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 3956
+        width: 302
+        height: 1001
+      alignment: 9
+      pivot: {x: 0.5007971, y: 0.8504255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3089
+        width: 1078
+        height: 1911
+      alignment: 9
+      pivot: {x: 0.497, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_6
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 3087
+        width: 95
+        height: 1565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_7
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 3085
+        width: 315
+        height: 732
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1149
+        width: 1078
+        height: 1911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1149
+        width: 784
+        height: 1916
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_10
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 2926
+        width: 131
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_11
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 2189
+        width: 288
+        height: 880
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_12
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1150
+        width: 1078
+        height: 1911
+      alignment: 9
+      pivot: {x: 0.5184, y: 0.5104454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_13
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1149
+        width: 188
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_14
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 1149
+        width: 186
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_15
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 1149
+        width: 185
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 973
+        width: 659
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_17
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 714
+        width: 869
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_18
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 436
+        width: 129
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_19
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 436
+        width: 385
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_20
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 675
+        width: 175
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_21
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 287
+        width: 385
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_22
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 7
+        width: 1911
+        height: 1078
+      alignment: 9
+      pivot: {x: 0.5, y: 0.505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_23
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 21
+        width: 349
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapVer2_24
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 21
+        width: 547
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
