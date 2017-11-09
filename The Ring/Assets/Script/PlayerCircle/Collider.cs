@@ -12,6 +12,7 @@ public class Collider : MonoBehaviour {
 	private bool stunned;
 	private bool isStopRotate;
 	private bool isStartGame; 
+	public EndlessManager endManager;
 	void Start () {
 		isStartGame = false;
 		stunned = false;
@@ -42,6 +43,8 @@ public class Collider : MonoBehaviour {
 				col.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
 				col.gameObject.transform.localEulerAngles = new Vector3(0,0,180);
 			}
+		} else if (col.gameObject.layer == 21) {
+			endManager.CreateNewMap();
 		}
 	}
 

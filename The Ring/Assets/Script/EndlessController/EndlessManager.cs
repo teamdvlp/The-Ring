@@ -18,20 +18,16 @@ public class EndlessManager : MonoBehaviour {
 
     private int position_Had_Been_Chosen_Of_MediumMap, position_Had_Been_Chosen_Of_HighMap;
 
- 
-
-
-
+    // public MapManager mapManager;
     void Awake()
     {
         Pass_All_Map_To_ListMap();
     }
 
-
-
     void Start () {
-
+        // mapManager.OnPlayerCollisionMap += OnPlayerCollisionMap;
         int mapPosition = Random.Range(0, lowMapList.Count - 1);
+        
         performingMap = lowMapList[mapPosition];
         Debug.Log("LOW LEVEL MAP");
         timerCache = timer;
@@ -47,7 +43,7 @@ public class EndlessManager : MonoBehaviour {
 		timerCache -=dt;
 		if (timerCache <= 0) {
 			timerCache = timer;
-            CreateNewMap();
+            // CreateNewMap();
 		}
 	}
 
@@ -62,11 +58,13 @@ public class EndlessManager : MonoBehaviour {
         UpdateMapLocation();
 	}
 
+    private void OnPlayerCollisionMap (GameObject map) {
+        CreateNewMap();
+    }
+
 	private void OnMapStartDestroy () {
 
 	}
-
-
 
     private void ChangeToMediumLevelMap ()
     {
@@ -78,7 +76,6 @@ public class EndlessManager : MonoBehaviour {
             if (position == 0)
             {
                 position++;
-
             } else if (position == mediumMapList.Count - 1)
             {
                 position--;
@@ -120,8 +117,6 @@ public class EndlessManager : MonoBehaviour {
         Debug.Log("HIGH MAP");
     }
 
-
-
     private void Pass_All_Map_To_ListMap()
     {
         lowMapList = new List<List<GameObject>>();
@@ -147,8 +142,6 @@ public class EndlessManager : MonoBehaviour {
         position_Had_Been_Chosen_Of_MediumMap = mediumMapList.Count;
     }
 
-
-
     private void UpdatePosition () {
 		if (order < performingMap.Count - 1) {
 			order++;
@@ -157,7 +150,6 @@ public class EndlessManager : MonoBehaviour {
             ChangeMap();
 		}
 	}
-
 
     private void ChangeMap ()
     {
@@ -171,9 +163,6 @@ public class EndlessManager : MonoBehaviour {
             isHighLevelMapPerfoming = true;    
         }
     }
-
-
-
 
 	private void UpdateMapLocation () {
 		position = new Vector2(0,distance * NumberOfMapHasBeenBorn ) ;
