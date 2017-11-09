@@ -34,7 +34,6 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 		endPoint = Camera.main.ScreenToWorldPoint(eventData.position);
         direction = (endPoint - startPoint);
 		direction = direction.magnitude > 3? direction.normalized * 3f: direction;
-        Debug.Log(direction.magnitude);
 		moveEffect.transform.LookAt (point5.transform);
 		setActivePoint (true);
 	}

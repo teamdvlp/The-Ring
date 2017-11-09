@@ -7,6 +7,7 @@ public class EatCoin : MonoBehaviour {
 	public Text coinText;
 	static int coin;
 	public GameOver onGameOver;
+    public AudioSource audio;
 
 
 	// Use this for initialization
@@ -23,15 +24,17 @@ public class EatCoin : MonoBehaviour {
 		if (col.gameObject.tag.Equals("Coin")) {
             PlusCoin(1);
             Destroy(col.gameObject);
+            audio.Play();
         } else if (col.gameObject.tag.Equals("Ruby")) {
 			PlusCoin (10);
+            audio.Play();
             Destroy(col.gameObject);
         }
     }
 
 
 	private void PlusCoin (int coinCount) {
-        coin = coin + coinCount;
-        coinText.text = coin.ToString();
+        coin =  coin + coinCount;
+        coinText.text = "<b> " + coin.ToString() + "</b>";
 	}
 }

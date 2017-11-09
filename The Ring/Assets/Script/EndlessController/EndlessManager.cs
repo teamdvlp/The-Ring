@@ -69,7 +69,8 @@ public class EndlessManager : MonoBehaviour {
     private void ChangeToMediumLevelMap ()
     {
         int position = Random.Range(0, mediumMapList.Count - 1);
-
+        Debug.Log("MEDIUM pos: " + position);
+        Debug.Log("PREVIOUS POSITION Medium : " + position_Had_Been_Chosen_Of_MediumMap);
         //Check that if The Index of next map equal the index of previous Map;
         if (position == position_Had_Been_Chosen_Of_MediumMap)
         {
@@ -86,7 +87,7 @@ public class EndlessManager : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_MediumMap = position;
 
-        Debug.Log("MEDIUM MAP");    
+        Debug.Log("MEDIUM MAP Lever " + position);    
     }
 
 
@@ -94,9 +95,9 @@ public class EndlessManager : MonoBehaviour {
 
     private void ChangeToHighLevelMap ()
     {
-        int position = Random.Range(0, mediumMapList.Count - 1);
-
-        //Check that if The Index of next map equal the index of previous Map;
+        int position = Random.Range(0, highMapList.Count - 1);
+        Debug.Log("HIGH pos: " + position);
+        Debug.Log("PREVIOUS POSITION High: " + position_Had_Been_Chosen_Of_MediumMap);
         if (position == position_Had_Been_Chosen_Of_HighMap)
         {
             if (position == 0)
@@ -114,7 +115,7 @@ public class EndlessManager : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_HighMap = position;
 
-        Debug.Log("HIGH MAP");
+        Debug.Log("HIGH MAP Lever " + position);
     }
 
     private void Pass_All_Map_To_ListMap()
