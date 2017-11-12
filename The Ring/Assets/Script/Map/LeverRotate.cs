@@ -8,7 +8,7 @@ public class LeverRotate: MonoBehaviour {
     public float upRotateSpeed,downRotateSpeed, delayTimeWhenEndUpRotate, delayTimeWhenEndDownRotate;
     public float topAngle, botAngle;
     private bool isMovingUp = true, isMovingDown = false;
-    private bool isTouching;
+    private bool isTouching = true;
 
 
 	// Use this for initialization
@@ -19,9 +19,9 @@ public class LeverRotate: MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        Debug.Log(transform.rotation.eulerAngles.z);
         if (isTouching)
         {
-            Debug.Log("HOHOHO");
             if (isMovingUp)
             {
                 if (transform.rotation.eulerAngles.z >= topAngle)

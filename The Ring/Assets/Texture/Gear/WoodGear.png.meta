@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 49d9a1d1b61fecc4aaaefb54e5e61b1b
-timeCreated: 1510150643
+guid: 6d6a41b245c89944b9e0d2b1aaa09611
+timeCreated: 1510401230
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GrassCircle_0
+    21300000: WoodGear_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,13 +84,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrassCircle_0
+      name: WoodGear_0
       rect:
         serializedVersion: 2
-        x: 644
-        y: 288
-        width: 633
-        height: 612
+        x: 706
+        y: 234
+        width: 648
+        height: 654
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

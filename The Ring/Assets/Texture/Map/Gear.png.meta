@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 49d9a1d1b61fecc4aaaefb54e5e61b1b
-timeCreated: 1510150643
+guid: 231f685dafbd38c4f93be43da3a65829
+timeCreated: 1510384707
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GrassCircle_0
+    21300000: Gear_0
+    21300002: Gear_1
+    21300004: Gear_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,13 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrassCircle_0
+      name: Gear_0
       rect:
         serializedVersion: 2
-        x: 644
-        y: 288
-        width: 633
-        height: 612
+        x: 550
+        y: 632
+        width: 218
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gear_1
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 511
+        width: 241
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gear_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 120
+        width: 281
+        height: 281
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 
 public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     public TapTapTap tapManager;
-    public float force = 2000;
+    public float startForce = 2000f;
+    float force;
     bool isTouching = false;
     public float touchingTime;
     public GameObject loadingProgress,progress;
@@ -38,7 +39,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
             }
             if (touchingTime <= 0)
             {
-                force = 2800;
+                force = startForce + touchingTime * 1.2f * 1000;
                 AddForce();
                 isFullPowerBefore = true;
             }
@@ -48,7 +49,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     void AddForce ()
     {
         tapManager.AddForces(force);
-        force = 2000;
+        force = startForce;
         isTouching = false;
         tapManager.isTouching = false;
         touchingTime = 0.75f;
