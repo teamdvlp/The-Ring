@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class bucukoem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,5 +12,10 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log("Fucking shit");
 	}
 }

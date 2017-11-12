@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4494277688818972}
   - component: {fileID: 212172482205602474}
   - component: {fileID: 60235490864132284}
+  - component: {fileID: 61046013672662166}
+  - component: {fileID: 114598158826705116}
   m_Layer: 9
   m_Name: Map8
   m_TagString: Ring
@@ -103,6 +105,44 @@ PolygonCollider2D:
       - {x: 2.51, y: -4.11}
       - {x: 2.51, y: 3.32}
       - {x: 2.49, y: 3.34}
+--- !u!61 &61046013672662166
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441602262316530}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!114 &114598158826705116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441602262316530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621a0249ae6974f22a1b0236cb196550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endManager: {fileID: 114091075704389584, guid: 73e811d50dcd54b1a8ac7c190e6eb7d6,
+    type: 2}
 --- !u!212 &212172482205602474
 SpriteRenderer:
   m_ObjectHideFlags: 1

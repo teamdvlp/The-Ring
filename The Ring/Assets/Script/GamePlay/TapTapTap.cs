@@ -23,7 +23,6 @@ public class TapTapTap : MonoBehaviour {
 
     public void AddForces (float force)
     {
-        Debug.Log("ABC");
         Instantiate(power, players.transform.position, Quaternion.identity);
         direction = director.transform.position - transform.position;
         playerRigid2D.AddForce(direction * force);

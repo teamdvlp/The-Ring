@@ -9,64 +9,63 @@ public class EndlessManager : MonoBehaviour {
     private List<List<GameObject>> highMapList;
     public List<GameObject> performingMap;
 	private static int order;
-	private static Vector2 position;
-	public int distance = 80;
-	private int NumberOfMapHasBeenBorn;
-	private float timer = 3;
-	private float timerCache = 0;
     private bool isHighLevelMapPerfoming = false;
-
+    public Vector2 positionSpawn;
+    private GameObject selectedMap;
+    public float TimeToDestroyMap;
     private int position_Had_Been_Chosen_Of_MediumMap, position_Had_Been_Chosen_Of_HighMap;
-
- 
-
-
-
+    public MonsterCollider monsterCollider;
+    private List<GameObject> mapHasbeenSpawned;
     void Awake()
     {
         Pass_All_Map_To_ListMap();
     }
 
-
-
     void Start () {
-
+        mapHasbeenSpawned = new List<GameObject>();
+        GetComponent<Collider>().OnPlayerColliderWithMapBorder += OnPlayerCollisionMapBorder;
+        monsterCollider.OnMonsterColliderWithMapBorder += OnMonsterCollisionMapBorder;
         int mapPosition = Random.Range(0, lowMapList.Count - 1);
         performingMap = lowMapList[mapPosition];
-        Debug.Log("LOW LEVEL MAP");
-        timerCache = timer;
-		NumberOfMapHasBeenBorn = 0;
 		order = 0;
-		position = Vector2.zero;
+        createThreeMapWhenGameStarted();
 	}
-
-
 	
 	void Update () {
-		float dt = Time.deltaTime;
-		timerCache -=dt;
-		if (timerCache <= 0) {
-			timerCache = timer;
-            CreateNewMap();
-		}
+		
 	}
-
-
 
 	public void CreateNewMap () {
-		NumberOfMapHasBeenBorn ++;
-		GameObject map = this.performingMap[order];
+		selectedMap = this.performingMap[order];
         UpdatePosition();
-		map = Instantiate(map);
-		map.transform.position = position;
+		selectedMap = Instantiate(selectedMap);
+		selectedMap.transform.position = positionSpawn;
         UpdateMapLocation();
+        mapHasbeenSpawned.Add(selectedMap);
 	}
 
-	private void OnMapStartDestroy () {
+    private int checkTheCountOfMapAbovePlayer() {
+        return mapHasbeenSpawned.FindAll (map => map.transform.position.y > this.transform.position.y).Count;
+    }
 
-	}
+    private IEnumerator DestroyMapAfterSec (GameObject map) {
+        yield return new WaitForSeconds (TimeToDestroyMap);
+        Destroy(map);
+        mapHasbeenSpawned.Remove(map);
+        Debug.Log("Count Map: " + checkTheCountOfMapAbovePlayer());
+        
+    }
+    private void OnPlayerCollisionMapBorder (GameObject map) {
+        if (checkTheCountOfMapAbovePlayer() <= 2) {
+            CreateNewMap();
+        }
+    }
 
-
+    private void createThreeMapWhenGameStarted () {
+        CreateNewMap();
+        CreateNewMap();
+        CreateNewMap();
+    }
 
     private void ChangeToMediumLevelMap ()
     {
@@ -79,7 +78,6 @@ public class EndlessManager : MonoBehaviour {
             if (position == 0)
             {
                 position++;
-
             } else if (position == mediumMapList.Count - 1)
             {
                 position--;
@@ -89,11 +87,13 @@ public class EndlessManager : MonoBehaviour {
         performingMap = mediumMapList[position];
 
         position_Had_Been_Chosen_Of_MediumMap = position;
-
+        
         Debug.Log("MEDIUM MAP Lever " + position);    
     }
 
-
+    private void OnMonsterCollisionMapBorder (GameObject map) {
+        StartCoroutine(DestroyMapAfterSec(map));
+    }
 
 
     private void ChangeToHighLevelMap ()
@@ -121,8 +121,6 @@ public class EndlessManager : MonoBehaviour {
         Debug.Log("HIGH MAP Lever " + position);
     }
 
-
-
     private void Pass_All_Map_To_ListMap()
     {
         lowMapList = new List<List<GameObject>>();
@@ -148,8 +146,6 @@ public class EndlessManager : MonoBehaviour {
         position_Had_Been_Chosen_Of_MediumMap = mediumMapList.Count;
     }
 
-
-
     private void UpdatePosition () {
 		if (order < performingMap.Count - 1) {
 			order++;
@@ -158,7 +154,6 @@ public class EndlessManager : MonoBehaviour {
             ChangeMap();
 		}
 	}
-
 
     private void ChangeMap ()
     {
@@ -173,10 +168,8 @@ public class EndlessManager : MonoBehaviour {
         }
     }
 
-
-
-
 	private void UpdateMapLocation () {
-		position = new Vector2(0,distance * NumberOfMapHasBeenBorn ) ;
+		positionSpawn = new Vector2 (positionSpawn.x, positionSpawn.y + selectedMap.GetComponent<Renderer>().bounds.size.y) ;
 	}
+
 }

@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class showFps : MonoBehaviour {
+
+public class getSize : MonoBehaviour {
+
 	// Use this for initialization
-	public Text txtFps;
 	void Start () {
-		
+		Debug.Log("Map: " + GetComponent<Renderer>().bounds.size.y);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		txtFps.text = (1.0f/Time.deltaTime) + "";
+		
 	}
 }

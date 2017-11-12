@@ -12,13 +12,17 @@ public class Collider : MonoBehaviour {
 	private bool stunned;
 	private bool isStopRotate;
 	private bool isStartGame; 
+	public EndlessManager endManager;
+	public delegate void PlayerColliderWithMapBorder (GameObject map);
+	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
 	void Start () {
+		Debug.Log("MT: " + GetComponent<Renderer>().bounds.size.y);
 		isStartGame = false;
 		stunned = false;
 		isStopRotate = false;
 		mRigidBody = this.GetComponent<Rigidbody2D>();
 		changeNature = this.GetComponent<ChangeNature>();
-		this.GetComponent<Intro>().onGameStarted += OnStartGame;
+		// this.GetComponent<Intro>().onGameStarted += OnStartGame;
 		mNature = this.GetComponent<Nature>();
     }
 
@@ -41,6 +45,10 @@ public class Collider : MonoBehaviour {
 				isStopRotate = false;
 				col.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
 				col.gameObject.transform.localEulerAngles = new Vector3(0,0,180);
+			}
+		} else if (col.gameObject.layer == 21) {
+			if (OnPlayerColliderWithMapBorder != null) {
+				OnPlayerColliderWithMapBorder(col.gameObject.transform.parent.gameObject);
 			}
 		}
 	}

@@ -35,10 +35,10 @@ TagManager:
   - PlayerCircle
   - CollideStove
   - Stove
-  - 
+  - Monster
   - RingProtected
   - Coin
-  - 
+  - MapBorder
   - 
   - 
   - 

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4492327372321372}
   - component: {fileID: 212170175042680660}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4536127616860420}
   - component: {fileID: 212079526301430972}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4615539399521252}
   - component: {fileID: 212800923558194462}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 61696514863750062}
   - component: {fileID: 114467946949182788}
   - component: {fileID: 114074143652761498}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster 1
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4359850411951530}
   - component: {fileID: 212736918818108986}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4401670752644990}
   - component: {fileID: 212623176394649102}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4908040911700632}
   - component: {fileID: 212164835412063518}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757191160607524}
   - component: {fileID: 212005426890537598}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Monster_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
