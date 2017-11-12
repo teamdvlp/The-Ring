@@ -13,7 +13,7 @@ public class EatCoin : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         coin = 0;
-		onGameOver.OnOverGame += OnGameOver;
+		// onGameOver.OnOverGame += OnGameOver;
     }
     public void OnGameOver () { 
 		SqliteUserManager.AddCoin (coin);

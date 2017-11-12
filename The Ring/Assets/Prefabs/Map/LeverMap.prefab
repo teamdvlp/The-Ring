@@ -42,8 +42,26 @@ GameObject:
   - component: {fileID: 60768855114656428}
   - component: {fileID: 114549643127111312}
   - component: {fileID: 50823127411747838}
+  - component: {fileID: 58980586859012550}
+  - component: {fileID: 58202312926065348}
   m_Layer: 9
   m_Name: Lever
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1781402155698600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4671368055572658}
+  - component: {fileID: 61405964857555178}
+  m_Layer: 21
+  m_Name: MapBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,10 +74,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1666167639418304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.011, y: 33.432, z: 0}
-  m_LocalScale: {x: 0.4479681, y: 0.4479681, z: 0.4479681}
+  m_LocalPosition: {x: 39.95, y: 36.563, z: 0}
+  m_LocalScale: {x: 0.8350336, y: 0.83503306, z: 0.83503306}
   m_Children:
   - {fileID: 4370563820273426}
+  - {fileID: 4671368055572658}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71,11 +90,24 @@ Transform:
   m_GameObject: {fileID: 1732866428643078}
   m_LocalRotation: {x: -0, y: -0, z: -0.592332, w: -0.80569404}
   m_LocalPosition: {x: -3.970002, y: -1.5500015, z: 0}
-  m_LocalScale: {x: 0.8824343, y: 0.8824343, z: 0.8824343}
+  m_LocalScale: {x: 0.7935764, y: 0.7935764, z: 0.7935764}
   m_Children: []
   m_Father: {fileID: 4181318924852822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 72.645004}
+--- !u!4 &4671368055572658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781402155698600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4181318924852822}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50823127411747838
 Rigidbody2D:
   serializedVersion: 4
@@ -116,6 +148,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58202312926065348
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732866428643078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09, y: -7.21}
+  serializedVersion: 2
+  m_Radius: 0.15
+--- !u!58 &58980586859012550
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732866428643078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09, y: -7.21}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!60 &60329973363047788
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -274,6 +336,31 @@ PolygonCollider2D:
       - {x: 0.35007298, y: -0.019538403}
       - {x: 0.15476048, y: -0.31250715}
       - {x: -0.089380145, y: -0.2880931}
+--- !u!61 &61405964857555178
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781402155698600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 9}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.75, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &95253727673062912
 Animator:
   serializedVersion: 3
@@ -303,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeRotateTime: 0
-  upRotateSpeed: 100
+  upRotateSpeed: 70
   downRotateSpeed: -100
   delayTimeWhenEndUpRotate: 1
   delayTimeWhenEndDownRotate: 1

@@ -19,6 +19,7 @@ public class MonsterMovement : MonoBehaviour {
 
     void Move ()
     {
-        monsterTransform.position = new Vector3(monsterTransform.position.x, monsterTransform.position.y + moveSpeed * Time.deltaTime, monsterTransform.position.z);
+        // monsterTransform.position = new Vector3(monsterTransform.position.x, monsterTransform.position.y + moveSpeed * Time.deltaTime, monsterTransform.position.z);
+        GetComponent<Rigidbody2D>().velocity = Vector2.up * moveSpeed;
     }
 }
