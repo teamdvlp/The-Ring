@@ -11,8 +11,8 @@ public class MapManager : MonoBehaviour {
 	public event PlayerCollisionMap OnMonsterCollisionMap;
 	public EndlessManager endManager;
 	void Start () {
-		
-	}
+
+    }
 	
 	void Update () {
 		
