@@ -16,6 +16,8 @@ TagManager:
   - Coin
   - Ruby
   - Skill
+  - wall
+  - ImpeWood
   layers:
   - Default
   - TransparentFX
@@ -27,10 +29,10 @@ TagManager:
   - 
   - 
   - Ring
-  - 
+  - Wood
   - OverlayCanvas
   - SmallMonster
-  - 
+  - Equipment
   - CheckedRing
   - PlayerCircle
   - CollideStove
@@ -39,7 +41,7 @@ TagManager:
   - RingProtected
   - Coin
   - MapBorder
-  - 
+  - Impedement
   - 
   - 
   - 
