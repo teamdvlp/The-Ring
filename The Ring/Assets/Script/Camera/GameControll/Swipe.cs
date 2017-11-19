@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler {
 
 	public Vector3 startPoint, endPoint, direction;
-	public GameObject player;
+	public GameObject player, saws;
 	public GameObject point1, point2, point3, point4, point5;
 	public GameObject moveEffect;
 	Rigidbody2D rigidBody;
@@ -52,9 +52,8 @@ public class Swipe : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDra
 			direction = (Vector3) endPoint - startPoint;
 			direction /= 3f;
 			rigidBody.velocity = (-direction) * force;
+			saws.GetComponent<Rigidbody2D>().velocity = (-direction)*force;
 	}
-
-
 
 	void setActivePoint(bool isActive) {
         point1.SetActive(isActive);

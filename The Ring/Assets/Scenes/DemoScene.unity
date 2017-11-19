@@ -266,6 +266,7 @@ MonoBehaviour:
   endPoint: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   player: {fileID: 1317263907}
+  saws: {fileID: 1729627482}
   point1: {fileID: 0}
   point2: {fileID: 0}
   point3: {fileID: 0}
@@ -1161,7 +1162,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 29768996
+  randomSeed: -921565427
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7897,6 +7898,30 @@ Prefab:
       propertyPath: TimeToDestroyMap
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4471415663944464, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712324709539836, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503882461601628, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280023030078278, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619426027819310, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202190906595100, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
   m_IsPrefabParent: 0
@@ -9101,6 +9126,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c46900a5f2b946b98f66ec44f49815d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!232 &1317263921
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317263907}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1729627487}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_MaxDistanceOnly: 0
 --- !u!1001 &1323543286
 Prefab:
   m_ObjectHideFlags: 0
@@ -11277,6 +11320,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 2
+--- !u!1 &1729627482 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927863129359982, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+    type: 2}
+  m_PrefabInternal: {fileID: 994765208}
+--- !u!50 &1729627487 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50493436708735986, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+    type: 2}
+  m_PrefabInternal: {fileID: 994765208}
 --- !u!1 &1734585006 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1863072436792510, guid: 73a020fcee8d63946b40eb77db55b74b,
