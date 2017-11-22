@@ -20,7 +20,6 @@ public class MapManager : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-			Debug.Log("Fuck");
 			endManager.CreateNewMap();
 	}
 }

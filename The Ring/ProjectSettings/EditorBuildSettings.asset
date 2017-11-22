@@ -41,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShoppingScene.unity
     guid: 0663c46b9a4e5be458998e691d659c13
+  - enabled: 1
+    path: Assets/Scenes/DemoScene - Copy.unity
+    guid: 7fb5e932c497f4a3683edefa4cf72030
