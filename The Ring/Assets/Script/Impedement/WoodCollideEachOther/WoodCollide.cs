@@ -9,9 +9,9 @@ public class WoodCollide : MonoBehaviour {
 	public float timeToGoBack;
 	public GameObject wood1;
 	public GameObject wood2;
-	public NotiWhenWoodCollide notiWhenWoodCollide;
+	public ImpeNotiWhenCollide notiWhenCollide;
 	void Start () {
-		notiWhenWoodCollide.OnWoodCollide += OnWoodCollide;
+		notiWhenCollide.OnWoodCollide += OnWoodCollide;
 		StartCoroutine(CollideWood());
 	}
 	void Update () {

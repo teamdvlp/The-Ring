@@ -40,8 +40,9 @@ GameObject:
   - component: {fileID: 61777601670030272}
   - component: {fileID: 114397393682714356}
   - component: {fileID: 114707877657000014}
+  - component: {fileID: 95849388395501950}
   m_Layer: 22
-  m_Name: 
+  m_Name: Wood2
   m_TagString: ImpeWood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,8 +62,9 @@ GameObject:
   - component: {fileID: 114966854153423436}
   - component: {fileID: 114647550644834860}
   - component: {fileID: 114388219524289274}
+  - component: {fileID: 95612152793856768}
   m_Layer: 22
-  m_Name: 
+  m_Name: Wood1
   m_TagString: ImpeWood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +190,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 7
+  m_Constraints: 6
 --- !u!50 &50396511298787878
 Rigidbody2D:
   serializedVersion: 4
@@ -208,7 +210,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 7
+  m_Constraints: 6
 --- !u!61 &61380047159703784
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -309,6 +311,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.2, y: 0.64}
   m_EdgeRadius: 0
+--- !u!95 &95612152793856768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255695997467006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85f3829d7d3244b79fe293d9f55d0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95849388395501950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165521527440486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85f3829d7d3244b79fe293d9f55d0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114112852424768856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,12 +356,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1efb0b400c54d28ace764f479d918b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 500
   timeToCollide: 3
   timeToGoBack: 3
   wood1: {fileID: 1255695997467006}
   wood2: {fileID: 1165521527440486}
-  notiWhenWoodCollide: {fileID: 114966854153423436}
+  notiWhenCollide: {fileID: 114966854153423436}
 --- !u!114 &114388219524289274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 1404352963246828}
+  Target: {fileID: 1404352963246828}
 --- !u!114 &114397393682714356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 1404352963246828}
+  Target: {fileID: 1404352963246828}
 --- !u!114 &114966854153423436
 MonoBehaviour:
   m_ObjectHideFlags: 1

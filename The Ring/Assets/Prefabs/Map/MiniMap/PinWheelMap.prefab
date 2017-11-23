@@ -50,6 +50,27 @@ GameObject:
 --- !u!1 &1294330433809062
 GameObject:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4170221109082162}
+  - component: {fileID: 212762917265949422}
+  - component: {fileID: 60568707407641464}
+  - component: {fileID: 50785149926940992}
+  m_Layer: 9
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1530939928295058
+GameObject:
+  m_ObjectHideFlags: 0
+=======
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -192,11 +213,19 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364140973270412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_LocalPosition: {x: -1.6099993, y: -3.7870026, z: 0}
+  m_LocalScale: {x: 0.44797, y: 0.44797, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 5
+=======
   m_LocalPosition: {x: -0.047489166, y: 4.752145, z: 0}
   m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 6
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4397663703374486
 Transform:
@@ -205,17 +234,56 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822573524324530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_LocalPosition: {x: -1.61, y: 4.38, z: 0}
+  m_LocalScale: {x: 0.4479681, y: 0.4479681, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 0
+=======
   m_LocalPosition: {x: -0.047489166, y: -4.0000067, z: 0}
   m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 7
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4665895280762358
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_GameObject: {fileID: 1912337558611902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.122, y: 67.077, z: 0}
+  m_LocalScale: {x: 1.1620626, y: 1.1620626, z: 1.1620626}
+  m_Children:
+  - {fileID: 4091526271238924}
+  - {fileID: 4612135239641650}
+  - {fileID: 4170221109082162}
+  - {fileID: 4486920608476576}
+  - {fileID: 4790961796278838}
+  - {fileID: 4086742448372796}
+  - {fileID: 4583063339981568}
+  - {fileID: 4983177855965036}
+  - {fileID: 4009320707911086}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4170221109082162
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436204331487266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.620004, y: 4.3799973, z: 0}
+  m_LocalScale: {x: -0.4479681, y: 0.4479681, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 2
+=======
   m_GameObject: {fileID: 1211451181322578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.6585503, y: -8.322511, z: 0}
@@ -223,6 +291,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 3
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4691840584399952
 Transform:
@@ -231,11 +300,19 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1600840020426984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_LocalPosition: {x: -1.6099993, y: -0.0070028305, z: 0}
+  m_LocalScale: {x: 0.44797, y: 0.44797, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 3
+=======
   m_LocalPosition: {x: 3.6585503, y: 9.46749, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 1
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4778054168704740
 Transform:
@@ -244,17 +321,36 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852925014363664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_LocalPosition: {x: 1.620004, y: -3.787003, z: 0}
+  m_LocalScale: {x: -0.44797, y: 0.44797, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 6
+=======
   m_LocalPosition: {x: -3.6000023, y: 9.469993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 0
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4819705969613290
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_GameObject: {fileID: 1937549034236970}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11000192, y: 2.3429937, z: 0}
+  m_LocalScale: {x: 0.4479681, y: 0.4479681, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4790961796278838
+=======
   m_GameObject: {fileID: 1294330433809062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6000023, y: -0.10000706, z: 0}
@@ -264,23 +360,43 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4852667596260280
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153869059725294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_LocalPosition: {x: 1.620004, y: -0.0070028305, z: 0}
+  m_LocalScale: {x: -0.44797, y: 0.44797, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 4
+=======
   m_LocalPosition: {x: -3.6, y: -8.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4984896446936968}
   m_RootOrder: 2
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4984896446936968
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/TwoPinWheelMap.prefab
+  m_GameObject: {fileID: 1190117296589892}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5971221, w: 0.8021504}
+  m_LocalPosition: {x: 0.11000192, y: -1.7970047, z: 0}
+  m_LocalScale: {x: 0.44797, y: 0.44797, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4141547051650626}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2446.6719}
+--- !u!50 &50248737882150022
+=======
   m_GameObject: {fileID: 1839829593059166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 33.694695, y: -11.93046, z: 0}
@@ -298,6 +414,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50129790913962730
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinWheelMap.prefab
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1

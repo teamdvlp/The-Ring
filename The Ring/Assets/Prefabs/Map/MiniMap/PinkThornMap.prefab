@@ -124,24 +124,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1925086934282660
+=======
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/Oblique.prefab
+--- !u!1 &1301763126008218
+>>>>>>> 0c0af87cb3b1ba72009793d408e2b97427fafeed
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4433259104074482}
   - component: {fileID: 212790360989665786}
   - component: {fileID: 114009476393246002}
   - component: {fileID: 114066268119875530}
   m_Layer: 22
   m_Name: CircleSaw (2)
+=======
+  - component: {fileID: 224899858829767032}
+  - component: {fileID: 212357287520384852}
+  - component: {fileID: 60445647586615494}
+  m_Layer: 9
+  m_Name: Oblique
+>>>>>>> 0c0af87cb3b1ba72009793d408e2b97427fafeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &4165641686083928
 Transform:
   m_ObjectHideFlags: 1
@@ -197,6 +211,10 @@ Transform:
   m_Father: {fileID: 4382371584622702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3922.296}
+=======
+--- !u!60 &60445647586615494
+=======
+>>>>>>> 0c0af87cb3b1ba72009793d408e2b97427fafeed
 --- !u!4 &4499236913985294
 Transform:
   m_ObjectHideFlags: 1
@@ -365,6 +383,7 @@ CircleCollider2D:
   serializedVersion: 2
   m_Radius: 2.6349998
 --- !u!60 &60087489341420166
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinkThornMap.prefab
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -887,3 +906,43 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/Oblique.prefab
+--- !u!224 &224463686327499548
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102543823819796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224899858829767032}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00000059604645, y: 0.0000038146973}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224899858829767032
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1301763126008218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.489, y: 0.658, z: 0.635}
+  m_Children:
+  - {fileID: 224463686327499548}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.11, y: 47.42}
+  m_SizeDelta: {x: 10.75, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/PinkThornMap.prefab

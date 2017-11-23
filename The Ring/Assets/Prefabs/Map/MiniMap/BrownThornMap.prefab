@@ -110,13 +110,28 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/ReverseOblique.prefab
+  m_GameObject: {fileID: 1032479534240912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11, y: 37.48, z: 0}
+  m_LocalScale: {x: 0.520567, y: 0.520567, z: 0.520567}
+  m_Children:
+  - {fileID: 4756212944214854}
+=======
   m_GameObject: {fileID: 1158797696685130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.07, y: 2.23, z: 15.87}
   m_LocalScale: {x: 0.44200686, y: 0.44200686, z: 0.44200686}
   m_Children:
   - {fileID: 4425441648449566}
   - {fileID: 4255399977987650}
+=======
+  m_LocalPosition: {x: 33.695854, y: 1.2885742, z: 0}
+  m_LocalScale: {x: 0.5225546, y: 0.5225546, z: 0.5225546}
+  m_Children: []
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/BrownThornMap.prefab
+>>>>>>> 0c0af87cb3b1ba72009793d408e2b97427fafeed
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

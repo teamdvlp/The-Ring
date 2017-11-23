@@ -1,9 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/Oblique.prefab.meta
+guid: 75830ce3ada374cf98b3b6f36cff902c
+timeCreated: 1511351455
+=======
 guid: 7faac152ff7cdd549a8705d5784e5095
 timeCreated: 1511345458
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/BlueMap.prefab.meta
 licenseType: Free
 NativeFormatImporter:
-  mainObjectFileID: 100100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

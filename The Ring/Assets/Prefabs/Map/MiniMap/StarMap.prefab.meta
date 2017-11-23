@@ -1,9 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:The Ring/Assets/Prefabs/Map/StarMap.prefab.meta
+guid: 6189f0362e5a74c58a618509c2076da5
+timeCreated: 1511452272
+=======
 guid: 09bd6887bfbe82d45a80dcddaf0ba115
 timeCreated: 1511345443
+>>>>>>> 45ecd744e3e9aa0d69b859d1b2ed99f8214e034c:The Ring/Assets/Prefabs/Map/MiniMap/StarMap.prefab.meta
 licenseType: Free
 NativeFormatImporter:
-  mainObjectFileID: 100100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
