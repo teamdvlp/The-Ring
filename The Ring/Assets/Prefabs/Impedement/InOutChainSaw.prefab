@@ -19,8 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4147450408069738}
-  - component: {fileID: 114990979770139338}
-  - component: {fileID: 114389927628034046}
   m_Layer: 22
   m_Name: InOutChainSaw
   m_TagString: Untagged
@@ -39,6 +37,9 @@ GameObject:
   - component: {fileID: 212451617858339318}
   - component: {fileID: 95214439988604946}
   - component: {fileID: 60469100126925846}
+  - component: {fileID: 114778381211947670}
+  - component: {fileID: 114237780621179218}
+  - component: {fileID: 114654382600881212}
   m_Layer: 22
   m_Name: ChainsawAbcs_0
   m_TagString: Untagged
@@ -276,30 +277,41 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114389927628034046
+--- !u!114 &114237780621179218
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135221341928448}
+  m_GameObject: {fileID: 1198822993350492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239ab399a2571420d9550811f8972a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114654382600881212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198822993350492}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5f73fd7d93704e03bc7d04704eb7691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
---- !u!114 &114990979770139338
+  hp: 5
+--- !u!114 &114778381211947670
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135221341928448}
+  m_GameObject: {fileID: 1198822993350492}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 0}
+  Target: {fileID: 1135221341928448}
 --- !u!212 &212451617858339318
 SpriteRenderer:
   m_ObjectHideFlags: 1

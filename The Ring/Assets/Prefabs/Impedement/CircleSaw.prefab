@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 212337297178284332}
   - component: {fileID: 114108109543445738}
   - component: {fileID: 114883670998032724}
+  - component: {fileID: 95886994762935816}
   m_Layer: 22
   m_Name: CircleSaw
   m_TagString: Untagged
@@ -110,6 +111,23 @@ CircleCollider2D:
   m_Offset: {x: -0.0000007152557, y: -0.19072483}
   serializedVersion: 2
   m_Radius: 2.6349998
+--- !u!95 &95886994762935816
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504474436224256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85f3829d7d3244b79fe293d9f55d0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114108109543445738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!114 &114883670998032724
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 61528562829286440}
   - component: {fileID: 114105315387279324}
   - component: {fileID: 114264329956396238}
+  - component: {fileID: 95765363754089084}
   m_Layer: 22
   m_Name: Hammer
   m_TagString: Untagged
@@ -209,6 +210,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 29.88, y: 7.7}
   m_EdgeRadius: 0
+--- !u!95 &95765363754089084
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072803062454832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85f3829d7d3244b79fe293d9f55d0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114105315387279324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!114 &114160768571126670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f73fd7d93704e03bc7d04704eb7691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 5
 --- !u!212 &212516008028315296
 SpriteRenderer:
   m_ObjectHideFlags: 1

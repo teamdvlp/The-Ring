@@ -108,6 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &54724309 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1404352963246828, guid: 25e5209c0a89a4fb8942d45579b2213d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1812646262}
 --- !u!1001 &215050640
 Prefab:
   m_ObjectHideFlags: 0
@@ -117,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4094745846098898, guid: 8d234772aeaf84347a5edc4205fb75b2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.66
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 4094745846098898, guid: 8d234772aeaf84347a5edc4205fb75b2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.98
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 4094745846098898, guid: 8d234772aeaf84347a5edc4205fb75b2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -147,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114787180379073154, guid: 8d234772aeaf84347a5edc4205fb75b2,
+        type: 2}
+      propertyPath: hp
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d234772aeaf84347a5edc4205fb75b2, type: 2}
   m_IsPrefabParent: 0
@@ -159,11 +169,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.99
+      value: -8.85
       objectReference: {fileID: 0}
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.02
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.z
@@ -189,7 +199,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 58889188801070028, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 232683144549042706, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+        type: 2}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 58308360618990072, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+    - {fileID: 58470159924583566, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+    - {fileID: 58533932618380986, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &717424051
@@ -234,6 +257,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20588af9447c8324bb389842c2c4928f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &818282439 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1255695997467006, guid: 25e5209c0a89a4fb8942d45579b2213d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1812646262}
+--- !u!114 &818282441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818282439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239ab399a2571420d9550811f8972a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &904202008
 Prefab:
   m_ObjectHideFlags: 0
@@ -357,9 +396,70 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1255695997467006, guid: 25e5209c0a89a4fb8942d45579b2213d, type: 2}
+      propertyPath: m_Name
+      value: Wood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165521527440486, guid: 25e5209c0a89a4fb8942d45579b2213d, type: 2}
+      propertyPath: m_Name
+      value: Wood2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388219524289274, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 54724309}
+    - target: {fileID: 114707877657000014, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 54724309}
+    - target: {fileID: 114112852424768856, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: notiWhenCollide
+      value: 
+      objectReference: {fileID: 818282441}
+    - target: {fileID: 114112852424768856, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: speed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 50396511298787878, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 50188555901023236, guid: 25e5209c0a89a4fb8942d45579b2213d,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114966854153423436, guid: 25e5209c0a89a4fb8942d45579b2213d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25e5209c0a89a4fb8942d45579b2213d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1864773982 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1330802927503222, guid: 8d234772aeaf84347a5edc4205fb75b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 215050640}
+--- !u!95 &1864773992
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864773982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85f3829d7d3244b79fe293d9f55d0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1971125520
 GameObject:
   m_ObjectHideFlags: 0

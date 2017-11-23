@@ -44,22 +44,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!4 &4946466943305992
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1301763126008218}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: 47.42, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.520567}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> cda6a96dd8dc1ea42784fb4feeab9ab92dec3c55
 --- !u!60 &60445647586615494
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -236,7 +220,7 @@ RectTransform:
   m_GameObject: {fileID: 1301763126008218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.489, y: 0.658, z: 0.635}
   m_Children:
   - {fileID: 224463686327499548}
   m_Father: {fileID: 0}

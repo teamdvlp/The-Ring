@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ImpeCollider : MonoBehaviour {
-	private ImpedementInfo mInfo;
-	public GameObject DestroyTarget;
+	private ImpedementHelper mInfo;
+	public GameObject Target;
 	void Start () {
-		mInfo = this.GetComponent<ImpedementInfo>();
+		mInfo = this.GetComponent<ImpedementHelper>();
 	}
 	
 	void Update () {
@@ -17,16 +17,22 @@ public class ImpeCollider : MonoBehaviour {
 	{
 		if (col.gameObject.layer == 13) {
 			mInfo.hp -= col.gameObject.GetComponent<EquipmentInfo>().damage;
+			GetComponent<ImpedementHelper>().playAnimShaking(true);
 			DeadProcess();
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D col)
+	{
+		GetComponent<ImpedementHelper>().playAnimShaking(false);
+	}
+
 	private void DeadProcess () {
 		if (mInfo.hp <= 0) {
-			if (DestroyTarget == null) {
+			if (Target == null) {
 				Destroy(this.gameObject);
 			} else {
-				Destroy(DestroyTarget);
+				Destroy(Target);
 			}
 		}
 	}
