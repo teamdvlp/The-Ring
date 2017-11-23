@@ -20,10 +20,8 @@ public class Pendulum : MonoBehaviour {
     private void Update()
     {
         time -= Time.deltaTime;
-        Debug.Log("TIME: " + time);
         if (time <= 0)
         {
-            Debug.Log("QUAY");
             rigid2D.AddTorque(mainTainSpeed);
             time = maintainSpeedTime;
         }

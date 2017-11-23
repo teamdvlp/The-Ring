@@ -7,7 +7,6 @@ public class EndlessBackground : MonoBehaviour {
     static List<Background> backgroundList;
     public static int mapPosition;
     public static Vector3 previousPosition;
-    float time = 2f;
 
     private void Start()
     {
@@ -20,6 +19,7 @@ public class EndlessBackground : MonoBehaviour {
     {
         ProcessPosition();
         Instantiate(backgroundList[mapPosition].gameObject, previousPosition, Quaternion.identity);
+        Debug.Log("CREATE");
     }
 
 
