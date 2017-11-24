@@ -53,25 +53,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowLevelMap:
     Mini_Map_1:
-    - {fileID: 1570726126103510, guid: 14ce1aad8a5f9e14083a2bd437b9cc96, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_2:
-    - {fileID: 1938947905786008, guid: 921bb6ec49816a44a892b56f38d940b5, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_3:
-    - {fileID: 1901169536897592, guid: 1093fb51b431d18438adea54f960bd71, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
   mediumLevelMap:
     Mini_Map_1:
-    - {fileID: 1375790292023660, guid: 5bf33dd8df7c7a747a3fd40ed27afac6, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_2:
-    - {fileID: 1553637574898892, guid: 69b49978511a87647ac4f1440d3814dd, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_3:
-    - {fileID: 1157927693192182, guid: 21b4e58d61334e545ad81412ad1ccc1c, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
   highLevelMap:
     Mini_Map_1:
-    - {fileID: 1375790292023660, guid: 5bf33dd8df7c7a747a3fd40ed27afac6, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_2:
-    - {fileID: 1257690703230034, guid: e2880773cff929045a289d557b1a7409, type: 2}
+    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_3:
     - {fileID: 1257715537250314, guid: fe5135aa9b0262344a3c7398c3acee49, type: 2}
   performingMap:
-  - {fileID: 1938947905786008, guid: 921bb6ec49816a44a892b56f38d940b5, type: 2}
-  distance: 8
+  - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+  positionSpawn: {x: 0, y: 0}
+  TimeToDestroyMap: 0
+  monsterCollider: {fileID: 0}
