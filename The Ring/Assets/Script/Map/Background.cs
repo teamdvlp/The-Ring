@@ -12,11 +12,10 @@ public class Background : MonoBehaviour {
 
     public void OnTriggerEnter2D (Collider2D col)
     {
-        
         if (col.gameObject.name.Equals("PlayerCircle"))
         {
-            EndlessBackground.CreateNextBackground();
-            Destroy(gameObject.GetComponent<Background>());
+                EndlessBackground.CreateNextBackground();
+                Destroy(gameObject.GetComponent<BoxCollider2D>());
         }
     }
 

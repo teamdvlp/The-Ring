@@ -5,10 +5,10 @@ using UnityEngine;
 public class OnGameOver : MonoBehaviour {
     public GameObject ContinueBoard;
     public GameObject deathEffect,respawnEffect;
-    public Swipe swipe;
     public delegate bool RespawnEvent();
     public event RespawnEvent OnPlayerRespawn;
     // Properties Of Player
+    public GameObject directionCircle;
     public GameObject MovingEffect;
     SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
@@ -60,9 +60,7 @@ public class OnGameOver : MonoBehaviour {
             rigidbody2D.velocity = Vector3.zero;
         }
         MovingEffect.SetActive(state);
-        swipe.enabled = state;
+        directionCircle.SetActive(state);
         spriteRenderer.enabled = state;
-        
-
     }
 }
