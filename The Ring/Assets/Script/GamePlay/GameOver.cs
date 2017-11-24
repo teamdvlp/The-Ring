@@ -15,7 +15,6 @@ public class GameOver : MonoBehaviour {
 
 
 
-
     void Start () {
         gameOverBoard.SetActive(false);
 	}
@@ -27,9 +26,6 @@ public class GameOver : MonoBehaviour {
         {
             OnOverGame();
         }
-        var smallMonsters = GameObject.FindGameObjectsWithTag("SmallMonster");
-        smallMonsters[0].SetActive(false);
-		smallMonsters[1].SetActive(false);
 		transparentBackground.SetActive (true);
 		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
 		Invoke("ActiveOverBoard", delayTimeAppearOverBoard);

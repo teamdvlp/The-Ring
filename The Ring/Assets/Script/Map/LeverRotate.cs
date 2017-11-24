@@ -19,7 +19,6 @@ public class LeverRotate: MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        Debug.Log(transform.rotation.eulerAngles.z);
         if (isTouching)
         {
             if (isMovingUp)

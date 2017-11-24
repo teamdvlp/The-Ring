@@ -3,7 +3,7 @@ using UnityEngine;
 public class Collider : MonoBehaviour {
 	public delegate void PlayerColliderWithMapBorder (GameObject map);
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
-    public GameOver gameOverManager;
+    public OnGameOver gameOverManager;
 	void Start () {
     }
 
@@ -20,8 +20,8 @@ public class Collider : MonoBehaviour {
     {
         if (col.gameObject.layer == 22)
         {
-            Debug.Log("ABCS");
-            gameOverManager.OverGames();
+            Debug.Log("FUCK");
+            gameOverManager.Die();
         }
     }
 }

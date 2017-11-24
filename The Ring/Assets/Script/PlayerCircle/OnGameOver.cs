@@ -12,38 +12,43 @@ public class OnGameOver : MonoBehaviour {
     public GameObject MovingEffect;
     SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
+    public GameOver gameOver;
+    Collider_SmallMonster colliderWood;
 
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+        colliderWood = GetComponent<Collider_SmallMonster>();
     }
 	
     public void Die()
     {
+        Debug.Log("DIE");
         ContinueBoard.SetActive(true);
-        SetState(false);    
+        gameObject.SetActive(false);
         Instantiate(deathEffect, transform.position, transform.rotation);
     }
 
     public void Respawn ()
     {
-        if (OnPlayerRespawn != null)
-        {
-            if (OnPlayerRespawn())
-            {
+        //if (OnPlayerRespawn != null)
+        //{
+        //    if (OnPlayerRespawn())
+        //    {
+        Debug.Log("RESPAWN");
                 ContinueBoard.SetActive(false);
-                SetState(true);
+        gameObject.SetActive(true);
                 transform.position = new Vector3(0, transform.position.y, transform.position.z);
                 StartCoroutine(CreateRespawnEffect());
-            }
-            else
-            {
-                Debug.Log("You have not enough coin to Respawn");
-            };
-        } else
-        {
-            Debug.Log("NullOnPlayerRespawn");
-        }
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("You have not enough coin to Respawn");
+        //    };
+        //} else
+        //{
+        //    Debug.Log("NullOnPlayerRespawn");
+        //}
         
     }
 
@@ -53,14 +58,15 @@ public class OnGameOver : MonoBehaviour {
         Instantiate(respawnEffect, transform.position, transform.rotation);
     }
 
-    public void SetState (bool state) 
-    {
-        if (!state)
-        {
-            rigidbody2D.velocity = Vector3.zero;
-        }
-        MovingEffect.SetActive(state);
-        directionCircle.SetActive(state);
-        spriteRenderer.enabled = state;
-    }
+    //public void SetState (bool state) 
+    //{
+    //    if (!state)
+    //    {
+    //        rigidbody2D.velocity = Vector3.zero;
+    //    }
+    //    MovingEffect.SetActive(state);
+    //    directionCircle.SetActive(state);
+    //    spriteRenderer.enabled = state;
+    //    colliderWood.enabled = state;
+    //}
 }
