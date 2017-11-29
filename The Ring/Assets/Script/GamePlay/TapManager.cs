@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TapTapTap : MonoBehaviour {
+public class TapManager : MonoBehaviour {
     public float rotateSpeed;
     public GameObject director;
     public GameObject players;

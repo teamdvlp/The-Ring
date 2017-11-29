@@ -4,6 +4,9 @@ public class Collider : MonoBehaviour {
 	public delegate void PlayerColliderWithMapBorder (GameObject map);
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
     public OnGameOver gameOverManager;
+    public bool isHavingArmor;
+    public bool collided;
+
 	void Start () {
     }
 
@@ -18,10 +21,30 @@ public class Collider : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.layer == 22)
+        if (!collided)
         {
-            Debug.Log("FUCK");
-            gameOverManager.Die();
+            // 22 = Impedement
+            if (col.gameObject.layer == 22)
+            {
+                if (!isHavingArmor)
+                {
+                    Debug.Log("????");
+                    gameOverManager.Die();
+                }
+                else
+                {
+                    isHavingArmor = false;
+                    Debug.Log("FUCKKK?");
+                }
+
+            }
+            collided = true;
         }
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collided = false;
     }
 }

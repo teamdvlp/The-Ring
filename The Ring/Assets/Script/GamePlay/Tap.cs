@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
-    public TapTapTap tapManager;
+    public TapManager tapManager;
     public float startForce = 2000f;
     float force;
     bool isTouching = false;
