@@ -6,13 +6,10 @@ using UnityEngine.EventSystems;
 
 public class StartGame : MonoBehaviour{
 
-    public GameObject player;
-    public GameObject directionArrow;
     public GameObject settingButton, shoppingButton, exitButton;
     public GameObject nameGame;
     public Animator leftPreventer, rightPreventer;
     public MonsterMovement monsterMovement;
-    public float timeToReleaseMonster;
     public float speed;
    
     public void Starts ()
@@ -23,6 +20,10 @@ public class StartGame : MonoBehaviour{
         nameGame.transform.Translate(Vector3.up * speed);
         leftPreventer.enabled = true;
         rightPreventer.enabled = true;
+    }
+
+    public void ReleaseMonster ()
+    {
         monsterMovement.enabled = true;
     }
 

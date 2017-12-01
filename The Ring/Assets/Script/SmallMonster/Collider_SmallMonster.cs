@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collider_SmallMonster : MonoBehaviour {
 	OnGameOver onGameOver;
     public FuckingLimit limit;
-    public AudioSource audio;
+    //public AudioSource audio;
 
     // Use this for initialization
     void Start () {
@@ -19,7 +19,7 @@ public class Collider_SmallMonster : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        audio.Play();
+        //audio.Play();
     }
 
     void OnParticleCollision(GameObject other)

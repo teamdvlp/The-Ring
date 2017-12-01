@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TapManager : MonoBehaviour {
+public class DirectionArrow : MonoBehaviour {
     public float rotateSpeed;
     public GameObject director;
     public GameObject players;
     Rigidbody2D playerRigid2D;
     Vector3 direction;
-    public bool isTouching;
-    public GameObject power;
+    public bool isTouching { get; set; }
+    public GameObject power, ultraPower;
 
     private void Start()
     {
@@ -21,9 +21,21 @@ public class TapManager : MonoBehaviour {
         transform.Rotate(new Vector3(0,0, rotateSpeed * Time.deltaTime));    
     }
 
-    public void AddForces (float force)
+    public void AddForces (float force, bool isUltraPower)
     {
-        Instantiate(power, players.transform.position, Quaternion.identity);
+        if (rotateSpeed == 0)
+        {
+            rotateSpeed = 500;
+        }
+
+        if (isUltraPower)
+        {
+            Instantiate(ultraPower, players.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(power, players.transform.position, Quaternion.identity);
+        }
         direction = director.transform.position - transform.position;
         playerRigid2D.AddForce(direction * force);
     }
