@@ -2,8 +2,10 @@ using System.Collections;
 using UnityEngine;
 public class Collider : MonoBehaviour {
 	public delegate void PlayerColliderWithMapBorder (GameObject map);
+	public delegate void PlayerColliderWithBackground (GameObject map);
+	
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
-    public OnGameOver gameOverManager;
+	public event PlayerColliderWithBackground OnPlayerColliderWithBackground;
 	void Start () {
     }
 
@@ -14,14 +16,18 @@ public class Collider : MonoBehaviour {
 				OnPlayerColliderWithMapBorder(col.gameObject.transform.parent.gameObject);
 			}
 		}
+		else if (col.gameObject.layer == 19) {
+			if (OnPlayerColliderWithBackground != null) {
+				OnPlayerColliderWithBackground(col.gameObject);
+			}
+		}
 	}
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.layer == 22)
         {
-            Debug.Log("FUCK");
-            gameOverManager.Die();
+            // gameOverManager.Die();
         }
     }
 }

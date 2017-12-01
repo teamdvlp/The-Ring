@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndlessManager : MonoBehaviour {
+public class EndlessMap : MonoBehaviour {
     public Map lowLevelMap, mediumLevelMap, highLevelMap;
     private List<List<GameObject>> lowMapList ;
     private List<List<GameObject>> mediumMapList;
@@ -16,6 +16,7 @@ public class EndlessManager : MonoBehaviour {
     private int position_Had_Been_Chosen_Of_MediumMap, position_Had_Been_Chosen_Of_HighMap;
     public MonsterCollider monsterCollider;
     private List<GameObject> mapHasbeenSpawned;
+    public int countOfMapWasSpawnedWhenStarting;
     void Awake()
     {
         Pass_All_Map_To_ListMap();
@@ -28,12 +29,14 @@ public class EndlessManager : MonoBehaviour {
         int mapPosition = Random.Range(0, lowMapList.Count - 1);
         performingMap = lowMapList[mapPosition];
 		order = 0;
-        createThreeMapWhenGameStarted();
+        createMapWhenStarting();
 	}
-	
-	void Update () {
-		
-	}
+
+    private void createMapWhenStarting () {
+        for (int i = 0; i < countOfMapWasSpawnedWhenStarting; i++) {
+            CreateNewMap();
+        } 
+    }
 
 	public void CreateNewMap () {
 		selectedMap = this.performingMap[order];
@@ -52,7 +55,6 @@ public class EndlessManager : MonoBehaviour {
         yield return new WaitForSeconds (TimeToDestroyMap);
         Destroy(map);
         mapHasbeenSpawned.Remove(map);
-        Debug.Log("Count Map: " + checkTheCountOfMapAbovePlayer());
         
     }
     private void OnPlayerCollisionMapBorder (GameObject map) {
@@ -61,17 +63,9 @@ public class EndlessManager : MonoBehaviour {
         }
     }
 
-    private void createThreeMapWhenGameStarted () {
-        CreateNewMap();
-        CreateNewMap();
-        CreateNewMap();
-    }
-
     private void ChangeToMediumLevelMap ()
     {
         int position = Random.Range(0, mediumMapList.Count - 1);
-        Debug.Log("MEDIUM pos: " + position);
-        Debug.Log("PREVIOUS POSITION Medium : " + position_Had_Been_Chosen_Of_MediumMap);
         //Check that if The Index of next map equal the index of previous Map;
         if (position == position_Had_Been_Chosen_Of_MediumMap)
         {
@@ -88,7 +82,6 @@ public class EndlessManager : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_MediumMap = position;
         
-        Debug.Log("MEDIUM MAP Lever " + position);    
     }
 
     private void OnMonsterCollisionMapBorder (GameObject map) {
@@ -99,8 +92,6 @@ public class EndlessManager : MonoBehaviour {
     private void ChangeToHighLevelMap ()
     {
         int position = Random.Range(0, highMapList.Count - 1);
-        Debug.Log("HIGH pos: " + position);
-        Debug.Log("PREVIOUS POSITION High: " + position_Had_Been_Chosen_Of_MediumMap);
         if (position == position_Had_Been_Chosen_Of_HighMap)
         {
             if (position == 0)
@@ -118,7 +109,10 @@ public class EndlessManager : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_HighMap = position;
 
-        Debug.Log("HIGH MAP Lever " + position);
+    }
+
+    private void createNewBackground () {
+
     }
 
     private void Pass_All_Map_To_ListMap()
@@ -169,7 +163,6 @@ public class EndlessManager : MonoBehaviour {
     }
 
 	private void UpdateMapLocation () {
-		positionSpawn = new Vector2 (positionSpawn.x, positionSpawn.y + selectedMap.GetComponent<Renderer>().bounds.size.y) ;
+        positionSpawn = selectedMap.transform.GetChild(0).transform.position;
 	}
-
 }

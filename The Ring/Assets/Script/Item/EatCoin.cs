@@ -22,11 +22,11 @@ public class EatCoin : MonoBehaviour {
 
 	public void OnTriggerEnter2D (Collider2D col) { 
 		if (col.gameObject.tag.Equals("Coin")) {
-            PlusCoin(1);
+            // PlusCoin(1);
             Destroy(col.gameObject);
             audio.Play();
         } else if (col.gameObject.tag.Equals("Ruby")) {
-			PlusCoin (10);
+			// PlusCoin (10);
             audio.Play();
             Destroy(col.gameObject);
         }

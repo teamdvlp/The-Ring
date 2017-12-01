@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EquipmentAttack : MonoBehaviour {
 	public int speed;
-	// Use this for initialization
+	public GameObject par;
 	void Start () {
-		GetComponent<Rigidbody2D>().AddTorque(speed);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		GetComponent<Rigidbody2D>().angularVelocity = speed;
 	}
 
-
+	void OnCollisionStay2D(Collision2D other)
+	{
+		GameObject obj = Instantiate(par);
+		float aliveTime = obj.GetComponent<ParticleSystem>().startLifetime;
+		obj.GetComponent<AutoDestroy>().destroyTime = aliveTime;
+		obj.transform.position = other.contacts[0].point;
+	}	
 }
