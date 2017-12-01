@@ -81,7 +81,10 @@ public class EndlessMap : MonoBehaviour {
         performingMap = mediumMapList[position];
 
         position_Had_Been_Chosen_Of_MediumMap = position;
+<<<<<<< HEAD:The Ring/Assets/Script/EndlessController/EndlessMap.cs
         
+=======
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1:The Ring/Assets/Script/EndlessController/EndlessManager.cs
     }
 
     private void OnMonsterCollisionMapBorder (GameObject map) {
@@ -109,10 +112,13 @@ public class EndlessMap : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_HighMap = position;
 
+<<<<<<< HEAD:The Ring/Assets/Script/EndlessController/EndlessMap.cs
     }
 
     private void createNewBackground () {
 
+=======
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1:The Ring/Assets/Script/EndlessController/EndlessManager.cs
     }
 
     private void Pass_All_Map_To_ListMap()

@@ -6,20 +6,37 @@ public class MonsterMovement : MonoBehaviour {
 
     Transform monsterTransform;
     public float moveSpeed;
+    float speed;
 
-	// Use this for initialization
 	void Start () {
         monsterTransform = gameObject.transform;
-	}
+        speed = moveSpeed;    
+    }
 	
-	// Update is called once per frame
 	void Update () {
         Move();
     }
 
     void Move ()
     {
-        // monsterTransform.position = new Vector3(monsterTransform.position.x, monsterTransform.position.y + moveSpeed * Time.deltaTime, monsterTransform.position.z);
-        GetComponent<Rigidbody2D>().velocity = Vector2.up * moveSpeed;
+        monsterTransform.Translate(Vector2.up * speed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals("Preventer"))
+        {
+            Debug.Log("ENTER");
+            speed = 0;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals("Preventer"))
+        {
+            Debug.Log("EXIT");
+            speed = moveSpeed;
+        }
     }
 }

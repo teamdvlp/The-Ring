@@ -53,44 +53,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowLevelMap:
     Mini_Map_1:
-    - {fileID: 1158797696685130, guid: b9a38e845097ae84dbc9c4eff4e2b0e4, type: 2}
-    - {fileID: 1659419848388668, guid: f9e71f72d19c08549a0b43e3e82ab08a, type: 2}
-    - {fileID: 1158797696685130, guid: b9a38e845097ae84dbc9c4eff4e2b0e4, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_2:
-    - {fileID: 1158797696685130, guid: b9a38e845097ae84dbc9c4eff4e2b0e4, type: 2}
-    - {fileID: 1158797696685130, guid: b9a38e845097ae84dbc9c4eff4e2b0e4, type: 2}
-    - {fileID: 1158797696685130, guid: b9a38e845097ae84dbc9c4eff4e2b0e4, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_3:
-    - {fileID: 1659419848388668, guid: f9e71f72d19c08549a0b43e3e82ab08a, type: 2}
-    - {fileID: 1659419848388668, guid: f9e71f72d19c08549a0b43e3e82ab08a, type: 2}
-    - {fileID: 1659419848388668, guid: f9e71f72d19c08549a0b43e3e82ab08a, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
   mediumLevelMap:
     Mini_Map_1:
-    - {fileID: 1817860528016174, guid: 95b9fc5908c21124080d551e32639d21, type: 2}
-    - {fileID: 1188381345147736, guid: 7faac152ff7cdd549a8705d5784e5095, type: 2}
-    - {fileID: 1549889348575662, guid: 09bd6887bfbe82d45a80dcddaf0ba115, type: 2}
+    - {fileID: 0}
     Mini_Map_2:
     - {fileID: 1799253871341174, guid: 128526cfc870fb844b280b6bc4ff7a39, type: 2}
-    - {fileID: 1076001890796924, guid: eadb718b7452f5048bdc1fcb8340cdfb, type: 2}
-    - {fileID: 1116285969650480, guid: 208b350c2d421ac4795714e5005fdfca, type: 2}
     Mini_Map_3:
-    - {fileID: 1659419848388668, guid: f9e71f72d19c08549a0b43e3e82ab08a, type: 2}
-    - {fileID: 1900579433284564, guid: fc17658ad30d44a418cbd36b88d5e206, type: 2}
-    - {fileID: 1116285969650480, guid: 208b350c2d421ac4795714e5005fdfca, type: 2}
+    - {fileID: 0}
   highLevelMap:
     Mini_Map_1:
     - {fileID: 1116285969650480, guid: 208b350c2d421ac4795714e5005fdfca, type: 2}
-    - {fileID: 1900579433284564, guid: fc17658ad30d44a418cbd36b88d5e206, type: 2}
-    - {fileID: 1549889348575662, guid: 09bd6887bfbe82d45a80dcddaf0ba115, type: 2}
     Mini_Map_2:
-    - {fileID: 1839829593059166, guid: 93e42eff605b91846a0671f898f0b8ef, type: 2}
-    - {fileID: 1839829593059166, guid: 93e42eff605b91846a0671f898f0b8ef, type: 2}
-    - {fileID: 1116285969650480, guid: 208b350c2d421ac4795714e5005fdfca, type: 2}
+    - {fileID: 0}
     Mini_Map_3: []
   performingMap:
   - {fileID: 1799253871341174, guid: 128526cfc870fb844b280b6bc4ff7a39, type: 2}
-  - {fileID: 1116285969650480, guid: 208b350c2d421ac4795714e5005fdfca, type: 2}
-  - {fileID: 1839829593059166, guid: 93e42eff605b91846a0671f898f0b8ef, type: 2}
   positionSpawn: {x: 0, y: 862.21515}
   TimeToDestroyMap: 2
   monsterCollider: {fileID: 0}

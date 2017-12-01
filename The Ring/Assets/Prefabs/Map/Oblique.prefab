@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 224899858829767032}
   - component: {fileID: 212357287520384852}
   - component: {fileID: 60445647586615494}
+  - component: {fileID: 114191458521707816}
   m_Layer: 9
   m_Name: Oblique
   m_TagString: Untagged
@@ -152,6 +153,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114191458521707816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1301763126008218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621a0249ae6974f22a1b0236cb196550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endManager: {fileID: 114091075704389584, guid: 73e811d50dcd54b1a8ac7c190e6eb7d6,
+    type: 2}
 --- !u!212 &212357287520384852
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -220,7 +234,7 @@ RectTransform:
   m_GameObject: {fileID: 1301763126008218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.489, y: 0.658, z: 0.635}
+  m_LocalScale: {x: 0.26230365, y: 0.35295665, z: 0.34061927}
   m_Children:
   - {fileID: 224463686327499548}
   m_Father: {fileID: 0}
@@ -228,6 +242,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 25.69, y: 6.67}
   m_SizeDelta: {x: 22.02, y: 51.62}
+=======
+  m_AnchoredPosition: {x: -2.640709, y: -12.77788}
+  m_SizeDelta: {x: 10.75, y: 20}
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
   m_Pivot: {x: 0.5, y: 0.5}

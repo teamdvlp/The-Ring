@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 8344f40903123cd41992f784d9cdfa43
+<<<<<<< HEAD
 timeCreated: 1511699141
+=======
+timeCreated: 1511699234
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Map5_0
+    21300002: Map5_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -71,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
   - buildTarget: iPhone
     maxTextureSize: 2048
     textureFormat: -1
@@ -79,6 +86,8 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+=======
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
   - buildTarget: Android
     maxTextureSize: 2048
     textureFormat: -1
@@ -89,6 +98,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites: []
     outline:
     - - {x: -394.22296, y: -622.5586}
@@ -268,6 +278,39 @@ TextureImporter:
       - {x: -50.040684, y: 192.8711}
       - {x: -47.599674, y: 192.8711}
       - {x: 3.6615136, y: 236.8164}
+=======
+    sprites:
+    - serializedVersion: 2
+      name: Map5_0
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1547
+        width: 1077
+        height: 1914
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Map5_1
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1542
+        width: 784
+        height: 1919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+>>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -53,27 +53,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowLevelMap:
     Mini_Map_1:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_2:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_3:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
   mediumLevelMap:
     Mini_Map_1:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_2:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_3:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
   highLevelMap:
     Mini_Map_1:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_2:
-    - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
     Mini_Map_3:
     - {fileID: 1257715537250314, guid: fe5135aa9b0262344a3c7398c3acee49, type: 2}
-  performingMap:
-  - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
+  performingMap: []
   positionSpawn: {x: 0, y: 0}
   TimeToDestroyMap: 0
   monsterCollider: {fileID: 0}
