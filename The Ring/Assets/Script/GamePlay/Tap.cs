@@ -14,7 +14,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     float force;
     public bool isTouching = false;
     public float touchingTime;
-    public bool isFullPowerBefore = false;
+    public bool isFullPower;
 
     void Start()
     {
@@ -25,16 +25,21 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     public void OnPointerDown(PointerEventData eventData)
     {
         isTouching = true;
-        isFullPowerBefore = false;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+<<<<<<< HEAD
         isTouching = false;
         if (!isFullPowerBefore)
         {
             AddForce(false);
         }
+=======
+        AddForce(isFullPower);
+        isTouching = false;
+        playerRenderer.sprite = listSprite[0];
+>>>>>>> bb861b63f92f1592005003dbe8d1596712dd8413
     }
 
     void Update () {
@@ -42,20 +47,20 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
         {
             directionArrow.isTouching = true;
             force += Time.deltaTime * ForceStrenght;
-            touchingTime -= Time.deltaTime;
+
             // Giống Animation
             ChangeSpriteOfPlayerFollowState();
 
             if (touchingTime <= 0)
             {
                 force = startForce + startTouchingTime * 2f * ForceStrenght ;
-                AddForce(true);
-                isFullPowerBefore = true;
-                playerRenderer.sprite = listSprite[0];
+                isFullPower = true;
+                isTouching = false;
             }
-        } else
-        {
-            playerRenderer.sprite = listSprite[0];
+            else
+            {
+                touchingTime -= Time.deltaTime;
+            }
         }
     }
 
@@ -99,11 +104,10 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     {
         directionArrow.AddForces(force, isUltraPower);
         force = startForce;
-        isTouching = false;
-        directionArrow.isTouching = false;
         touchingTime = startTouchingTime;
-        //loadingProgress.SetActive(false);
+        isFullPower = false;
+        directionArrow.isTouching = false;
     }
 
- 
+
 }
