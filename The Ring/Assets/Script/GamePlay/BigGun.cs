@@ -7,7 +7,6 @@ public class BigGun : MonoBehaviour {
     public GameObject rope;
     public float shootTime;
     private static bool isSetPosition;
-    public Swipe swipe;
     public GameObject shootEffectPosition;
     public GameObject shootEffect;
 
@@ -17,7 +16,6 @@ public class BigGun : MonoBehaviour {
         {
             if (!isSetPosition)
             {
-                swipe.enabled = false;
                 col.gameObject.transform.position = transform.position;
                 OnPreparingShoot();
                 StartCoroutine(Shoot(col.gameObject));
@@ -39,7 +37,6 @@ public class BigGun : MonoBehaviour {
         this.gameObject.GetComponent<Animator>().Play("BigGunShoot");
         this.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         gameObjects.GetComponent<Rigidbody2D>().AddForce(Vector3.up * force);
-        swipe.enabled = true;
         Debug.Log("Shoot");
     }
 

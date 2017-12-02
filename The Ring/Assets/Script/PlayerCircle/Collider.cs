@@ -5,14 +5,11 @@ public class Collider : MonoBehaviour {
 	public delegate void PlayerColliderWithBackground (GameObject map);
 	
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
-<<<<<<< HEAD
 	public event PlayerColliderWithBackground OnPlayerColliderWithBackground;
-=======
     public OnGameOver gameOverManager;
     public bool isHavingArmor;
     public bool collided;
 
->>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
 	void Start () {
     }
 
@@ -34,9 +31,6 @@ public class Collider : MonoBehaviour {
     {
         if (!collided)
         {
-<<<<<<< HEAD
-            // gameOverManager.Die();
-=======
             // 22 = Impedement
             if (col.gameObject.layer == 22)
             {
@@ -53,7 +47,6 @@ public class Collider : MonoBehaviour {
 
             }
             collided = true;
->>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
         }
         
     }

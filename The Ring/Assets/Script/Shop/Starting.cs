@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Starting : MonoBehaviour {
-	public Image imageChoosenCharacter;
+	public SpriteRenderer imageChoosenCharacter;
 	public Sprite startingSprite;
 	public static bool hadSetSpriteDefault = false;
 	public static List<Character> list_OwnedCharacter;
