@@ -133,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519087298184354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -1.4, z: -7.74}
+  m_LocalPosition: {x: -29.051296, y: 19.009594, z: -7.74}
   m_LocalScale: {x: 0.5225546, y: 0.5225546, z: 0.5225546}
   m_Children:
   - {fileID: 4458437943825090}
@@ -201,7 +201,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 3
 --- !u!60 &60297187121354658
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -491,8 +491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621a0249ae6974f22a1b0236cb196550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endManager: {fileID: 114252225104501930, guid: f4a725e7609514e4abed0c2206a8c80f,
-    type: 2}
 --- !u!114 &114095877466830754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -668,7 +666,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.2020817, y: 0.3708912}
+  m_ConnectedAnchor: {x: -26.679214, y: 20.780485}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 100
