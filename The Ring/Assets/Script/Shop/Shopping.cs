@@ -56,11 +56,9 @@ public class Shopping : MonoBehaviour {
 	private void ShowInfo (int choosenPosition) {
 		Character character = list_Character [choosenPosition];
 		if (checkIsBought(character.getId())) {
-			Debug.Log ("ĐÃ MUA");
 			choosenCharacterImage.sprite = character.GetSprite ();
 			ProcessControllerState (false, 100);
 		} else { 
-			Debug.Log ("CHANGE SPRITE");
 			choosenCharacterImage.sprite = character.GetSprite ();
 			Debug.Log (character.GetSprite ());
 			costText.text = character.GetCost () + " Rings";

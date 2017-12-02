@@ -37,6 +37,6 @@ public class DirectionArrow : MonoBehaviour {
             Instantiate(power, players.transform.position, Quaternion.identity);
         }
         direction = director.transform.position - transform.position;
-        playerRigid2D.AddForce(direction * force);
+        playerRigid2D.velocity = (direction * force);
     }
 }

@@ -14,7 +14,6 @@ public class Intro : MonoBehaviour {
     public GameObject SmokeBurst;
 	public PhysicsMaterial2D bounceMaterial;
     private bool isCollided = false;
-	public Swipe swipe;
 
 	public delegate void GameStarted ();
 
