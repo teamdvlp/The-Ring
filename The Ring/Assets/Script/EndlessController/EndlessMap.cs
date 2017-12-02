@@ -108,13 +108,10 @@ public class EndlessMap : MonoBehaviour {
 
         position_Had_Been_Chosen_Of_HighMap = position;
 
-<<<<<<< HEAD
-=======
     }
 
     private void createNewBackground () {
 
->>>>>>> d31be15db542367197253338cec1924551f6f2c2
     }
 
     private void Pass_All_Map_To_ListMap()

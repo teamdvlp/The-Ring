@@ -13,12 +13,10 @@ public class OnGameOver : MonoBehaviour {
     SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
     public GameOver gameOver;
-    Collider_SmallMonster colliderWood;
 
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
-        colliderWood = GetComponent<Collider_SmallMonster>();
     }
 	
     public void Die()

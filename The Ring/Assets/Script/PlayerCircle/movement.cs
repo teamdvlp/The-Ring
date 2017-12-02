@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 	public Trackpad trackpad;
     public float speed;
-    public Limit playerLimits;
 
     void Start () {
 		
@@ -18,6 +17,5 @@ public class Movement : MonoBehaviour {
 
     void LimitMovement ()
     {
-        this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x, playerLimits.MinimumX, playerLimits.MaximumX), Mathf.Clamp(this.transform.position.y,playerLimits.MinimumY,playerLimits.MaximumY), this.transform.position.z);
     }
 }

@@ -113,6 +113,77 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 50246829210283910, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
     type: 2}
   m_PrefabInternal: {fileID: 1486739989}
+--- !u!1 &320880736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 320880738}
+  - component: {fileID: 320880737}
+  m_Layer: 0
+  m_Name: Map2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &320880737
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320880736}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 28d2953b613617949b85573771e9d4a5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 29.999998, y: 50}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &320880738
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320880736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 385.94827, y: 270.93674, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &376422710 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114062614909715282, guid: 607f1ff4acf30e4418c96034a99e1876,
@@ -297,7 +368,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501609844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 431.4, y: 246.8, z: -10}
+  m_LocalPosition: {x: 432, y: 243, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -328,6 +399,7 @@ GameObject:
   - component: {fileID: 976940835}
   - component: {fileID: 976940834}
   - component: {fileID: 976940836}
+  - component: {fileID: 976940837}
   m_Layer: 5
   m_Name: Trackpad
   m_TagString: Untagged
@@ -393,10 +465,12 @@ MonoBehaviour:
   - {fileID: 21300012, guid: 5927aed088ad72548ab2fb796cf54468, type: 3}
   - {fileID: 21300014, guid: 5927aed088ad72548ab2fb796cf54468, type: 3}
   directionArrow: {fileID: 1192973016}
-  startForce: 3000
+  startForce: 80
+  startTouchingTime: 0.75
   playerRenderer: {fileID: 1307016343}
-  force: 0
-  touchingTime: 0.75
+  ForceStrenght: 0
+  isTouching: 0
+  touchingTime: 3
   isFullPowerBefore: 0
 --- !u!114 &976940836
 MonoBehaviour:
@@ -425,6 +499,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!95 &976940837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976940831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36cf8b2d42828ea4eaccd860ed68a779, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1192973016 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114702764422159050, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
@@ -450,11 +541,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 431.4
+      value: 432.16
       objectReference: {fileID: 0}
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 238.2
+      value: 243
       objectReference: {fileID: 0}
     - target: {fileID: 4377218053868954, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
       propertyPath: m_LocalPosition.z
@@ -490,7 +581,24 @@ Prefab:
       propertyPath: monsterCollider
       value: 
       objectReference: {fileID: 376422710}
-    m_RemovedComponents: []
+    - target: {fileID: 114772528397576844, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+        type: 2}
+      propertyPath: positionSpawn.x
+      value: 432
+      objectReference: {fileID: 0}
+    - target: {fileID: 114960959212189022, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+        type: 2}
+      propertyPath: positionStartSpawn.x
+      value: 432
+      objectReference: {fileID: 0}
+    - target: {fileID: 50246829210283910, guid: d8eaf45fe00c63e46bc077c4a0cb8337,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114991656452364128, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
+    - {fileID: 114550738789162338, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d8eaf45fe00c63e46bc077c4a0cb8337, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1925156116
@@ -593,11 +701,6 @@ Prefab:
     - target: {fileID: 4814348092051618, guid: 607f1ff4acf30e4418c96034a99e1876, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467946949182788, guid: 607f1ff4acf30e4418c96034a99e1876,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 607f1ff4acf30e4418c96034a99e1876, type: 2}

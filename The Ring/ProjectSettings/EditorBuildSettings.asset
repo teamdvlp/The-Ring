@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 0282502d6cc3af049bec81e41f0faa73
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SettingScene.unity
     guid: 3ed71f52777b24149abff945a2ee3ef3
   - enabled: 0
@@ -32,15 +32,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Screen Play/Scene 1.unity
     guid: 9628e5385c46bac4b93d0a593ec66839
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartingScene 1.unity
     guid: 3a0cad35c3048544f9c5c77de45063ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screen Play/Scene.unity
     guid: 1d01d8009f3cbb3479b04071dfa0f268
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ShoppingScene.unity
     guid: 0663c46b9a4e5be458998e691d659c13
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DemoScene - Copy.unity
     guid: 7fb5e932c497f4a3683edefa4cf72030
+  - enabled: 1
+    path: Assets/Scenes/SceneEndlessMain.unity
+    guid: 3048f95f131f04688b08b9147f8976e1

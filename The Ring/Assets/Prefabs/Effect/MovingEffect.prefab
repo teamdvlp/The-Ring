@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4269428462614064}
   - component: {fileID: 198981261027107216}
   - component: {fileID: 199010069247965846}
+  - component: {fileID: 114202218041567134}
   m_Layer: 0
   m_Name: MovingEffect
   m_TagString: Untagged
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114202218041567134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208603859863096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a628a19e28e85647abef735c188022a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 2
 --- !u!198 &198981261027107216
 ParticleSystem:
   m_ObjectHideFlags: 1

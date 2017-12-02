@@ -33,10 +33,7 @@ public class Collider : MonoBehaviour {
     {
         if (!collided)
         {
-<<<<<<< HEAD
             // gameOverManager.Die();
-=======
->>>>>>> d31be15db542367197253338cec1924551f6f2c2
             // 22 = Impedement
             if (col.gameObject.layer == 22)
             {

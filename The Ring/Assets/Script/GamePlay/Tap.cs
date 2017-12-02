@@ -12,7 +12,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     public SpriteRenderer playerRenderer;
     public float ForceStrenght;
     float force;
-    bool isTouching = false;
+    public bool isTouching = false;
     public float touchingTime;
     public bool isFullPowerBefore = false;
 
@@ -30,6 +30,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        isTouching = false;
         if (!isFullPowerBefore)
         {
             AddForce(false);
@@ -97,7 +98,6 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     void AddForce(bool isUltraPower)
     {
         directionArrow.AddForces(force, isUltraPower);
-        Debug.Log(force);
         force = startForce;
         isTouching = false;
         directionArrow.isTouching = false;
