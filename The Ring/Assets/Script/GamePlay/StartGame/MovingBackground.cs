@@ -41,9 +41,9 @@ public class MovingBackground : MonoBehaviour {
 
     void GetTopOfBackground ()
     {
-        topTop = backgroundTop.GetComponent<Background>().top;
-        topMiddle = backgroundMiddle.GetComponent<Background>().top;
-        topBot = backgroundBot.GetComponent<Background>().top;
+        // topTop = backgroundTop.GetComponent<Background>().top;
+        // topMiddle = backgroundMiddle.GetComponent<Background>().top;
+        // topBot = backgroundBot.GetComponent<Background>().top;
     }
     
 
@@ -65,7 +65,6 @@ public class MovingBackground : MonoBehaviour {
         backgroundBot.transform.Translate(Vector2.down * speed); 
     }
 
-    /////////////////
 }
 
 

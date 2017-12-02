@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Collider_SmallMonster : MonoBehaviour {
 	OnGameOver onGameOver;
-<<<<<<< HEAD
     // public FuckingLimit limit;
     public AudioSource audio;
-=======
     public FuckingLimit limit;
     //public AudioSource audio;
->>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
 
     // Use this for initialization
     void Start () {

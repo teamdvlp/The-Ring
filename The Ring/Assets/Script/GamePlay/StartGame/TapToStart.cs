@@ -19,7 +19,7 @@ public class TapToStart : MonoBehaviour, IPointerDownHandler
 
     void StartGame()
     {
-        startGameManager.Starts();
+        // startGameManager.Starts();
     }
 
     

@@ -5,19 +5,18 @@ public class Collider : MonoBehaviour {
 	public delegate void PlayerColliderWithBackground (GameObject map);
 	
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
-<<<<<<< HEAD
 	public event PlayerColliderWithBackground OnPlayerColliderWithBackground;
-=======
     public OnGameOver gameOverManager;
     public bool isHavingArmor;
     public bool collided;
 
->>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
 	void Start () {
     }
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+				Debug.Log("Mapborder" + col.gameObject.layer);
+		
 		if (col.gameObject.layer == 21) {
 			if (OnPlayerColliderWithMapBorder != null) {
 				OnPlayerColliderWithMapBorder(col.gameObject.transform.parent.gameObject);
@@ -34,26 +33,21 @@ public class Collider : MonoBehaviour {
     {
         if (!collided)
         {
-<<<<<<< HEAD
             // gameOverManager.Die();
-=======
             // 22 = Impedement
             if (col.gameObject.layer == 22)
             {
                 if (!isHavingArmor)
                 {
-                    Debug.Log("????");
-                    gameOverManager.Die();
+                    // gameOverManager.Die();
                 }
                 else
                 {
                     isHavingArmor = false;
-                    Debug.Log("FUCKKK?");
                 }
 
             }
             collided = true;
->>>>>>> 1b02d5c6f6f0056e01abaff76709ab23cd566bf1
         }
         
     }
