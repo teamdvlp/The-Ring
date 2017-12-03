@@ -18,7 +18,7 @@ public class Score : MonoBehaviour {
 	void Start () {
         coinToRespawn = 10;
         isGameStarted = false;
-        GetComponent<Intro>().onGameStarted += OnGameStarted;
+        //GetComponent<Intro>().onGameStarted += OnGameStarted;
         // gameOver.OnOverGame += OnOverGame;
         // OnGameOver.OnPlayerRespawn += OnRespawn;
     }

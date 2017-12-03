@@ -19,21 +19,24 @@ public class Armor : MonoBehaviour {
         // 22 = Impedement;
         if (col.gameObject.layer == 22)
         {
+            Debug.Log("HAVING ARMOR ?: " +  collider.isHavingArmor);
             if (collider.isHavingArmor)
             {
-                Debug.Log("HM ?");
+                Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
                 ContactPoint2D[] point = col.contacts;
                 if (collideEffect != null)
                 {
                     Instantiate(collideEffect,point[0].point,transform.rotation);
-                } else
-                {
-
                 }
                 armorSprite.sprite = null;
+                collider.isHavingArmor = false;
+            } else
+            {
+                Debug.Log("CLGT ?");
             }
         }
-        
+
+
     }
-	
+
 }
