@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotiWhenCollide : MonoBehaviour {
+public class ImpeNotiWhenCollide : MonoBehaviour {
 
 	public delegate void WoodCollide(GameObject col);
 	public event WoodCollide OnWoodCollide;
@@ -17,16 +17,13 @@ public class NotiWhenCollide : MonoBehaviour {
 		
 	}
 
-		void OnCollisionEnter2D(Collision2D other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.name.Equals("InOutChainSaw")) {
 
 		}
-		if (other.gameObject.name.Equals("Wood2")) {
 		if (OnWoodCollide != null) {
 			OnWoodCollide(other.gameObject);
 		}
-		}
-			
 	}
 }

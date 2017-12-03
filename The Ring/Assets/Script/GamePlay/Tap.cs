@@ -29,17 +29,14 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     public void OnPointerUp(PointerEventData eventData)
     {
-<<<<<<< HEAD
         isTouching = false;
-        if (!isFullPowerBefore)
+        if (!isFullPower)
         {
             AddForce(false);
         }
-=======
         AddForce(isFullPower);
         isTouching = false;
         playerRenderer.sprite = listSprite[0];
->>>>>>> bb861b63f92f1592005003dbe8d1596712dd8413
     }
 
     void Update () {

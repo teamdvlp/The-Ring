@@ -30,6 +30,7 @@ public class WoodCollide : MonoBehaviour {
 			StartCoroutine(GoBack());
 		}
 		else if (col.tag.Equals("wall")) {
+			Debug.Log("wall");
 			StartCoroutine(CollideWood());
 		}
 	}

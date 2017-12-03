@@ -36,5 +36,8 @@ public class ImpeCollider : MonoBehaviour {
 			}
 		}
 	}
-	
+	 void OnCollisionEnter2D(Collision2D other)
+	 {
+		 Debug.Log("con cu");
+	 }
 }

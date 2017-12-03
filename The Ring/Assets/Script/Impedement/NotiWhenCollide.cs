@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpeNotiWhenCollide : MonoBehaviour {
+public class NotiWhenCollide : MonoBehaviour {
 
 	public delegate void WoodCollide(GameObject col);
 	public event WoodCollide OnWoodCollide;

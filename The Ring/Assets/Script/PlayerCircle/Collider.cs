@@ -15,8 +15,6 @@ public class Collider : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-				Debug.Log("Mapborder" + col.gameObject.layer);
-		
 		if (col.gameObject.layer == 21) {
 			if (OnPlayerColliderWithMapBorder != null) {
 				OnPlayerColliderWithMapBorder(col.gameObject.transform.parent.gameObject);
