@@ -67,3 +67,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BoardNoti
+    uniqueID: 787476805
+    locked: 0
