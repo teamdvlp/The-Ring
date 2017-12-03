@@ -55,14 +55,14 @@ TagManager:
   - name: Equipment
     uniqueID: 2752611591
     locked: 0
+  - name: Background
+    uniqueID: 1485654705
+    locked: 0
   - name: Ring
     uniqueID: 2612012227
     locked: 0
   - name: Impedement
     uniqueID: 3596131195
-    locked: 0
-  - name: Background
-    uniqueID: 1485654705
     locked: 0
   - name: Default
     uniqueID: 0
