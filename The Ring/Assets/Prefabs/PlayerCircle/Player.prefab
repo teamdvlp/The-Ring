@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 114033022704894464}
   - component: {fileID: 114697786615713604}
   - component: {fileID: 114467621399327532}
+  - component: {fileID: 114486002838989270}
   m_Layer: 15
   m_Name: Player
   m_TagString: Untagged
@@ -158,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 1730399179826968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0025368622, y: -0.0076104235, z: 2.536803}
-  m_LocalScale: {x: 0.331369, y: 0.33136892, z: 0.33136868}
+  m_LocalScale: {x: 0.44792834, y: 0.44792813, z: 0.44792783}
   m_Children:
   - {fileID: 4740860622322846}
   m_Father: {fileID: 4377218053868954}
@@ -214,8 +215,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 5
+  m_Mass: 1
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -271,14 +272,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758107561466052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ef442c67d6b04caab42752db3a1bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lowLevelMap:
     Mini_Map_1:
-    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 0}
     Mini_Map_2:
     - {fileID: 1370037343721692, guid: 460234264226aa243bacead6542a0662, type: 2}
     Mini_Map_3:
@@ -287,7 +288,7 @@ MonoBehaviour:
     Mini_Map_1:
     - {fileID: 1938947905786008, guid: 921bb6ec49816a44a892b56f38d940b5, type: 2}
     Mini_Map_2:
-    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 0}
     Mini_Map_3:
     - {fileID: 1257715537250314, guid: fe5135aa9b0262344a3c7398c3acee49, type: 2}
   highLevelMap:
@@ -296,11 +297,12 @@ MonoBehaviour:
     Mini_Map_2:
     - {fileID: 1951229313269856, guid: 54b4d8a7f9890c3468e127b62eae5dd8, type: 2}
     Mini_Map_3:
-    - {fileID: 1301763126008218, guid: ef0ce119fa83740598d08a4439f3416e, type: 2}
+    - {fileID: 0}
   performingMap: []
   positionSpawn: {x: 0, y: 0}
   TimeToDestroyMap: 1
   monsterCollider: {fileID: 0}
+  countOfMapWasSpawnedWhenStarting: 0
 --- !u!114 &114260938254936152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,11 +327,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f720d6d21ba44644480301ff555a06c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 500
+  rotateSpeed: 0
   director: {fileID: 1934732370873106}
   players: {fileID: 1758107561466052}
-  isTouching: 0
   power: {fileID: 1669095609764818, guid: 335130a5352ef9044be5de63390cc777, type: 2}
+  ultraPower: {fileID: 1693680453654426, guid: bb9cebf4b4f23b34889f3ddb4c7a5fda, type: 2}
 --- !u!114 &114467621399327532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,6 +346,18 @@ MonoBehaviour:
   gameOverManager: {fileID: 114662100043576692}
   isHavingArmor: 0
   collided: 0
+--- !u!114 &114486002838989270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1758107561466052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396da348c4f31a4eb86e0b96488b0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 212499251923849998}
 --- !u!114 &114662100043576692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7095,8 +7109,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1682955069
-  m_SortingLayer: 2
+  m_SortingLayerID: 1485654705
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5927aed088ad72548ab2fb796cf54468, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

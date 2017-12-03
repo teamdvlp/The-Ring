@@ -21,7 +21,6 @@ public class EatItem : MonoBehaviour {
         // 23 = Armor
         if (col.gameObject.layer == 23)
         {
-            Debug.Log("ALO");
             collider.isHavingArmor = true;
             armorSprite.sprite = col.gameObject.GetComponent<SpriteRenderer>().sprite;
             armorSprite.enabled = true;

@@ -8,14 +8,10 @@ public class OnGameOver : MonoBehaviour {
     public delegate bool RespawnEvent();
     public event RespawnEvent OnPlayerRespawn;
     // Properties Of Player
-    public GameObject directionCircle;
-    public GameObject MovingEffect;
-    SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
     public GameOver gameOver;
 
     void Start () {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 	
@@ -36,7 +32,7 @@ public class OnGameOver : MonoBehaviour {
         Debug.Log("RESPAWN");
                 ContinueBoard.SetActive(false);
         gameObject.SetActive(true);
-                transform.position = new Vector3(0, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
                 StartCoroutine(CreateRespawnEffect());
         //    }
         //    else
