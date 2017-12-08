@@ -21,10 +21,8 @@ GameObject:
   - component: {fileID: 4094745846098898}
   - component: {fileID: 212411811513355934}
   - component: {fileID: 60677637942552886}
-  - component: {fileID: 61560593054387710}
   - component: {fileID: 114364223898770672}
   - component: {fileID: 50640996004964160}
-  - component: {fileID: 233408811259499462}
   - component: {fileID: 114143049791307034}
   - component: {fileID: 114787180379073154}
   m_Layer: 22
@@ -41,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330802927503222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.66, y: -0.98, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 417.21, y: 237.03, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,9 +52,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330802927503222}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -244,31 +242,6 @@ PolygonCollider2D:
       - {x: -5.1015234, y: -1.1769204}
       - {x: -5.091523, y: -1.1169205}
       - {x: -5.091523, y: -0.8569205}
---- !u!61 &61560593054387710
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330802927503222}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 4.95, y: -2.12}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.9647498, y: 0.34062886}
-    oldSize: {x: 7.9, y: 3.69}
-    newSize: {x: 7.84, y: 3.69}
-    adaptiveTilingThreshold: 1
-    drawMode: 0
-    adaptiveTiling: 1
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.86, y: 37.8}
-  m_EdgeRadius: 0
 --- !u!114 &114143049791307034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911ec03980db405dac9c9eb1912f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyTarget: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!114 &114364223898770672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc88913959378942811087f7fd02fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToReverse: 2
+  speed: 200
 --- !u!114 &114787180379073154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,26 +321,3 @@ SpriteRenderer:
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!233 &233408811259499462
-HingeJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330802927503222}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.66, y: -0.98}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: -100
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
