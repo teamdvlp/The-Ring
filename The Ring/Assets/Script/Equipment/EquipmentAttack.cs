@@ -11,7 +11,7 @@ public class EquipmentAttack : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D other)
 	{
 		GameObject obj = Instantiate(par);
-		float aliveTime = obj.GetComponent<ParticleSystem>().startLifetime;
+		float aliveTime = obj.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
 		obj.GetComponent<AutoDestroy>().destroyTime = aliveTime;
 		obj.transform.position = other.contacts[0].point;
 	}

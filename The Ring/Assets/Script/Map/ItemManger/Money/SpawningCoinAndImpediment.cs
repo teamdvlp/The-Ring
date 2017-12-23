@@ -17,7 +17,7 @@ public class SpawningCoinAndImpediment : MonoBehaviour {
         int CoinCount = Random.Range(0, list_GroupCoin.Count);
         for (int i = 0; i < CoinCount; i++) {
         int CoinIndex = Random.Range(0, list_GroupCoin.Count);
-        list_GroupCoin[CoinIndex].active = true;
+        list_GroupCoin[CoinIndex].SetActive(true);
         }
     }
 
@@ -29,7 +29,7 @@ public class SpawningCoinAndImpediment : MonoBehaviour {
         for (int i = 0; i <= impedimentCount; i++)
         {
             int impedimentIndex = Random.Range(0, list_Impediment.Count);
-            list_Impediment[impedimentIndex].active = true;
+            list_Impediment[impedimentIndex].SetActive(true);
         }
     }
 }

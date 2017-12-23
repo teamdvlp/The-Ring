@@ -8,11 +8,11 @@ public class OnGameOver : MonoBehaviour {
     public delegate bool RespawnEvent();
     public event RespawnEvent OnPlayerRespawn;
     // Properties Of Player
-    private Rigidbody2D rigidbody2D;
+    private Rigidbody2D playerRigidbody2D;
     public GameOver gameOver;
 
     void Start () {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        playerRigidbody2D = GetComponent<Rigidbody2D>();
     }
 	
     public void Die()

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class AttractCoin : MonoBehaviour {
 
-    public GameObject gameObject;
+    public GameObject player;
 
 	void Update () {
         if (gameObject != null)
-        transform.position = Vector3.Lerp(transform.position, gameObject.transform.position, 0.1f);		
+        transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.1f);		
 	}
 
     void OnTriggerEnter2D (Collider2D  col)
     {
         if (col.gameObject.name.Equals("Magnet"))
         {
-            this.gameObject = col.gameObject;
+            this.player = col.gameObject;
         }
     }
 }

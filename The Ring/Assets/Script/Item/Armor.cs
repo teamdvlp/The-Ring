@@ -5,13 +5,13 @@ using UnityEngine;
 public class Armor : MonoBehaviour {
     public GameObject collideEffect;
     public SpriteRenderer armorSprite;
-    Collider collider;
+    Collider playerCollider;
     
 
 
     private void Start()
     {
-        collider = GetComponent<Collider>();
+        playerCollider = GetComponent<Collider>();
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -19,17 +19,15 @@ public class Armor : MonoBehaviour {
         // 22 = Impedement;
         if (col.gameObject.layer == 22)
         {
-            Debug.Log("HAVING ARMOR ?: " +  collider.isHavingArmor);
-            if (collider.isHavingArmor)
+            if (playerCollider.isHavingArmor)
             {
-                Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
                 ContactPoint2D[] point = col.contacts;
                 if (collideEffect != null)
                 {
                     Instantiate(collideEffect,point[0].point,transform.rotation);
                 }
                 armorSprite.sprite = null;
-                collider.isHavingArmor = false;
+                playerCollider.isHavingArmor = false;
             } else
             {
                 Debug.Log("CLGT ?");

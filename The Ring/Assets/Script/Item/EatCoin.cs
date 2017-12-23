@@ -7,7 +7,7 @@ public class EatCoin : MonoBehaviour {
 	public Text coinText;
 	static int coin;
 	public GameOver onGameOver;
-    public AudioSource audio;
+    public AudioSource audiO;
 
 
 	// Use this for initialization
@@ -24,10 +24,10 @@ public class EatCoin : MonoBehaviour {
 		if (col.gameObject.tag.Equals("Coin")) {
             // PlusCoin(1);
             Destroy(col.gameObject);
-            audio.Play();
+            audiO.Play();
         } else if (col.gameObject.tag.Equals("Ruby")) {
-			// PlusCoin (10);
-            audio.Play();
+            // PlusCoin (10);
+            audiO.Play();
             Destroy(col.gameObject);
         }
     }

@@ -7,7 +7,6 @@ public class ImpeNotiWhenCollide : MonoBehaviour {
 	public delegate void WoodCollide(GameObject col);
 	public event WoodCollide OnWoodCollide;
 	public delegate void InOutChainSawCollide(GameObject col);
-	public event InOutChainSawCollide OnInOutChainSawCollide;
 	void Start () {
 		
 	}

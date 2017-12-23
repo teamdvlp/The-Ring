@@ -9,6 +9,7 @@ public class BigGun : MonoBehaviour {
     private static bool isSetPosition;
     public GameObject shootEffectPosition;
     public GameObject shootEffect;
+    public AudioSource audios;
 
     public void OnTriggerEnter2D(Collider2D col)
     {
