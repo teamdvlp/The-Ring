@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4903998505757054}
   - component: {fileID: 212516008028315296}
   - component: {fileID: 50337511535958150}
-  - component: {fileID: 233176069861787758}
   - component: {fileID: 114160768571126670}
   - component: {fileID: 60986374031371996}
   - component: {fileID: 114105315387279324}
@@ -41,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1072803062454832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.03, y: 0.94, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 417.57, y: 239.2, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,9 +53,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1072803062454832}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -65,8 +64,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!60 &60986374031371996
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -219,11 +218,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1072803062454832}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cc88913959378942811087f7fd02fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToReverse: 2
+  speed: 120
 --- !u!114 &114264329956396238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,26 +279,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!233 &233176069861787758
-HingeJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1072803062454832}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 19.03, y: 0.94}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 100
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359

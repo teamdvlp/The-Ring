@@ -33,8 +33,9 @@ public class Collider : MonoBehaviour {
         if (!collided)
         {
             // 22 = Impedement ; 18 = Monster
-            if (col.gameObject.layer == 22 || col.gameObject.layer == 18)
+            if (col.gameObject.layer == 25 || col.gameObject.layer == 18)
             {
+                Debug.Log("fuck die");
                 if (!isHavingArmor)
                 {
                     gameOverManager.Die();
