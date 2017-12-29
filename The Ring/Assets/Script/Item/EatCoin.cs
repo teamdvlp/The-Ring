@@ -15,12 +15,20 @@ public class EatCoin : MonoBehaviour {
         coin = 0;
 		// onGameOver.OnOverGame += OnGameOver;
     }
+
     public void OnGameOver () { 
 		SqliteUserManager.AddCoin (coin);
     }
 
+    private void OnApplicationPause(bool pause)
+    {
+        
+    }
 
-	public void OnTriggerEnter2D (Collider2D col) { 
+
+
+
+    public void OnTriggerEnter2D (Collider2D col) { 
 		if (col.gameObject.tag.Equals("Coin")) {
             // PlusCoin(1);
             Destroy(col.gameObject);

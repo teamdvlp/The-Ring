@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Screen Play/Scene.unity
     guid: 1d01d8009f3cbb3479b04071dfa0f268
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ShoppingScene.unity
     guid: 0663c46b9a4e5be458998e691d659c13
   - enabled: 0
@@ -48,5 +48,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneEndlessMain.unity
     guid: 3048f95f131f04688b08b9147f8976e1
   - enabled: 1
-    path: Assets/Scenes/DuplicateScene.unity
+    path: Assets/Scenes/RealScene/ShoppingScenes.unity
+    guid: 6cea7b52310d901448885f59262e0b96
+  - enabled: 1
+    path: Assets/Scenes/RealScene/DuplicateScene.unity
     guid: 1ed84ccee3e5e4919863c68ee2967916
