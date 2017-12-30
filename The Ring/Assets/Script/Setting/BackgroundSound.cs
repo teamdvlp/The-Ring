@@ -23,12 +23,9 @@ public class BackgroundSound : MonoBehaviour {
 
     private void SetVolume()
     {
-        if (audioSourcee == null) {
+		if (audioSourcee == null) return;
 
-        }
-        else
-        {
-            audioSourcee.volume = SettingManager.BackgroundSound;
-        }
+        audioSourcee.volume = SettingManager.BackgroundSound;
+        
     }
 }
