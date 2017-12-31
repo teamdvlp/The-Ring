@@ -10,7 +10,7 @@ public class Score : MonoBehaviour {
     public Text coinToRespawnText;
     private bool isGameStarted;
     public int score;
-	public OnGameOver OnGameOver;
+	public GameOverManager gameOverManager;
     public GameOver gameOver;
     private static int coinToRespawn;
     

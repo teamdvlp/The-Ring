@@ -6,12 +6,12 @@ public class Collider : MonoBehaviour {
 	
 	public event PlayerColliderWithMapBorder OnPlayerColliderWithMapBorder;
 	public event PlayerColliderWithBackground OnPlayerColliderWithBackground;
-    OnGameOver gameOverManager;
+    GameOverManager gameOverManager;
     public bool isHavingArmor;
     public bool collided;
 
 	void Start () {
-        gameOverManager = GetComponent<OnGameOver>();
+        gameOverManager = GetComponent<GameOverManager>();
     }
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -32,10 +32,9 @@ public class Collider : MonoBehaviour {
     {
         if (!collided)
         {
-            // 22 = Impedement ; 18 = Monster
+            // 25 = PlayerKiller ; 18 = Monster
             if (col.gameObject.layer == 25 || col.gameObject.layer == 18)
             {
-                Debug.Log("fuck die");
                 if (!isHavingArmor)
                 {
                     gameOverManager.Die();

@@ -9,7 +9,9 @@ public class GameOver : MonoBehaviour {
     public float delayTimeAppearOverBoard;
     public GameObject transparentBackground;
 
-    // Đem từ Delegate và Event OnGameOver qua GameOver vì hàm OverGame nằm bên file GameOver.cs
+
+
+    // Đem từ Delegate và Event OnGameOver từ OnGameOver qua GameOver vì hàm OverGame nằm trong file GameOver.cs
     public delegate void OverGame();
     public event OverGame OnOverGame;
 
@@ -19,16 +21,21 @@ public class GameOver : MonoBehaviour {
         gameOverBoard.SetActive(false);
 	}
 	
-
-    public void OverGames()
+    // Xử lí khi Game Over hoàn toàn, không quyết định respawn
+    public void Process_GameOver()
     {
         if (OnOverGame != null)
         {
             OnOverGame();
         }
+
+        // Hiện cái background lên
 		transparentBackground.SetActive (true);
-		transparentBackground.GetComponent<TransparentBackground>().FadeIn();
-		Invoke("ActiveOverBoard", delayTimeAppearOverBoard);
+        // Hiện ra dần 
+        transparentBackground.GetComponent<TransparentBackground>().FadeIn();
+
+        // Cho cái bảng Game Over hiện xuống
+        Invoke("ActiveOverBoard", delayTimeAppearOverBoard);
 		ContinueBoard.SetActive (false);
     }
 
