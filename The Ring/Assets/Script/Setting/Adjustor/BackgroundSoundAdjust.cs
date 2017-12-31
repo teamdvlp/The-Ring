@@ -13,6 +13,7 @@ public class BackgroundSoundAdjust: MonoBehaviour, IDragHandler, IPointerUpHandl
     void Start ()
     {
         slider = GetComponent<Slider>();
+        slider.value = SettingManager.BackgroundSound;    
     }
 
 
