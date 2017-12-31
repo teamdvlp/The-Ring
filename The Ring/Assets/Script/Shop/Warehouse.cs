@@ -10,16 +10,16 @@ public class Warehouse {
 	}
 	void AddCharacter (List<Sprite> CharacterSprites)
 	{
-		Character character1 = new Character (CharacterSprites[0],100,1,2314);
-		Character character2 = new Character (CharacterSprites[1],800,2,3214);
-		Character character3 = new Character (CharacterSprites[2],3000,3,5234);
-		Character character4 = new Character (CharacterSprites[3],7000,4,5524);
-		Character character5 = new Character (CharacterSprites[4],15000,5,9182);
-		characters.Add(character1);
-		characters.Add(character2);
-		characters.Add(character3);
-		characters.Add(character4);
-		characters.Add(character5);
+		// Character character1 = new Character (CharacterSprites[0],100,1,2314);
+		// Character character2 = new Character (CharacterSprites[1],800,2,3214);
+		// Character character3 = new Character (CharacterSprites[2],3000,3,5234);
+		// Character character4 = new Character (CharacterSprites[3],7000,4,5524);
+		// Character character5 = new Character (CharacterSprites[4],15000,5,9182);
+		// characters.Add(character1);
+		// characters.Add(character2);
+		// characters.Add(character3);
+		// characters.Add(character4);
+		// characters.Add(character5);
 	}
 	public static void newInstance (List<Sprite> listSprite) {
 		if (Warehouse.mInstance == null) {

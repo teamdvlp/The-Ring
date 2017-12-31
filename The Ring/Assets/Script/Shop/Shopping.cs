@@ -55,19 +55,19 @@ public class Shopping : MonoBehaviour {
 	// Thể hiện thông tin lên màn hình
 	private void ShowInfo (int choosenPosition) {
 		Character character = list_Character [choosenPosition];
-		if (checkIsBought(character.getId())) {
-			choosenCharacterImage.sprite = character.GetSprite ();
-			ProcessControllerState (false, 100);
-		} else { 
-			choosenCharacterImage.sprite = character.GetSprite ();
-			Debug.Log (character.GetSprite ());
-			costText.text = character.GetCost () + " Rings";
-			ProcessControllerState (true, 255);
-		}
+		// if (checkIsBought(character.getId())) {
+		// 	choosenCharacterImage.sprite = character.GetSprite ();
+		// 	ProcessControllerState (false, 100);
+		// } else { 
+		// 	choosenCharacterImage.sprite = character.GetSprite ();
+		// 	Debug.Log (character.GetSprite ());
+		// 	costText.text = character.GetCost () + " Rings";
+		// 	ProcessControllerState (true, 255);
+		// }
 	}
 
 	private void Process_Bought_Character_InShop_AfterBuy (int choosenPosition) {
-		SqliteUserManager.addCharacter(list_Character[choosenPosition].getId());
+		// SqliteUserManager.addCharacter(list_Character[choosenPosition].getId());
 	}
 
 	private void ProcessControllerState (bool state, float alpha) {
@@ -78,14 +78,17 @@ public class Shopping : MonoBehaviour {
 	}
 
 	public void Buy () {
-		if (SqliteUserManager.getCoin() > list_Character[choosenPosition].GetCost()) {
-			User.SetUserSprite(list_Character[choosenPosition].GetSprite());
-			SqliteUserManager.AddCoin (-list_Character [choosenPosition].GetCost());
-			Process_Bought_Character_InShop_AfterBuy (choosenPosition);
-			ShowInfo (choosenPosition);
-		} else { 
-			Debug.Log ("You have not enough money");
-			// Debug.Log (SqliteUserManager.getCoin() + " And " + list_Cost[choosenPosition]  );
-		}
+
+		// User user = new User();
+		// user.Coin = 2;
+	// 	if (SqliteUserManager.getCoin() > list_Character[choosenPosition].GetCost()) {
+	// 		// User.SetUserSprite(list_Character[choosenPosition].GetSprite());
+	// 		SqliteUserManager.AddCoin (-list_Character [choosenPosition].GetCost());
+	// 		Process_Bought_Character_InShop_AfterBuy (choosenPosition);
+	// 		ShowInfo (choosenPosition);
+	// 	} else { 
+	// 		Debug.Log ("You have not enough money");
+	// 		// Debug.Log (SqliteUserManager.getCoin() + " And " + list_Cost[choosenPosition]  );
+	// 	}
 	}
 }

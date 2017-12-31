@@ -19,29 +19,29 @@ public class Starting : MonoBehaviour {
 	}
 
 	void CreateListOfAllCharacter () {
-		SqliteUserManager.ClearAllCharacter();
-		list_OwnedCharacter = Warehouse.getInstance().getAllCharacter()
-		.FindAll(x => SqliteUserManager.getCharacter()
-		.Exists(id => id == x.getId()));
+		// SqliteUserManager.ClearAllCharacter();
+		// list_OwnedCharacter = Warehouse.getInstance().getAllCharacter()
+		// .FindAll(x => SqliteUserManager.getCharacter()
+		// .Exists(id => id == x.getId()));
 	}
 
 	private void SetStartingState () { 
 		if (!hadSetSpriteDefault) {
 			if (startingSprite != null) { 
-				User.SetUserSprite (startingSprite);
+				// User.SetUserSprite (startingSprite);
 			}
 			hadSetSpriteDefault = true;
 		} 
 
-		if (User.sprite != null) {
-			imageChoosenCharacter.sprite = User.sprite;
-		}
+		// if (User.sprite != null) {
+		// 	imageChoosenCharacter.sprite = User.sprite;
+		// }
 	}
 
 	private void ShowInfoOfChoosenCharacter (int position) {
 		if (list_OwnedCharacter.Count >= 1) {
-		imageChoosenCharacter.sprite = list_OwnedCharacter [position].GetSprite ();
-		User.sprite = list_OwnedCharacter [position].GetSprite ();
+		// imageChoosenCharacter.sprite = list_OwnedCharacter [position].GetSprite ();
+		// User.sprite = list_OwnedCharacter [position].GetSprite ();
 		}
 	}
 
