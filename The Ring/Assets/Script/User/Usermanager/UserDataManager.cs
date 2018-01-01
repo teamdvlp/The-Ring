@@ -27,15 +27,19 @@ public class UserDataManager {
 	public bool getUser () {
 		try {
 			BinaryFormatter bf = new BinaryFormatter ();
+			if (File.Exists(Application.persistentDataPath + "/" + FolderUserData)) {
 			FileStream fileStream = File.Open (Application.persistentDataPath + "/" + FolderUserData, FileMode.Open);
 			User user = (User) bf.Deserialize(fileStream);
+			User.getInstance().Equipments = user.Equipments;
+			User.getInstance().Characters = user.Characters;
 			User.getInstance().setCurrentChacracter(user.CurrentCharacter);
 			User.getInstance().setCurrentEquipment(user.CurrentEquipment);
 			User.getInstance().Coin = user.Coin;
-			User.getInstance().Equipments = user.Equipments;
-			User.getInstance().Characters = user.Characters;
 			fileStream.Close();
 			return true;
+			}
+			Debug.Log("File not found");
+			return false;
 		} catch (Exception e) {
 			Debug.LogError(e.ToString());
 			return false;

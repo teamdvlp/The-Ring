@@ -23,7 +23,7 @@ public class shopDataManager {
 			mShop.Equipments.addItem(new Equipment ("đường dẫn đến prefab",232323));
 			// không đụng đến
 			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
+			FileStream file = File.Create(Application.dataPath + "/shop/" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
 			return true;
@@ -36,8 +36,8 @@ public class shopDataManager {
 	public bool getShop () {
 		try {
 			BinaryFormatter bf = new BinaryFormatter();
-			if (File.Exists(Application.persistentDataPath + "/" + FolderShopData)) {
-				FileStream file = File.Open (Application.persistentDataPath + "/" + FolderShopData, FileMode.Open);
+			if (File.Exists(Application.dataPath + "/shop/" + FolderShopData)) {
+				FileStream file = File.Open (Application.dataPath + "/shop/" + FolderShopData, FileMode.Open);
 				shop mShop = (shop) bf.Deserialize(file);
 
 				shop.getInstance().Characters = mShop.Characters;
