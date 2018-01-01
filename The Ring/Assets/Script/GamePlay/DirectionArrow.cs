@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DirectionArrow : MonoBehaviour {
     public float rotateSpeed;
+
+    // Mũi tên chỉ hướng
     public GameObject director;
+
+    // Truyền Player vào
     public GameObject players;
     Rigidbody2D playerRigid2D;
     Vector3 direction;
+    // Có đang chạm vào màn hình không
     public bool isTouching { get; set; }
-    public GameObject power, ultraPower;
+
+    public GameObject normalMovingEffect, ultraMovingEffect;
 
     private void Start()
     {
@@ -23,19 +29,24 @@ public class DirectionArrow : MonoBehaviour {
 
     public void AddForces (float force, bool isUltraPower)
     {
+        // Nếu như mũi tên đang dừng quay
         if (rotateSpeed == 0)
         {
             rotateSpeed = 500;
         }
 
+        // Nếu như đã hold hết cây năng lượng thì instantiate cái hiệu ứng ultra
         if (isUltraPower)
         {
-            Instantiate(ultraPower, players.transform.position, Quaternion.identity);
+            Instantiate(ultraMovingEffect, players.transform.position, Quaternion.identity);
         }
+        // Nếu không thì Instantiate hiệu ứng bình thường
         else
         {
-            Instantiate(power, players.transform.position, Quaternion.identity);
+            Instantiate(normalMovingEffect, players.transform.position, Quaternion.identity);
         }
+        // Direction sẽ có 1 cái node tên là director (Con của mũi tên) nằm theo cái hướng của mũi tên, lúc bắn đi thì lấy tọa độ của director đó
+        // trừ lại cho transform.position là ra
         direction = director.transform.position - transform.position;
         playerRigid2D.velocity = (direction * force);
     }
