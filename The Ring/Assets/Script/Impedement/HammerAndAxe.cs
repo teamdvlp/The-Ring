@@ -10,11 +10,13 @@ public class HammerAndAxe : MonoBehaviour {
     private bool isStop;
     public float speed;
     private float speedCache;
-    public float accelabration;
-    public bool  isTop;
+    public float acceleration;
+    public bool  isAtTop;
+
+
     private void Start()
     {
-        isTop = true;
+        isAtTop = true;
         speedCache = speed;
         isStop = false;
         isReversing = false;
@@ -24,8 +26,8 @@ public class HammerAndAxe : MonoBehaviour {
     void Update()
     {   
         if (!isStop) {
-            if (isTop) {
-                speed = speed + speedCache*accelabration*Time.deltaTime;
+            if (isAtTop) {
+                speed = speed + speedCache*acceleration*Time.deltaTime;
             }
         }
     }
@@ -51,7 +53,7 @@ public class HammerAndAxe : MonoBehaviour {
         if (other.gameObject.layer == 9) {
             speed = speed/Mathf.Abs(speed) * speedCache;
             isStop = true;
-            isTop = !isTop;
+            isAtTop = !isAtTop;
            if (!isReversing) {
                isReversing = true;
                StartCoroutine(reverseAfterSec());

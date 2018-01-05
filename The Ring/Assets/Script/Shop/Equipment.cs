@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine;
 [Serializable]
 public class Equipment {
 	public string path{private set; get;}
 	public long price{private set; get;}
 	public int id {private set; get;}
+
 	public Equipment (string path, long price) {
 		this.path = path;
 		this.price = price;
@@ -17,4 +19,5 @@ public class Equipment {
 			this.id = id;
 		}
 	}
+
 }

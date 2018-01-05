@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System;
 [Serializable]
-public class shop {
-	private static shop instance;
+public class Shop {
+	private static Shop instance;
 	public List<Equipment> Equipments;
 	public List <Character> Characters; 
-	private shop () {}
-	public static shop getInstance () {
+	private Shop() {}
+	public static Shop getInstance () {
 		if (instance == null) {
-			instance = new shop();
+			instance = new Shop();
 		}
-		return shop.instance;
+		return Shop.instance;
 	}
 } 

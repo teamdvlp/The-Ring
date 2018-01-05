@@ -3,92 +3,113 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
+
 public class Shopping : MonoBehaviour {
-	public Image OwnedImage;
-	public Button btn_Buy;
-	public Image choosenCharacterImage;
-	public Character choosenCharacter;
-	public Text costText;
-	public List<Sprite> list_CharacterSprite;
-	public List<Character> list_Character;
-	List <int> list_Cost;
-	int choosenPosition = 0;
-
-	void Start () { 
-		CreateShopping ();
-	}
-
-	void CreateShopping () {
-		list_Character = new List<Character> ();
-		list_Character = Warehouse.getInstance().getAllCharacter();
-	}
 	
-	// Nhân vật phía sau
-	public void NextCharacter () {
+	public List<Character> list_Character;
+	public List<Equipment> list_Equipment;
 
-		if (choosenPosition < list_Character.Count - 1) {
-			choosenPosition++;
-			ShowInfo (this.choosenPosition);
+    // Check xem đây là Scene nào, Scene của Character hay là Equipment Scene (Nhằm để tiết kiệm file Script)
+	public bool isCharacterShopping_AndNot_EquipmentShopping;
 
-		} else {
-			choosenPosition = 0;
-			ShowInfo (this.choosenPosition);
-		}
+    // Tấm Panel chứa GridView, khi add View Child vào Panel thì GridView tự động sắp xếp
+	public Transform panel_Parent;
+
+    // Đã lấy dữ liệu chưa, nếu đã lấy rồi thì không lấy nữa
+	private static bool hasGottenData;
+	ShopDataManager shopDataManager;
+
+	// Danh sách các sản phẩm của shop (nhân vật, trang bị) để add và đẩy dữ liệu lên shopping
+	GameObject [] list_OfShop;
+
+	// Truyền Prefab của mỗi ô nhân vật hoặc ô trang bị trong cửa hàng
+	public GameObject window_ShoppingPrefab;
+
+
+
+
+	void Start () {
+        shopDataManager = new ShopDataManager();
+
+        if (!hasGottenData)
+        {
+            GetDataFromDatabase();
+            hasGottenData = true;
+        }
+
+       
+
+		PushDataToShop (isCharacterShopping_AndNot_EquipmentShopping);
 	}
 
-	// Nhân vật phía trước
-	public void PreviousCharacter () { 
-		if (choosenPosition > 0) {
-			choosenPosition--;
-			ShowInfo (this.choosenPosition);
 
-		} else if (choosenPosition <= 0) {
-			choosenPosition = list_Character.Count - 1;
-			ShowInfo (this.choosenPosition);
-		}
+	private void GetDataFromDatabase () { 
+		shopDataManager = new ShopDataManager ();
+		shopDataManager.getShop ();
 	}
 
-	private bool checkIsBought (int id) {
+
+	private void PushDataToShop (bool is_ShopCharacter_And_Not_ShopEquipment) {
+        list_Equipment = new List<Equipment>();
+        list_Character = new List<Character>();
+
+            // Đang ở Scene: Shop Character
+        if (is_ShopCharacter_And_Not_ShopEquipment ) {
+
+            if (Shop.getInstance().Characters != null)
+            {
+                list_Character = Shop.getInstance().Characters;
+                // Bắt Instantiate, rồi đẩy vào GridView thông qua việc setParent
+                Set_Instance_For_Each_Character_Window(list_Character.Count);
+            }
+            else
+            {
+                Debug.Log("Null Characters of Shop.getInstance(), at Shopping.cs");
+            }
+
+            // Else tức là không phải ở Shop Character mà là đang ở Scene: Shop Equipment
+        } else {
+
+            if (Shop.getInstance().Equipments != null)
+            {
+                list_Equipment = Shop.getInstance().Equipments;
+                // Bắt Instantiate, rồi đẩy vào GridView thông qua việc setParent
+                Set_Instance_For_Each_Equip_Window(list_Equipment.Count);
+            }
+            else
+            {
+                Debug.Log("Null Equipments of Shop.getInstance(), at Shopping.cs");
+            }
+        }
+	}
+
+    private void Set_Instance_For_Each_Character_Window (int count_Of_Window)
+    {
+        for (int i = 0; i <= count_Of_Window - 1; i++)
+        {
+                                                                  // Parent GridView
+            GameObject character = Instantiate(window_ShoppingPrefab, panel_Parent);
+            character.GetComponent<ShopCharacter>().SetCharacterInfo(list_Character[i]);
+        }
+    }
+
+    private void Set_Instance_For_Each_Equip_Window(int count_Of_Window)
+    {
+        for (int i = 0; i <= count_Of_Window - 1; i++)
+        {
+                                                                  // Parent GridView
+            GameObject equipment = Instantiate(window_ShoppingPrefab, panel_Parent);
+            equipment.GetComponent<ShopEquipment>().SetEquipmentInfo(list_Equipment[i]);
+        }
+    }
+
+    private bool checkIsBought (int id) {
 		return SqliteUserManager.getCharacter().Exists(x => x == id);
 	}
 
-	// Thể hiện thông tin lên màn hình
-	private void ShowInfo (int choosenPosition) {
-		Character character = list_Character [choosenPosition];
-		// if (checkIsBought(character.getId())) {
-		// 	choosenCharacterImage.sprite = character.GetSprite ();
-		// 	ProcessControllerState (false, 100);
-		// } else { 
-		// 	choosenCharacterImage.sprite = character.GetSprite ();
-		// 	Debug.Log (character.GetSprite ());
-		// 	costText.text = character.GetCost () + " Rings";
-		// 	ProcessControllerState (true, 255);
-		// }
-	}
-
-	private void Process_Bought_Character_InShop_AfterBuy (int choosenPosition) {
-		// SqliteUserManager.addCharacter(list_Character[choosenPosition].getId());
-	}
-
-	private void ProcessControllerState (bool state, float alpha) {
-		OwnedImage.enabled = !state;
-		btn_Buy.enabled = state;
-		costText.enabled = state;
-		choosenCharacterImage.color = new Color(225f,225f,225f,alpha);
-	}
-
-	public void Buy () {
-
-		// User user = new User();
-		// user.Coin = 2;
-	// 	if (SqliteUserManager.getCoin() > list_Character[choosenPosition].GetCost()) {
-	// 		// User.SetUserSprite(list_Character[choosenPosition].GetSprite());
-	// 		SqliteUserManager.AddCoin (-list_Character [choosenPosition].GetCost());
-	// 		Process_Bought_Character_InShop_AfterBuy (choosenPosition);
-	// 		ShowInfo (choosenPosition);
-	// 	} else { 
-	// 		Debug.Log ("You have not enough money");
-	// 		// Debug.Log (SqliteUserManager.getCoin() + " And " + list_Cost[choosenPosition]  );
-	// 	}
-	}
-}
+    //private void OnApplicationQuit()
+    //{
+    //    shopDataManager.save();
+    //}
+}   

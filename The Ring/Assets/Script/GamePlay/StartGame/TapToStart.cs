@@ -6,9 +6,7 @@ using UnityEngine.EventSystems;
 
 public class TapToStart : MonoBehaviour, IPointerDownHandler
 {
-    public Rigidbody2D player;
     public StartGame startGameManager;
-
 
     public void OnPointerDown(PointerEventData eventData)
     {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+// Dùng để xoay các bánh răng
 public class BackgroundRotate : MonoBehaviour {
 
     public float speed;

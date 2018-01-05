@@ -13,7 +13,7 @@ using System;
 	}
 
 	public static User getInstance() {
-		if (null == User.instance) {
+		if (User.instance == null) {
 			User.instance = new User();
 		}
 			return User.instance;

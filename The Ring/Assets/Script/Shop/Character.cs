@@ -9,6 +9,7 @@ public class Character {
 	public float speed{private set; get;}
 	public int id {private set; get;}
 
+
 	public Character (string path, long price, float speed) {
 		this.path = path;
 		this.price = price;
@@ -21,6 +22,7 @@ public class Character {
 			this.id = id;
 		}
 	}
+
 }
 
 

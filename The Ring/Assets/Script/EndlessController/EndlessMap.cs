@@ -8,9 +8,9 @@ public class EndlessMap : MonoBehaviour {
     public Map lowLevelMap, mediumLevelMap, highLevelMap;
 
     // List của List, nhìn kỹ
-    private List<List<GameObject>> lowMapList ;
-    private List<List<GameObject>> mediumMapList;
-    private List<List<GameObject>> hardMapList;
+    private List<List<GameObject>> lowMapList ; // Map dễ
+    private List<List<GameObject>> mediumMapList; // Map trung bình
+    private List<List<GameObject>> hardMapList; // Map Khó
 
     //Map đang chạy
     public List<GameObject> runningMap;
@@ -41,6 +41,7 @@ public class EndlessMap : MonoBehaviour {
         Pass_All_Map_To_ListMap(); 
     }
 
+
     void Start () {
         mapHasbeenSpawned = new List<GameObject>();
 
@@ -48,12 +49,13 @@ public class EndlessMap : MonoBehaviour {
         GetComponent<Collider>().OnPlayerColliderWithMapBorder += OnPlayerCollisionMapBorder;
         monsterCollider.OnMonsterColliderWithMapBorder += OnMonsterCollisionMapBorder;
 
-        // Random vị trí để lấy map ngẫu nhiên từ ListMap
+        // Random vị trí để lấy map ngẫu nhiên từ ListMap Dễ, và chỉ lấy một lần lúc đầu game
         int mapPosition = Random.Range(0, lowMapList.Count - 1);
         runningMap = lowMapList[mapPosition];
 		order = 0;
         createMapWhenStarting();
 	}
+
 
     private void createMapWhenStarting () {
         for (int i = 0; i < count_Of_Map_Was_Spawned_When_Starting; i++) {
@@ -70,9 +72,11 @@ public class EndlessMap : MonoBehaviour {
         mapHasbeenSpawned.Add(selectedMap);
 	}
 
+
     private int checkTheCountOfMapAbovePlayer() {
         return mapHasbeenSpawned.FindAll (map => map.transform.position.y > this.transform.position.y).Count;
     }
+
 
     private IEnumerator DestroyMapAfterSec (GameObject map) {
         yield return new WaitForSeconds (TimeToDestroyMap);
@@ -80,6 +84,8 @@ public class EndlessMap : MonoBehaviour {
         mapHasbeenSpawned.Remove(map);
         
     }
+
+
     private void OnPlayerCollisionMapBorder (GameObject map) {
         if (checkTheCountOfMapAbovePlayer() <= 2) {
             CreateNewMap();

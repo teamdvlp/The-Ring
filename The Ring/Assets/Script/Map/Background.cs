@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Background : MonoBehaviour {
-      void Start ()
-    {
-    }
 
-    public void OnTriggerEnter2D (Collider2D col)
-    {
-
-    }
-
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }

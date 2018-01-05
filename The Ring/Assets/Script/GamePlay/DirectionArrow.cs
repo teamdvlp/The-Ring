@@ -29,7 +29,7 @@ public class DirectionArrow : MonoBehaviour {
 
     public void AddForces (float force, bool isUltraPower)
     {
-        // Nếu như mũi tên đang dừng quay
+        // Nếu như mũi tên đang dừng quay thì cho nó tiếp tục quay sau khi di chuyển
         if (rotateSpeed == 0)
         {
             rotateSpeed = 500;
@@ -45,7 +45,8 @@ public class DirectionArrow : MonoBehaviour {
         {
             Instantiate(normalMovingEffect, players.transform.position, Quaternion.identity);
         }
-        // Direction sẽ có 1 cái node tên là director (Con của mũi tên) nằm theo cái hướng của mũi tên, lúc bắn đi thì lấy tọa độ của director đó
+        // Direction sẽ có 1 cái node tên là director (Con của Direction Arrow) nằm theo cái hướng của mũi tên,
+        // lúc bắn đi thì lấy tọa độ của director đó
         // trừ lại cho transform.position là ra
         direction = director.transform.position - transform.position;
         playerRigid2D.velocity = (direction * force);
