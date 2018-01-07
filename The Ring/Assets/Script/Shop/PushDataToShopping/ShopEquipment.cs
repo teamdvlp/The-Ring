@@ -22,13 +22,22 @@ public class ShopEquipment : MonoBehaviour {
         } else
         {
             Debug.Log("Null equipmentInfo at ShopEquipment.cs");
-        }
+        }   
     }
-
 
     public void SetEquipmentInfo(Equipment equipmentInfo)
     {
         this.equipmentInfo = equipmentInfo;
+    }
+
+    public Equipment GetEquipmentInfo()
+    {
+        return this.equipmentInfo;
+    }
+
+    public Sprite GetSprite ()
+    {
+        return this.spriteOfEquipment;
     }
 	
 }

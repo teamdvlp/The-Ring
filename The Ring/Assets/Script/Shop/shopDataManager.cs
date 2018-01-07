@@ -22,16 +22,16 @@ public class ShopDataManager {
             mShop.Characters = new List<Character> ();
 			mShop.Equipments = new List<Equipment>();
 
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 1000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 1000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 1000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 1000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 1000, 1));
+			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 100, 1));
+			mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 400, 1));
+			mShop.Characters.addItem(new Character(CharacterFolder + "GreenPlan", 1000, 1));
+			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 5000, 1));
+			mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 9500, 1));
+            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 50));
+            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "BlueMedicine", 50));
+            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "GreenMedicine", 50));
             mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
+            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "BlueMedicine", 100));
 
 
             // không đụng đến

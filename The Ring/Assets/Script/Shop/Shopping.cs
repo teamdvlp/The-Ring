@@ -6,7 +6,11 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class Shopping : MonoBehaviour {
-	
+    // Cái này là dùng để kéo thả vào
+    public GameObject buyBoard;
+    // cái này dùng để lưu cái trên lại, xài cho các sự kiện mua đồ, click vào mua thì hiện cái bảng lên 
+    public static GameObject BuyBoard;
+
 	public List<Character> list_Character;
 	public List<Equipment> list_Equipment;
 
@@ -30,27 +34,27 @@ public class Shopping : MonoBehaviour {
 
 
 	void Start () {
-        shopDataManager = new ShopDataManager();
-
-        if (!hasGottenData)
-        {
-            GetDataFromDatabase();
-            hasGottenData = true;
-        }
-
-       
-
+        
+        BuyBoard = buyBoard;
+        GetDataFromDatabase();
 		PushDataToShop (isCharacterShopping_AndNot_EquipmentShopping);
 	}
 
 
-	private void GetDataFromDatabase () { 
-		shopDataManager = new ShopDataManager ();
-		shopDataManager.getShop ();
-	}
+	private void GetDataFromDatabase () {
+
+        shopDataManager = new ShopDataManager();
+        if (!hasGottenData)
+        {
+            shopDataManager = new ShopDataManager ();
+		    shopDataManager.getShop ();
+            hasGottenData = true;
+        }
+
+    }
 
 
-	private void PushDataToShop (bool is_ShopCharacter_And_Not_ShopEquipment) {
+    private void PushDataToShop (bool is_ShopCharacter_And_Not_ShopEquipment) {
         list_Equipment = new List<Equipment>();
         list_Character = new List<Character>();
 

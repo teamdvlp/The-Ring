@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ShopCharacter : MonoBehaviour {
+
+public class ShopCharacter : MonoBehaviour
+{
 	public Image imageCharacter;
 	public Text textPriceCharacter;
-	Character characterInfo;
+	private Character characterInfo;
     // prefabs of Character
     private GameObject CHARACTER_MODEL;
     private Sprite spriteOfCharacter;
+
+   
 
 	void Start () {
 
@@ -21,7 +25,6 @@ public class ShopCharacter : MonoBehaviour {
             imageCharacter.sprite = spriteOfCharacter;
             textPriceCharacter.text = "<b>" + characterInfo.price + "</b>";
         }
-
     }
 
     public void SetCharacterInfo(Character characterInfo)
@@ -29,5 +32,19 @@ public class ShopCharacter : MonoBehaviour {
         this.characterInfo = characterInfo;
     }
 
+    public Character GetCharacterInfo ()
+    {
+        return this.characterInfo;
+    }
 
+    public GameObject getCHARACTER_MODEL ()
+    {
+        return this.CHARACTER_MODEL;
+    }
+
+    public Sprite GetSprite ()
+    {
+        return this.spriteOfCharacter;
+    }
+    
 }

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224844207370495220}
   - component: {fileID: 222878973160956646}
   - component: {fileID: 114110561891940834}
-  - component: {fileID: 114909033737216918}
+  - component: {fileID: 114644191733475278}
   m_Layer: 5
   m_Name: EquipmentWindow
   m_TagString: Untagged
@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 224011773072938822}
   - component: {fileID: 222321406706424352}
   - component: {fileID: 114638429678733484}
+  - component: {fileID: 114398700285682338}
   m_Layer: 5
   m_Name: EquipmentImage
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114398700285682338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600945862700662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2cb7bcc022d69e41973ed0dad5b294f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopEquipment: {fileID: 114644191733475278}
 --- !u!114 &114516740375027174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +209,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114909033737216918
+--- !u!114 &114644191733475278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -287,7 +300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2065, y: 879}
+  m_AnchoredPosition: {x: 808, y: -920}
   m_SizeDelta: {x: 183.7, y: 238.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224869073288922396
