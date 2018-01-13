@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Background : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Transform top;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

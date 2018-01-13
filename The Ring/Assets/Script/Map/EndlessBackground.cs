@@ -63,6 +63,7 @@ public class EndlessBackground : MonoBehaviour {
 
 
     private void OnMonsterCollideBackground (GameObject bg) {
+        Debug.Log("COLLIDE");
         StartCoroutine(DestroyBackgroundAfterSec(bg));      
     }
 

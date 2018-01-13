@@ -20,6 +20,7 @@ public class MonsterCollider : MonoBehaviour {
 			}
 		}
 
+        //19 : Background
 		if (other.gameObject.layer == 19) {
             if (OnMonsterCollideBackground != null) {
                 OnMonsterCollideBackground(other.gameObject);
