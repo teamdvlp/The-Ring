@@ -50,7 +50,7 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
             if (touchingTime <= 0)
             {
-                force = startForce + startTouchingTime * 2f * ForceStrenght ;
+                force = startForce +  0.2f * 2f * ForceStrenght ;
                 isFullPower = true;
                 isTouching = false;
             }

@@ -7,6 +7,7 @@ public class GameOverManager : MonoBehaviour {
     public GameObject deathEffect,respawnEffect;
     public delegate bool RespawnEvent();
     public event RespawnEvent OnPlayerRespawn;
+    public MonsterMovement monsterMovement;
     // Properties Of Player
     private Rigidbody2D playerRigidbody2D;
     public GameOver gameOver;
@@ -23,6 +24,7 @@ public class GameOverManager : MonoBehaviour {
         ContinueBoard.SetActive(true);
         gameObject.SetActive(false);
         Instantiate(deathEffect, transform.position, transform.rotation);
+        monsterMovement.enabled = false;
     }
 
     // Hàm này xử lí tái sinh nhân vật sau khi chết, sẽ được gọi khi nhấn nút Yes ở bảng Respawn trong file YesOrNoButton.cs
@@ -33,10 +35,11 @@ public class GameOverManager : MonoBehaviour {
         //    if (OnPlayerRespawn())
         //    {
         Debug.Log("RESPAWN");
-                ContinueBoard.SetActive(false);
+        ContinueBoard.SetActive(false);
         gameObject.SetActive(true);
-                transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-                StartCoroutine(CreateRespawnEffect());
+        transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        StartCoroutine(CreateRespawnEffect());
+        StartCoroutine(ReleaseMonster());
         //    }
         //    else
         //    {
@@ -53,5 +56,11 @@ public class GameOverManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(.1f);
         Instantiate(respawnEffect, transform.position, transform.rotation);
+    }
+
+    private IEnumerator ReleaseMonster ()
+    {
+        yield return new WaitForSeconds(1);
+        monsterMovement.enabled = true;
     }
 }

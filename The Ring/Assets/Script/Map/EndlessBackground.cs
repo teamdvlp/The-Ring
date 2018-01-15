@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndlessBackground : MonoBehaviour {
     public List<Background> backgroundList;
     private List<GameObject> backgroundHasBeenSpawned;
-    public int mapOrder;
+    public int mapOrder = 0;
     public int count_Of_Background_Was_Spawned_When_Start_Game;
     public float timeToDestroyBackground;
     private Vector3 positionSpawn;
@@ -53,12 +53,12 @@ public class EndlessBackground : MonoBehaviour {
     }
 
     private void UpdateMapOrderBackground () {
-        positionSpawn = selected_Background.transform.GetChild(0).transform.position                                                                                                                                                                                                                                                                                                          ;
+        positionSpawn = selected_Background.transform.GetChild(0).transform.position;
     }
 
 
     private  int CountBackgroundAbovePlayer () {
-        return backgroundHasBeenSpawned.FindAll(x => x.transform.position.y > this.transform.position.y).Count;
+        return 0;
     }
 
 

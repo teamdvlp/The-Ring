@@ -49,6 +49,7 @@ public class DirectionArrow : MonoBehaviour {
         // lúc bắn đi thì lấy tọa độ của director đó
         // trừ lại cho transform.position là ra
         direction = director.transform.position - transform.position;
+        Debug.Log(direction);
         playerRigid2D.velocity = (direction * force);
     }
 }
