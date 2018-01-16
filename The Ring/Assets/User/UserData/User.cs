@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 [Serializable]
-	public class User {
+	public class 	User {
 	private  static User instance; 	
 	public List<Character> Characters;
 	public Character CurrentCharacter {private set; get;}
@@ -13,7 +13,7 @@ using System;
 	}
 
 	public static User getInstance() {
-		if (User.instance == null) {
+		if (null == User.instance) {
 			User.instance = new User();
 		}
 			return User.instance;

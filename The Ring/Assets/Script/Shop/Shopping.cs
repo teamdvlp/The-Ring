@@ -34,7 +34,8 @@ public class Shopping : MonoBehaviour {
 
 
 	void Start () {
-        
+        // ShopDataManager data = new ShopDataManager();
+        // data.save();
         BuyBoard = buyBoard;
         GetDataFromDatabase();
 		PushDataToShop (isCharacterShopping_AndNot_EquipmentShopping);

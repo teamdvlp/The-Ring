@@ -36,7 +36,7 @@ public class ShopDataManager {
 
             // không đụng đến
             BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
+			FileStream file = File.Create(Application.dataPath + "/shop/	" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
 			return true;
