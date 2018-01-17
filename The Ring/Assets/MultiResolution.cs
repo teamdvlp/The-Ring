@@ -8,6 +8,7 @@ public class MultiResolution : MonoBehaviour {
 
     void Start()
     {
+        // Camera.main.aspect = 2960f/1440f;
         aspect = cam.aspect;
         Debug.Log("16/9 = " + (9f/16f));
         if (aspect.Equals(9f/16f))
