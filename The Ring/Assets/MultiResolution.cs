@@ -26,31 +26,39 @@ public class MultiResolution : MonoBehaviour {
             return;
         }
 
-        if (Rate == Math.Round(16f/9f,4)) {
-            Debug.Log("169");
-            process169();
-        } 
-        else if (Rate == Math.Round(18.5f/9f,4)) {
-            process189();
-            Debug.Log("189");
-        } 
-        else if (Rate == Math.Round(4f/3f, 4)) {
-            Debug.Log("43");
-            process43 ();
-        }
-        else if (Rate == Math.Round(16f/10f, 4)) {
-            Debug.Log("1610");
-            process1610 ();
-        }
-        else if (Rate == Math.Round(5f/4f,4)) {
-            Debug.Log("54");
-            process54 ();
-        }
-        else if (Rate == Math.Round(18.5f/9f,4)) {
-            Debug.Log("1859");
-            process1859 ();
-        }
+        process();
+
+        // if (Rate == Math.Round(16f/9f,4)) {
+        //     Debug.Log("169");
+        //     process169();
+        // } 
+        // else if (Rate == Math.Round(18.5f/9f,4)) {
+        //     process189();
+        //     Debug.Log("189");
+        // } 
+        // else if (Rate == Math.Round(4f/3f, 4)) {
+        //     Debug.Log("43");
+        //     process43 ();
+        // }
+        // else if (Rate == Math.Round(16f/10f, 4)) {
+        //     Debug.Log("1610");
+        //     process1610 ();
+        // }
+        // else if (Rate == Math.Round(5f/4f,4)) {
+        //     Debug.Log("54");
+        //     process54 ();
+        // }
+        // else if (Rate == Math.Round(18.5f/9f,4)) {
+        //     Debug.Log("1859");
+        //     process1859 ();
+        // }
 	}
+
+        private void process () {
+        float Rate1 = (float) Rate;
+        Camera.main.aspect = Rate1/Rate1/Rate1;
+        Camera.main.orthographicSize = (BiggestSprite.bounds.size.x*Rate1)/2f;
+}
 
     private void process1859() {
         Camera.main.aspect = 9f/18.5f;
