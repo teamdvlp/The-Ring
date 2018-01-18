@@ -25,7 +25,7 @@ public class MultiResolution : MonoBehaviour {
         if (Math.Abs(Rate - aspect) > 0.15) {
             return;
         }
-        Camera.main.aspect = Rate/Rate/Rate;
+        Camera.main.aspect = 1/Rate;
         Camera.main.orthographicSize = (BiggestSprite.bounds.size.x*Rate)/2f;
 	}
 
