@@ -3,22 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MultiResolution : MonoBehaviour {
-    public Camera cam;
-    float aspect;
+    public SpriteRenderer f;
+   	private float screenW;
+	private float screenH;
+	private float aspect;
+	void Start () {
+		screenH = Screen.height;
+		screenW = Screen.width;
+		aspect = screenH/screenW;
+		// 16:9
+		if (aspect<1.85 && aspect>1.6) {
+			Debug.Log("16/9");
+			process169();
+		}
+		// 18.5/9
+		else if (aspect>1.9 && aspect < 2.25) {
+			Debug.Log("18.5/9");
+			process189();
+		}
+	}
+	void Update()
+	{
+	}
+	private void process169 () {
+		Camera.main.aspect = 9f/16f;
+        Camera.main.orthographicSize = ((f.bounds.size.x/9f)*16f)/2f;
+	}
 
-    void Start()
-    {
-        // Camera.main.aspect = 2960f/1440f;
-        aspect = cam.aspect;
-        Debug.Log("16/9 = " + (9f/16f));
-        if (aspect.Equals(9f/16f))
-        {
-            Debug.Log("HIHI");
-            transform.localScale = new Vector3(1,1,1);
-        } else if (cam.aspect == 9f / 18.5f)
-        {
-            transform.localScale = new Vector3(0.8558578f, 0.8558578f, 0.8558578f);
-        } 
-    }
+	private void process189 () {
+		Camera.main.aspect = 9f/18f;
+		Camera.main.orthographicSize = ((f.bounds.size.x/9f)*18f)/2f;
+	}
 
+	private float convertPxtoDp (float Px) {
+		return Px / (Screen.dpi/160);
+	}
+
+	private float convertDptoPx (float Dp) {
+		return Dp * (Screen.dpi/160);
+	}
 }

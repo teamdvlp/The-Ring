@@ -5,6 +5,7 @@ using UnityEngine;
 public class fuck : MonoBehaviour {
 	public SpriteRenderer f169;
 	public SpriteRenderer f189;
+	public SpriteRenderer small;
 	private float screenW;
 	private float screenH;
 	private float aspect;
@@ -14,7 +15,6 @@ public class fuck : MonoBehaviour {
 		screenW = Screen.width;
 		aspect = screenH/screenW;
 		// 16:9
-		Debug.Log(aspect);
 		if (aspect<1.85 && aspect>1.6) {
 			Debug.Log("16/9");
 			process169();
@@ -25,7 +25,12 @@ public class fuck : MonoBehaviour {
 			process189();
 		}
 	}
-
+	/// <summary>
+	/// Update is called every frame, if the MonoBehaviour is enabled.
+	/// </summary>
+	void Update()
+	{
+	}
 	private void process169 () {
 		f169.enabled = true;
 		f189.enabled = false;
@@ -39,9 +44,12 @@ public class fuck : MonoBehaviour {
 		Camera.main.aspect = f189.bounds.size.x/f189.bounds.size.y;
 		Camera.main.orthographicSize = f189.bounds.size.y/2f;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private float convertPxtoDp (float Px) {
+		return Px / (Screen.dpi/160);
+	}
+
+	private float convertDptoPx (float Dp) {
+		return Dp * (Screen.dpi/160);
 	}
 }
