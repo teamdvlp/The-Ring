@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotDestroySoundManager : MonoBehaviour {
-	private static bool isStartGame;
+public class NotDestroy : MonoBehaviour {
+	private bool isStartGame;
 
 	void Start () {
         // Nếu như đã StartGame rồi thì không được tạo thêm nữa

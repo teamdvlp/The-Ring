@@ -9,11 +9,10 @@ public class GameOverManager : MonoBehaviour {
     public event RespawnEvent OnPlayerRespawn;
     public MonsterMovement monsterMovement;
     // Properties Of Player
-    private Rigidbody2D playerRigidbody2D;
     public GameOver gameOver;
 
     void Start () {
-        playerRigidbody2D = GetComponent<Rigidbody2D>();
+
     }
 
 
