@@ -2455,7 +2455,6 @@ MonoBehaviour:
   settingButton: {fileID: 1535901880}
   shoppingButton: {fileID: 693448756}
   propertiesButton: {fileID: 105408937}
-  exitButton: {fileID: 848197086}
   nameGame: {fileID: 1363204733}
   leftPreventer: {fileID: 774288476}
   rightPreventer: {fileID: 1780972922}
@@ -3800,6 +3799,22 @@ Prefab:
     - target: {fileID: 4691920219812278, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676015442056140, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676015442056140, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 29.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565270886822562, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 30.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565270886822562, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9186f727c12e554469234cdcf624d87c, type: 2}
