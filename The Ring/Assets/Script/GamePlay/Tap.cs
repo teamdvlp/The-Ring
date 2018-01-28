@@ -63,38 +63,38 @@ public class Tap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     void ChangeSpriteOfPlayerFollowState()
     {
-        if (touchingTime >= startTouchingTime * 0.9f)
-        {
-            playerRenderer.sprite = listSprite[0];
-        }
-        else if (touchingTime >= startTouchingTime * 0.8f)
-        {
-            playerRenderer.sprite = listSprite[1];
-        }
-        else if (touchingTime >= startTouchingTime * 0.7f)
-        {
-            playerRenderer.sprite = listSprite[2];
-        }
-        else if (touchingTime >= startTouchingTime * 0.6f)
-        {
-            playerRenderer.sprite = listSprite[3];
-        }
-        else if (touchingTime >= startTouchingTime * 0.5f)
-        {
-            playerRenderer.sprite = listSprite[4];
-        }
-        else if (touchingTime >= startTouchingTime * 0.4f)
-        {
-            playerRenderer.sprite = listSprite[5];
-        }
-        else if (touchingTime >= startTouchingTime * 0.3f)
-        {
-            playerRenderer.sprite = listSprite[6];
-        }
-        else if (touchingTime >= startTouchingTime * 0.2f)
-        {
-            playerRenderer.sprite = listSprite[7];
-        }
+            //if (touchingTime >= startTouchingTime * 0.9f)
+            //{
+            //    playerRenderer.sprite = listSprite[0];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.8f)
+            //{
+            //    playerRenderer.sprite = listSprite[1];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.7f)
+            //{
+            //    playerRenderer.sprite = listSprite[2];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.6f)
+            //{
+            //    playerRenderer.sprite = listSprite[3];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.5f)
+            //{
+            //    playerRenderer.sprite = listSprite[4];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.4f)
+            //{
+            //    playerRenderer.sprite = listSprite[5];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.3f)
+            //{
+            //    playerRenderer.sprite = listSprite[6];
+            //}
+            //else if (touchingTime >= startTouchingTime * 0.2f)
+            //{
+            //    playerRenderer.sprite = listSprite[7];
+            //}
     }
 
     void AddForce(bool isUltraPower)
