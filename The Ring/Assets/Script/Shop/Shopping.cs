@@ -21,8 +21,6 @@ public class Shopping : MonoBehaviour {
 	public Transform panel_Parent;
 
     // Đã lấy dữ liệu chưa, nếu đã lấy rồi thì không lấy nữa
-	private static bool hasGottenData;
-	ShopDataManager shopDataManager;
 
 	// Danh sách các sản phẩm của shop (nhân vật, trang bị) để add và đẩy dữ liệu lên shopping
 	GameObject [] list_OfShop;
@@ -34,25 +32,12 @@ public class Shopping : MonoBehaviour {
 
 
 	void Start () {
-        // ShopDataManager data = new ShopDataManager();
-        // data.save();
         BuyBoard = buyBoard;
-        GetDataFromDatabase();
 		PushDataToShop (isCharacterShopping_AndNot_EquipmentShopping);
 	}
 
 
-	private void GetDataFromDatabase () {
-
-        shopDataManager = new ShopDataManager();
-        if (!hasGottenData)
-        {
-            shopDataManager = new ShopDataManager ();
-		    shopDataManager.getShop ();
-            hasGottenData = true;
-        }
-
-    }
+	
 
 
     private void PushDataToShop (bool is_ShopCharacter_And_Not_ShopEquipment) {
@@ -113,8 +98,4 @@ public class Shopping : MonoBehaviour {
 		return SqliteUserManager.getCharacter().Exists(x => x == id);
 	}
 
-    //private void OnApplicationQuit()
-    //{
-    //    shopDataManager.save();
-    //}
 }   

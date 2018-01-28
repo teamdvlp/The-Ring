@@ -22,7 +22,6 @@ public class MonsterCollider : MonoBehaviour {
 
         //19 : Background
 		if (other.gameObject.layer == 19) {
-            Debug.Log("SHOW ME SOEM");
             if (OnMonsterCollideBackground != null) {
                 OnMonsterCollideBackground(other.gameObject);
             }

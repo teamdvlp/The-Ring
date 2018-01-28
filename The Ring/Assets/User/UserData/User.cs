@@ -2,13 +2,13 @@
 using UnityEngine;
 using System;
 [Serializable]
-	public class 	User {
+	public class User {
 	private  static User instance; 	
 	public List<Character> Characters;
 	public Character CurrentCharacter {private set; get;}
 	public Equipment CurrentEquipment {private set; get;}
 	public List<Equipment> Equipments;
-	public long Coin;
+	public long Coin = 100000;
 	private User () {
 	}
 
@@ -31,7 +31,7 @@ using System;
 		if (Equipments.Exists(x=>x.id==equipment.id)) {
 			this.CurrentEquipment = equipment;
 		} else {
-			Debug.Log("không thể sử dụng vũ khí chưa sở hữu");
+			//Debug.Log("không thể sử dụng vũ khí chưa sở hữu");
 		}
 	}
 	

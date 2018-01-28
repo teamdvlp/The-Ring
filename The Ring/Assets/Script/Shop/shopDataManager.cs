@@ -10,43 +10,52 @@ public class ShopDataManager {
     private const string CharacterFolder = "CharacterPrebs/";
     private const string EquipmentFolder = "EquipmentPrebs/";
 
+
+    int buyed;
+
+
     public ShopDataManager () {
-	}
+    }
 
 	public bool save () {
-		try {
+        try
+        {
             Shop mShop = Shop.getInstance();
             // cách thêm dữ liệu vào cửa hàng, cứ thêm dữ liệu vào đây, lúc public game thì xóa hàm hoặc để private
 
 
-            mShop.Characters = new List<Character> ();
-			mShop.Equipments = new List<Equipment>();
-
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 100, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 400, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "GreenPlan", 1000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 5000, 1));
-			mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 9500, 1));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 50));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "BlueMedicine", 50));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "GreenMedicine", 50));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "RedMedicine", 100));
-            mShop.Equipments.addItem(new Equipment (EquipmentFolder + "BlueMedicine", 100));
+            // Reset Dữ liệu Shop trong quá trình Test, không xài thì comment lại
 
 
-            // không đụng đến
+            mShop.Characters = new List<Character>();
+
+            //ResetShopData(mShop);
+            // không đụng đến (C*n C*c, bóp vcc)
             BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Create(Application.dataPath + "/shop/	" + FolderShopData);
+			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
 			return true;
-		} catch (Exception e) {
-			Debug.LogError(e.ToString());
-			return false;
-		}
-	}	
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e.ToString());
+            return false;
+        }
+    }	
 
-	public bool getShop () {
+    private void ResetShopData (Shop mShop)
+    {
+
+        mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 5000, 1, true, true));
+        mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 400, 1));
+        mShop.Characters.addItem(new Character(CharacterFolder + "GreenPlan", 1000, 1));
+        mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 5000, 1));
+        mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 9500, 1));
+
+    }
+
+    public bool getShop () {
 		try {
 			BinaryFormatter bf = new BinaryFormatter();
 			if (File.Exists(Application.persistentDataPath + "/" + FolderShopData)) {
@@ -54,17 +63,26 @@ public class ShopDataManager {
                 Shop mShop = (Shop) bf.Deserialize(file);
 
                 Shop.getInstance().Characters = mShop.Characters;
-                Shop.getInstance().Equipments = mShop.Equipments;
-				return true;
+                for (int i = 0; i < Shop.getInstance().Characters.Count; i++)
+                {
+                    if (Shop.getInstance().Characters[i].isBought)
+                    {
+                        buyed++;
+                    }
+                }
+                Debug.Log("SO LUONG NHAN VAT DA MUA " + buyed);
+
+                    return true;
 			} else
             {
-                Debug.LogError("Không tìm thấy file At ShopDataManager.cs");
+                Debug.LogError("Không tìm thấy file tại ShopDataManager.cs");
             }
             return false;
 		} catch (Exception e) {
 			Debug.LogError(e.ToString());
 			return false;
 		}
+
 	}
 }
 
