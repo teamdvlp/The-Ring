@@ -20,6 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RealScene/DuplicateScene.unity
     guid: 1ed84ccee3e5e4919863c68ee2967916
-  - enabled: 1
-    path: Assets/Scenes/RealScene/CompleteScene 1.unity
+  - enabled: 0
+    path: 
     guid: c26ca6311f003f84f88525db6265c4b4
