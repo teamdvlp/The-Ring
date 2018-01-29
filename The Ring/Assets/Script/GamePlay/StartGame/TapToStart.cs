@@ -8,6 +8,11 @@ public class TapToStart : MonoBehaviour, IPointerDownHandler
 {
     public StartGame startGameManager;
 
+    void Start()
+    {
+
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         StartGame();

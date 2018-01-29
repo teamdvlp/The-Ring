@@ -229,6 +229,11 @@ Prefab:
       propertyPath: m_Name
       value: Arrow Back_ BUTTON
       objectReference: {fileID: 0}
+    - target: {fileID: 114458668464828508, guid: ce37befa8bc0a8043811080404add307,
+        type: 2}
+      propertyPath: sceneName
+      value: CompleteScene 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce37befa8bc0a8043811080404add307, type: 2}
   m_IsPrefabParent: 0

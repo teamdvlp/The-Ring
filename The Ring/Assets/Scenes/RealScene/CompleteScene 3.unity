@@ -318,6 +318,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &107588898 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114076859037038578, guid: 9eb86482d8d50432191efa55988f0cfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1554036519}
+  m_Script: {fileID: 11500000, guid: 4cf79389f9efedc428af802f262df168, type: 3}
 --- !u!1 &148616506
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +595,7 @@ Transform:
   m_LocalScale: {x: 0.09924652, y: 0.09924652, z: 0.09924652}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225644947
 GameObject:
@@ -810,7 +816,7 @@ Prefab:
         type: 2}
       propertyPath: monsterMovement
       value: 
-      objectReference: {fileID: 625293159}
+      objectReference: {fileID: 107588898}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fa14be5c7384684dab76565796dc246, type: 2}
   m_IsPrefabParent: 0
@@ -4567,6 +4573,11 @@ Prefab:
       propertyPath: m_Name
       value: MoveEffect2 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 198022914783983788, guid: b166131ffe443964fae492dd1741142c,
+        type: 2}
+      propertyPath: randomSeed
+      value: 110780778
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b166131ffe443964fae492dd1741142c, type: 2}
   m_IsPrefabParent: 0
@@ -5078,7 +5089,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 693448756}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -13834.71}
   m_LocalScale: {x: 1.1375, y: 1, z: 0.8047306}
   m_Children: []
   m_Father: {fileID: 1222652204}
@@ -5110,7 +5121,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.362673, b: 0.362673, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5711,6 +5722,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 198022914783983788, guid: b166131ffe443964fae492dd1741142c,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1806923122
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b166131ffe443964fae492dd1741142c, type: 2}
   m_IsPrefabParent: 0
@@ -5896,7 +5912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1060593266
 Prefab:
@@ -9279,7 +9295,7 @@ Transform:
   - {fileID: 1187438494}
   - {fileID: 1114078861}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187438493
 GameObject:
@@ -10219,6 +10235,11 @@ Prefab:
       propertyPath: m_Name
       value: MoveEffect2 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 198022914783983788, guid: b166131ffe443964fae492dd1741142c,
+        type: 2}
+      propertyPath: randomSeed
+      value: 463082932
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b166131ffe443964fae492dd1741142c, type: 2}
   m_IsPrefabParent: 0
@@ -10723,7 +10744,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535901880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -13834.71}
   m_LocalScale: {x: 0.980496, y: 1.0341421, z: 0.98841184}
   m_Children: []
   m_Father: {fileID: 1222652204}
@@ -10887,7 +10908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466707749573186, guid: 9eb86482d8d50432191efa55988f0cfe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4466707749573186, guid: 9eb86482d8d50432191efa55988f0cfe, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10911,7 +10932,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466707749573186, guid: 9eb86482d8d50432191efa55988f0cfe, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076859037038578, guid: 9eb86482d8d50432191efa55988f0cfe,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9eb86482d8d50432191efa55988f0cfe, type: 2}
@@ -11576,7 +11602,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -427027356
+  randomSeed: -1205132624
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14899,7 +14925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823635946
 GameObject:
@@ -14939,7 +14965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849348785
 GameObject:
@@ -15082,6 +15108,11 @@ Prefab:
     - target: {fileID: 1460657646363994, guid: b166131ffe443964fae492dd1741142c, type: 2}
       propertyPath: m_Name
       value: MoveEffect2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198022914783983788, guid: b166131ffe443964fae492dd1741142c,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1658767863
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b166131ffe443964fae492dd1741142c, type: 2}
