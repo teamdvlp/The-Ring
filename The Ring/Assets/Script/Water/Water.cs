@@ -162,9 +162,14 @@ public class Water : MonoBehaviour {
             //Create our colliders, set them be our child
             colliders[i] = new GameObject();
             colliders[i].name = "Trigger";
+<<<<<<< HEAD
             BoxCollider2D trigger = colliders[i].AddComponent<BoxCollider2D>();
             trigger.size = new Vector2(1, 0.5f);
             trigger.offset = new Vector2(0, 0.25f);
+=======
+            colliders[i].layer = 18; // 18 : Monster
+            colliders[i].AddComponent<BoxCollider2D>();
+>>>>>>> 4afc90e79c5445b46ad7f6c71e39ac96a1fef6a2
             colliders[i].transform.parent = transform;
 
             //Set the position and scale to the correct dimensions

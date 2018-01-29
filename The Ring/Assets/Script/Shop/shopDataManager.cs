@@ -18,8 +18,6 @@ public class ShopDataManager {
     }
 
 	public bool save () {
-        try
-        {
             Shop mShop = Shop.getInstance();
             // cách thêm dữ liệu vào cửa hàng, cứ thêm dữ liệu vào đây, lúc public game thì xóa hàm hoặc để private
 
@@ -29,19 +27,12 @@ public class ShopDataManager {
 
             mShop.Characters = new List<Character>();
 
-            //ResetShopData(mShop);
-            // không đụng đến (C*n C*c, bóp vcc)
-            BinaryFormatter bf = new BinaryFormatter ();
+        //ResetShopData(mShop);
+        BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
 			return true;
-        }
-        catch (Exception e)
-        {
-            Debug.LogError(e.ToString());
-            return false;
-        }
     }	
 
     private void ResetShopData (Shop mShop)
