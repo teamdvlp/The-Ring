@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1764146883866650
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1820456407910172
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1944248448539336
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1999181013518974
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4466707749573186}
   - component: {fileID: 114402898630055710}
   - component: {fileID: 114783984005545874}
+  - component: {fileID: 114439650894066630}
   m_Layer: 0
   m_Name: WaterManager
   m_TagString: Untagged
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73fe17a7b7514cdbad99b3d47e5f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x1: -4
+  x1: -10
   x2: 4
 --- !u!114 &114066056313711192
 MonoBehaviour:
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73fe17a7b7514cdbad99b3d47e5f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x1: -4
+  x1: -10
   x2: 4
 --- !u!114 &114068516969435916
 MonoBehaviour:
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73fe17a7b7514cdbad99b3d47e5f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x1: -4
+  x1: -10
   x2: 4
 --- !u!114 &114402898630055710
 MonoBehaviour:
@@ -213,10 +214,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splash: {fileID: 0}
   mat: {fileID: 2100000, guid: 919557a00759e4d448c488785ed49b4d, type: 2}
+  decreaseMass: 30
   watermesh: {fileID: 100000, guid: d7363347a64f34eb7b494f3ee099bdc6, type: 2}
   SurfaceLevelCoefficient: 3.5
-  WaterDensity: 2
+  WaterDensity: 3
   RunCount: 10
+--- !u!114 &114439650894066630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999181013518974}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1816f63f45c534807aea3628a5c3ad49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114631864143262298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73fe17a7b7514cdbad99b3d47e5f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x1: -4
+  x1: -10
   x2: 4
 --- !u!114 &114783984005545874
 MonoBehaviour:

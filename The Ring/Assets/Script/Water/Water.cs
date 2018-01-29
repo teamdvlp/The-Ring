@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 public class Water : MonoBehaviour {
- //Our renderer that'll make the top of the water visible
-    LineRenderer Body;
 
     //Our physics arrays
     float[] xpositions;
@@ -21,6 +19,9 @@ public class Water : MonoBehaviour {
     private Vector2 normalSize;
     [Header("Material của nước")]
     public Material mat;
+    [Header("Càng cao thì lực tương tác của vật thể và nước sẽ càng nhỏ")]
+    [Tooltip("Rất quan trọng, nên để là 30")]
+    public float decreaseMass;
     //The GameObject we're using for a mesh
     public GameObject watermesh;
 
@@ -42,7 +43,7 @@ public class Water : MonoBehaviour {
     public int RunCount;
     void Start()
     {
-        SpawnWater(-10,20,0,-3);
+        SpawnWater(-10,20,0,-10);
     }
 
     public void Splash(float xpos, float velocity)
@@ -93,13 +94,6 @@ public class Water : MonoBehaviour {
         int edgecount = Mathf.RoundToInt(Width) * 5;
         int nodecount = edgecount + 1;
         
-        //Add our line renderer and set it up:
-        Body = gameObject.AddComponent<LineRenderer>();
-        Body.material = mat;
-        Body.material.renderQueue = 1000;
-        Body.SetVertexCount(nodecount);
-        Body.SetWidth(0.1f, 0.1f);
-
         //Declare our physics arrays
         xpositions = new float[nodecount];
         ypositions = new float[nodecount];
@@ -121,7 +115,7 @@ public class Water : MonoBehaviour {
         {
             ypositions[i] = Top;
             xpositions[i] = Left + Width * i / edgecount;
-            Body.SetPosition(i, new Vector3(xpositions[i], Top, z));
+            // Body.SetPosition(i, new Vector3(xpositions[i], Top, z));
             accelerations[i] = 0;
             velocities[i] = 0;
         }
@@ -162,12 +156,15 @@ public class Water : MonoBehaviour {
             box2d.usedByEffector = true;
             BuoyancyEffector2D bouyancy = meshobjects[i].AddComponent<BuoyancyEffector2D>();
             bouyancy.density = WaterDensity;
+            bouyancy.surfaceLevel = 1f;
             meshobjects[i].transform.parent = transform;
 
             //Create our colliders, set them be our child
             colliders[i] = new GameObject();
             colliders[i].name = "Trigger";
-            colliders[i].AddComponent<BoxCollider2D>();
+            BoxCollider2D trigger = colliders[i].AddComponent<BoxCollider2D>();
+            trigger.size = new Vector2(1, 0.5f);
+            trigger.offset = new Vector2(0, 0.25f);
             colliders[i].transform.parent = transform;
 
             //Set the position and scale to the correct dimensions
@@ -192,28 +189,26 @@ public class Water : MonoBehaviour {
             Vertices[2] = new Vector3(xpositions[i], bottom, z);
             Vertices[3] = new Vector3(xpositions[i+1], bottom, z);
             meshes[i].vertices = Vertices;
-            meshobjects[i].GetComponent<BuoyancyEffector2D>().surfaceLevel =  ((ypositions[i]) - normalSize.y) * 3.5f;
+            meshobjects[i].GetComponent<BuoyancyEffector2D>().surfaceLevel = normalSize.y + ((ypositions[i]) - normalSize.y) * SurfaceLevelCoefficient;
         }
     }
 
     void FixedUpdate()
     {
         //Here we use the Euler method to handle all the physics of our springs:
-        // code hơi bị chất :))
         for (int i = 0; i < xpositions.Length ; i++)
         {
             float force = (springconstant * (ypositions[i] - baseheight) + velocities[i]*damping);
             accelerations[i] = (-force);
             ypositions[i] += velocities[i];
             velocities[i] += accelerations[i];
-            Body.SetPosition(i, new Vector3(xpositions[i], ypositions[i], z));
         }   
 
         //Now we store the difference in heights:
         float[] leftDeltas = new float[xpositions.Length];
         float[] rightDeltas = new float[xpositions.Length];
 
-        // sẽ dĩ chạy 8 lần là để cho nó được mượt hơn, nếu như với tốc độ của fixed update thì vẫn chưa đủ mượt
+        // sẽ dĩ chạy nhiều lần là để cho nó được mượt hơn, nếu như với tốc độ của fixed update thì vẫn chưa đủ mượt
         for (int j = 0; j < RunCount; j++)
         {
             for (int i = 0; i < xpositions.Length; i++)
