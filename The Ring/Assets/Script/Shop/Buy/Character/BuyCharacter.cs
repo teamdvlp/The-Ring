@@ -57,7 +57,6 @@ public class BuyCharacter : MonoBehaviour{
 
     private void OnDisable()
     {
-        Debug.Log("ON DIS");
         scrollRect.enabled = true;
     }
 }

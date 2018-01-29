@@ -19,16 +19,22 @@ public class ShopDataManager {
 
 	public bool save () {
             Shop mShop = Shop.getInstance();
-            // cách thêm dữ liệu vào cửa hàng, cứ thêm dữ liệu vào đây, lúc public game thì xóa hàm hoặc để private
+        // cách thêm dữ liệu vào cửa hàng, cứ thêm dữ liệu vào đây, lúc public game thì xóa hàm hoặc để private
 
 
-            // Reset Dữ liệu Shop trong quá trình Test, không xài thì comment lại
+        // Reset Dữ liệu Shop trong quá trình Test, không xài thì comment lại
+        //**
+        //mShop.Characters = new List<Character>();
+        //ResetShopData(mShop);
+        //**
 
 
-            mShop.Characters = new List<Character>();
-
+<<<<<<< HEAD
         //ResetShopData(mShop);
             BinaryFormatter bf = new BinaryFormatter ();
+=======
+        BinaryFormatter bf = new BinaryFormatter ();
+>>>>>>> 47adc29e12c3d5738bd131b89504278185c09509
 			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
@@ -37,7 +43,6 @@ public class ShopDataManager {
 
     private void ResetShopData (Shop mShop)
     {
-
         mShop.Characters.addItem(new Character(CharacterFolder + "RedPlan", 5000, 1, true, true));
         mShop.Characters.addItem(new Character(CharacterFolder + "BluePlan", 400, 1));
         mShop.Characters.addItem(new Character(CharacterFolder + "GreenPlan", 1000, 1));

@@ -36,10 +36,9 @@ public class StartGame : MonoBehaviour {
     {
         GetData_USER_and_SHOP_FromDB();
 
-        // Khi mở comment hàm ResetUserData() để TEST, vào hàm GetData_USER_and_SHOP_FromDB() bên dưới comment lại đoạn user.getUser
+        // Khi mở comment hàm ResetUserData() để TEST, vào hàm GetData_USER_and_SHOP_FromDB() bên dưới comment lại đoạn user.getUser, dòng 82
         // *****Có thể bug****
         //ResetUserData();
-
         SetPlayer_FEATURE();
         Debug.Log("SỐ LƯỢNG NHÂN VẬT SỠ HỮU : " + User.getInstance().Characters.Count);
     }
@@ -95,7 +94,7 @@ public class StartGame : MonoBehaviour {
         User.getInstance().setCurrentChacracter(Shop.getInstance().Characters[0]);
     }
 
-
+    // Set các thuộc tính của nhân vật
     private void SetPlayer_FEATURE ()
     {
         characterPrefabs = Resources.Load(User.getInstance().CurrentCharacter.path) as GameObject;
