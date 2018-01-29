@@ -167,6 +167,7 @@ public class Water : MonoBehaviour {
             //Create our colliders, set them be our child
             colliders[i] = new GameObject();
             colliders[i].name = "Trigger";
+            colliders[i].layer = 18; // 18 : Monster
             colliders[i].AddComponent<BoxCollider2D>();
             colliders[i].transform.parent = transform;
 
