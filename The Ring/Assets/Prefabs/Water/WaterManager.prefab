@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7768984e1f9f841dabb0d0d744051722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeKCount: 2
+  NodeKCount: 5
   splash: {fileID: 0}
   mat: {fileID: 2100000, guid: 919557a00759e4d448c488785ed49b4d, type: 2}
   decreaseMass: 30

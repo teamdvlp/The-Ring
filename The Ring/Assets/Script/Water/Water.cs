@@ -117,7 +117,6 @@ public class Water : MonoBehaviour {
         {
             ypositions[i] = Top;
             xpositions[i] = Left + Width * i / edgecount;
-            // Body.SetPosition(i, new Vector3(xpositions[i], Top, z));
             accelerations[i] = 0;
             velocities[i] = 0;
         }
@@ -165,7 +164,6 @@ public class Water : MonoBehaviour {
             colliders[i] = new GameObject();
             colliders[i].name = "Trigger";
             BoxCollider2D trigger = colliders[i].AddComponent<BoxCollider2D>();
-            colliders[i].layer = 18; // Monster
             trigger.size = new Vector2(1, 0.5f);
             trigger.offset = new Vector2(0, 0.25f);
             colliders[i].transform.parent = transform;

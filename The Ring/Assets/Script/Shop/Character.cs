@@ -10,8 +10,8 @@ public class Character {
     public long price { private set; get; }
     public float speed { private set; get; }
     public int id { private set; get; }
-    public bool isBought { set; get; }
-    public bool isChoosen { set; get; }
+    public bool isBought;
+    public bool isChoosen;
 
 
 	public Character (string path, long price, float speed) {
@@ -36,8 +36,6 @@ public class Character {
 			this.id = id;
 		}
 	}
-
-
 }
 
 

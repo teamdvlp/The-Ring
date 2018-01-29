@@ -28,7 +28,7 @@ public class ShopDataManager {
             mShop.Characters = new List<Character>();
 
         //ResetShopData(mShop);
-        BinaryFormatter bf = new BinaryFormatter ();
+            BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Create(Application.persistentDataPath + "/" + FolderShopData);
 			bf.Serialize(file, mShop);
 			file.Close();
