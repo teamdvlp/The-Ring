@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +26,6 @@ public class EndlessMap : MonoBehaviour {
     public Vector2 positionSpawn;
     private GameObject selectedMap;
     public float TimeToDestroyMap;
-
     // Vị trí của map trong list đã chọn trước đó
     private int previous_Running_Medium_Map_INDEX, previous_Running_Hard_Map_INDEX;
 
@@ -39,7 +38,7 @@ public class EndlessMap : MonoBehaviour {
     // Truyền các Map từ file Map.cs vào các ListMap (LowMapList, mediumMapList, hardMapList)
     {
         Pass_All_Map_To_ListMap(); 
-    }
+    } 
 
 
     void Start () {
@@ -48,7 +47,7 @@ public class EndlessMap : MonoBehaviour {
         // Truyền Event va chạm vớp MapBorder và Va chạm với Monster
         GetComponent<Collider>().OnPlayerColliderWithMapBorder += OnPlayerCollisionMapBorder;
         monsterCollider.OnMonsterColliderWithMapBorder += OnMonsterCollisionMapBorder;
-
+        
         // Random vị trí để lấy map ngẫu nhiên từ ListMap Dễ, và chỉ lấy một lần lúc đầu game
         int mapPosition = Random.Range(0, lowMapList.Count - 1);
         runningMap = lowMapList[mapPosition];

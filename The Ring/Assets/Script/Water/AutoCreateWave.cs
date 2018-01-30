@@ -16,7 +16,7 @@ public class AutoCreateWave : MonoBehaviour {
 
 	private IEnumerator autoWave () {
 		yield return new WaitForSeconds(0.2f);
-		transform.parent.GetComponent<Water>().Splash(Random.Range(x1,x2), 0.025f);
+		transform.parent.GetComponent<Water>().Splash(Random.Range(x1,x2), 0.5f);
 		StartCoroutine(autoWave());
 	}
 }
