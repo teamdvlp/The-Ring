@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoCreateWave : MonoBehaviour {
-
-	public float x1;
-	public float x2;
+	public float xMin;
+	public float xMax;
+	public float magnitude;
+	public float time;
 	void Start () {
 		StartCoroutine(autoWave());
 	}
 	
-	void Update () {
-
-	}
-
 	private IEnumerator autoWave () {
-		yield return new WaitForSeconds(0.2f);
-		transform.parent.GetComponent<Water>().Splash(Random.Range(x1,x2), 0.5f);
+		yield return new WaitForSeconds(time);
+		transform.parent.GetComponent<Water>().Splash(Random.Range(xMin,xMax), magnitude);
 		StartCoroutine(autoWave());
 	}
 }

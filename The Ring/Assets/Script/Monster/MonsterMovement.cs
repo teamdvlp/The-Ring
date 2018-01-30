@@ -13,7 +13,8 @@ public class MonsterMovement : MonoBehaviour {
         speed = moveSpeed;    
     }
 	
-	void Update () {
+    void FixedUpdate()
+    {
         Move();
     }
 

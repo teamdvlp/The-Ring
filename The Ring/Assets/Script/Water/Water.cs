@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 public class Water : MonoBehaviour {
-
+    [Header("Rất quan trọng")]
+    [Tooltip("Càng nhiều càng đẹp nhưng sẽ càng lag, nên để là 5")]
+    public int NodeKCount;
     //Our physics arrays
     float[] xpositions;
     float[] ypositions;
@@ -91,7 +93,7 @@ public class Water : MonoBehaviour {
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         //Calculating the number of edges and nodes we have
-        int edgecount = Mathf.RoundToInt(Width) * 5;
+        int edgecount = Mathf.RoundToInt(Width) * NodeKCount;
         int nodecount = edgecount + 1;
         
         //Declare our physics arrays
@@ -163,6 +165,7 @@ public class Water : MonoBehaviour {
             colliders[i] = new GameObject();
             colliders[i].name = "Trigger";
             BoxCollider2D trigger = colliders[i].AddComponent<BoxCollider2D>();
+            colliders[i].layer = 18; // Monster
             trigger.size = new Vector2(1, 0.5f);
             trigger.offset = new Vector2(0, 0.25f);
             colliders[i].transform.parent = transform;
